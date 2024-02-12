@@ -96,16 +96,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Sources\Buffers\ElementBuffer.h" />
     <ClInclude Include="Sources\Logger.h" />
     <ClInclude Include="Sources\Main.h" />
     <ClInclude Include="Sources\OpenGL.h" />
-    <ClInclude Include="Sources\Spec.h" />
+    <ClInclude Include="Sources\Primitives.h" />
+    <ClInclude Include="Sources\Buffers\VertexBuffer.h" />
+    <ClInclude Include="Sources\VertexArray.h" />
     <ClInclude Include="Sources\Window.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Sources\Buffers\ElementBuffer.cpp" />
     <ClCompile Include="Sources\Logger.cpp" />
     <ClCompile Include="Sources\Main.cpp" />
     <ClCompile Include="Sources\OpenGL.cpp" />
+    <ClCompile Include="Sources\Buffers\VertexBuffer.cpp" />
+    <ClCompile Include="Sources\VertexArray.cpp" />
     <ClCompile Include="Sources\Window.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
