@@ -1,4 +1,4 @@
-workspace "GameEngine"
+workspace "FlappyCube"
    architecture "x64"
    configurations { "Debug", "Release" }
 
@@ -9,6 +9,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "Vendors/GLFW/include"
 IncludeDir["GLEW"] = "Vendors/GLEW/include"
 IncludeDir["glm"] = "Vendors/glm"
+IncludeDir["spdlog"] = "Vendors/spdlog"
 
 project "FlappyCube"
    kind "ConsoleApp"
@@ -21,15 +22,21 @@ project "FlappyCube"
 
    files 
    {
-      "%{prj.name}/Sources/**"
+      "Sources/**"
    }
+
+   defines
+	{
+		"_CRT_SECURE_NO_WARNINGS"
+	}
 
    includedirs
    {
     "Sources",
     "%{IncludeDir.GLFW}",
     "%{IncludeDir.GLEW}",
-    "%{IncludeDir.glm}"
+    "%{IncludeDir.glm}",
+	"%{IncludeDir.spdlog}"
    }
 
    libdirs
@@ -40,7 +47,7 @@ project "FlappyCube"
 
    links
    {
-    "GLFW.lib",
+    "glfw3.lib",
     "glew32.lib",
     "opengl32.lib"
    }
