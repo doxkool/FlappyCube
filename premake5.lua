@@ -28,6 +28,7 @@ project "FlappyCube"
    defines
 	{
 		"_CRT_SECURE_NO_WARNINGS"
+		"_SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS"
 	}
 
    includedirs
@@ -47,7 +48,7 @@ project "FlappyCube"
 
    links
    {
-    "glfw3.lib",
+    "glfw3_mt.lib",
     "glew32.lib",
     "opengl32.lib"
    }

@@ -1,3 +1,10 @@
-[19:47:17] [info]	[Engine]   	====== New logging session ======
-[19:47:17] [debug]	[Engine]   	Log initialization completed.
-[19:47:17] [debug]	[Game]   	Log initialization completed.
+[18:34:23] [info]	[Engine]   	====== New logging session ======
+[18:34:23] [debug]	[Engine]   	Log initialization completed.
+[18:34:24] [debug]	[Engine]   	GLFW initialization completed.
+[18:34:24] [info]	[Engine]   	New window resolution : 1280x720
+[18:34:24] [info]	[Engine]   	OpenGL_API Information :
+[18:34:24] [info]	[Engine]   		NVIDIA Corporation
+[18:34:24] [info]	[Engine]   		NVIDIA GeForce GTX 1070/PCIe/SSE2
+[18:34:24] [info]	[Engine]   		4.5.0 NVIDIA 537.34
+[18:34:24] [info]	[Engine]   	====== Instance 'FlappyCube' created ======
+[18:34:24] [debug]	[Engine]   	GLEW_INIT_SUCCESS

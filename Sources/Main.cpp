@@ -1,52 +1,34 @@
 #include "Main.h"
 
 int main(int argc, char* argv[])
-{
-	FlappyCube::Logger::Init();
-	FlappyCube::Init_OpenGL();
-	FlappyCube::Init_GLFW();
-	FlappyCube::RunGameLoop();
+{	
+	FlappyCube::Init();
 
 	return 0;
 }
 
 namespace FlappyCube
 {
-
-	int Init_OpenGL()
+	void Init()
 	{
-		//Check GLEW is initialized correctly
-		if (glewInit() != GLEW_OK)
-		{
-			//LOG_CRITICAL("ERROR! GLEW_INIT_FAILED");
-		}
-		else {
-			//LOG_DEBUG("GLEW_INIT_SUCCESS");
-		}
+		Logger::Init();
+		window.Init("FlappyCube", 1280, 720, true);
+		OpenGL::Init();
 
-#ifdef ENGINE_DEBUG
-		glEnable(GL_DEBUG_OUTPUT);
-		glEnable(GL_DEBUG_OUTPUT_SYNCHRONOUS);
-
-		glDebugMessageCallback(OpenGL_DebugMsgCallback, nullptr);
-#endif
-
-		// Enables the Depth Buffer
-		glEnable(GL_DEPTH_TEST);
-
-		return 0;
-	}
-
-	int Init_GLFW()
-	{
-		return 0;
+		RunGameLoop();
 	}
 
 	void RunGameLoop()
 	{
-		while (true)
+		while (!window.Get_WindowShouldClose())
 		{
 			// Run Game code here
+
+			OpenGL::Set_ClearColor(glm::vec4(0.5f, 0.5f, 0.5f, 1.f));
+			OpenGL::Clear();
+
+			window.Update();
+			window.SwapBuffer();
 		}
 	}
 }
