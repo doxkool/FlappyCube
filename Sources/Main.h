@@ -1,6 +1,5 @@
 #pragma once
 
-#include "Spec.h"
 #include "Window.h"
 #include "Logger.h"
 
