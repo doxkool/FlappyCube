@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Buffers">
+      <UniqueIdentifier>{92479EF4-FE26-1D90-073F-A866739D83F1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Camera">
+      <UniqueIdentifier>{CE7141AB-BA13-6C81-A3CE-7FD58F0FF3D1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Sources\Buffers\ElementBuffer.h">
+      <Filter>Buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Buffers\VertexBuffer.h">
+      <Filter>Buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Camera\Camera.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Logger.h" />
+    <ClInclude Include="Sources\Main.h" />
+    <ClInclude Include="Sources\Mesh.h" />
+    <ClInclude Include="Sources\Model.h" />
+    <ClInclude Include="Sources\OpenGL.h" />
+    <ClInclude Include="Sources\Primitives.h" />
+    <ClInclude Include="Sources\Shader.h" />
+    <ClInclude Include="Sources\Texture.h" />
+    <ClInclude Include="Sources\VertexArray.h" />
+    <ClInclude Include="Sources\Window.h" />
+    <ClInclude Include="Sources\Camera\OrthographicCamera.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Sources\Buffers\ElementBuffer.cpp">
+      <Filter>Buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Buffers\VertexBuffer.cpp">
+      <Filter>Buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Logger.cpp" />
+    <ClCompile Include="Sources\Main.cpp" />
+    <ClCompile Include="Sources\Mesh.cpp" />
+    <ClCompile Include="Sources\Model.cpp" />
+    <ClCompile Include="Sources\OpenGL.cpp" />
+    <ClCompile Include="Sources\Shader.cpp" />
+    <ClCompile Include="Sources\Texture.cpp" />
+    <ClCompile Include="Sources\VertexArray.cpp" />
+    <ClCompile Include="Sources\Window.cpp" />
+    <ClCompile Include="Sources\Camera\OrthographicCamera.cpp" />
+  </ItemGroup>
+</Project>

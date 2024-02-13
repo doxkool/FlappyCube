@@ -10,6 +10,7 @@ IncludeDir["GLFW"] = "Vendors/GLFW/include"
 IncludeDir["GLEW"] = "Vendors/GLEW/include"
 IncludeDir["glm"] = "Vendors/glm"
 IncludeDir["spdlog"] = "Vendors/spdlog"
+IncludeDir["stb_image"] = "Vendors/stb_image"
 
 project "FlappyCube"
    kind "ConsoleApp"
@@ -27,7 +28,7 @@ project "FlappyCube"
 
    defines
 	{
-		"_CRT_SECURE_NO_WARNINGS"
+		"_CRT_SECURE_NO_WARNINGS",
 		"_SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS"
 	}
 
@@ -37,7 +38,8 @@ project "FlappyCube"
     "%{IncludeDir.GLFW}",
     "%{IncludeDir.GLEW}",
     "%{IncludeDir.glm}",
-	"%{IncludeDir.spdlog}"
+	"%{IncludeDir.spdlog}",
+	"%{IncludeDir.stb_image}"
    }
 
    libdirs

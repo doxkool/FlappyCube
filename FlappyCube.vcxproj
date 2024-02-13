@@ -57,8 +57,8 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>_SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS;_CRT_SECURE_NO_WARNINGS;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>Sources;Vendors\GLFW\include;Vendors\GLEW\include;Vendors\glm;Vendors\spdlog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>Sources;Vendors\GLFW\include;Vendors\GLEW\include;Vendors\glm;Vendors\spdlog;Vendors\stb_image;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -76,8 +76,8 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>Sources;Vendors\GLFW\include;Vendors\GLEW\include;Vendors\glm;Vendors\spdlog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>Sources;Vendors\GLFW\include;Vendors\GLEW\include;Vendors\glm;Vendors\spdlog;Vendors\stb_image;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -91,26 +91,37 @@
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>glfw3.lib;glew32.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3_mt.lib;glew32.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>Vendors\GLFW\lib;Vendors\GLEW\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Sources\Buffers\ElementBuffer.h" />
+    <ClInclude Include="Sources\Buffers\VertexBuffer.h" />
+    <ClInclude Include="Sources\Camera\Camera.h" />
+    <ClInclude Include="Sources\Camera\OrthographicCamera.h" />
     <ClInclude Include="Sources\Logger.h" />
     <ClInclude Include="Sources\Main.h" />
+    <ClInclude Include="Sources\Mesh.h" />
+    <ClInclude Include="Sources\Model.h" />
     <ClInclude Include="Sources\OpenGL.h" />
     <ClInclude Include="Sources\Primitives.h" />
-    <ClInclude Include="Sources\Buffers\VertexBuffer.h" />
+    <ClInclude Include="Sources\Shader.h" />
+    <ClInclude Include="Sources\Texture.h" />
     <ClInclude Include="Sources\VertexArray.h" />
     <ClInclude Include="Sources\Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Sources\Buffers\ElementBuffer.cpp" />
+    <ClCompile Include="Sources\Buffers\VertexBuffer.cpp" />
+    <ClCompile Include="Sources\Camera\OrthographicCamera.cpp" />
     <ClCompile Include="Sources\Logger.cpp" />
     <ClCompile Include="Sources\Main.cpp" />
+    <ClCompile Include="Sources\Mesh.cpp" />
+    <ClCompile Include="Sources\Model.cpp" />
     <ClCompile Include="Sources\OpenGL.cpp" />
-    <ClCompile Include="Sources\Buffers\VertexBuffer.cpp" />
+    <ClCompile Include="Sources\Shader.cpp" />
+    <ClCompile Include="Sources\Texture.cpp" />
     <ClCompile Include="Sources\VertexArray.cpp" />
     <ClCompile Include="Sources\Window.cpp" />
   </ItemGroup>
