@@ -1,4 +1,4 @@
-# FlaPpyCube
+# FlappyCube
 
 FlappyCube is a game inspired by FlappyBird.
 
