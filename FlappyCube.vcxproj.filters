@@ -29,6 +29,9 @@
     <ClInclude Include="Sources\VertexArray.h" />
     <ClInclude Include="Sources\Window.h" />
     <ClInclude Include="Sources\Camera\OrthographicCamera.h" />
+    <ClInclude Include="Sources\TimeStep.h" />
+    <ClInclude Include="Sources\Camera\PerspectiveCamera.h" />
+    <ClInclude Include="Sources\Utilities.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Sources\Buffers\ElementBuffer.cpp">
@@ -47,5 +50,7 @@
     <ClCompile Include="Sources\VertexArray.cpp" />
     <ClCompile Include="Sources\Window.cpp" />
     <ClCompile Include="Sources\Camera\OrthographicCamera.cpp" />
+    <ClCompile Include="Sources\Camera\PerspectiveCamera.cpp" />
+    <ClCompile Include="Sources\Utilities.cpp" />
   </ItemGroup>
 </Project>

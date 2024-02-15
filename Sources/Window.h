@@ -21,7 +21,9 @@ namespace FlappyCube
 		public:
 			Window();
 
-			void Init(const std::string Window_Title = "", const int Window_Width = 0, const int Window_Height = 0, const bool Window_Resizeable = true);
+			void Init(const std::string Window_Title = "Game", const int Window_Width = 0, const int Window_Height = 0, const bool Window_Resizeable = true);
+
+			void UpdateWindowTitle(const std::string Window_Title = "Game");
 
 			int Get_WindowShouldClose();
 			void Set_WindowShouldClose();

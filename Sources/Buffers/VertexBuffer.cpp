@@ -2,11 +2,11 @@
 
 namespace FlappyCube
 {
-	VertexBuffer::VertexBuffer(uint32_t size)
+	VertexBuffer::VertexBuffer(std::vector<Vertex>& vertices)
 	{
-		glCreateBuffers(1, &ID);
+		glGenBuffers(1, &ID);
 		glBindBuffer(GL_ARRAY_BUFFER, ID);
-		glBufferData(GL_ARRAY_BUFFER, size, nullptr, GL_DYNAMIC_DRAW);
+		glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(Vertex), vertices.data(), GL_STATIC_DRAW);
 	}
 
 	VertexBuffer::~VertexBuffer()

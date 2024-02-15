@@ -100,6 +100,7 @@
     <ClInclude Include="Sources\Buffers\VertexBuffer.h" />
     <ClInclude Include="Sources\Camera\Camera.h" />
     <ClInclude Include="Sources\Camera\OrthographicCamera.h" />
+    <ClInclude Include="Sources\Camera\PerspectiveCamera.h" />
     <ClInclude Include="Sources\Logger.h" />
     <ClInclude Include="Sources\Main.h" />
     <ClInclude Include="Sources\Mesh.h" />
@@ -108,6 +109,8 @@
     <ClInclude Include="Sources\Primitives.h" />
     <ClInclude Include="Sources\Shader.h" />
     <ClInclude Include="Sources\Texture.h" />
+    <ClInclude Include="Sources\TimeStep.h" />
+    <ClInclude Include="Sources\Utilities.h" />
     <ClInclude Include="Sources\VertexArray.h" />
     <ClInclude Include="Sources\Window.h" />
   </ItemGroup>
@@ -115,6 +118,7 @@
     <ClCompile Include="Sources\Buffers\ElementBuffer.cpp" />
     <ClCompile Include="Sources\Buffers\VertexBuffer.cpp" />
     <ClCompile Include="Sources\Camera\OrthographicCamera.cpp" />
+    <ClCompile Include="Sources\Camera\PerspectiveCamera.cpp" />
     <ClCompile Include="Sources\Logger.cpp" />
     <ClCompile Include="Sources\Main.cpp" />
     <ClCompile Include="Sources\Mesh.cpp" />
@@ -122,6 +126,7 @@
     <ClCompile Include="Sources\OpenGL.cpp" />
     <ClCompile Include="Sources\Shader.cpp" />
     <ClCompile Include="Sources\Texture.cpp" />
+    <ClCompile Include="Sources\Utilities.cpp" />
     <ClCompile Include="Sources\VertexArray.cpp" />
     <ClCompile Include="Sources\Window.cpp" />
   </ItemGroup>

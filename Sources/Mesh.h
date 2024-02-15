@@ -36,6 +36,8 @@ namespace FlappyCube
 				glm::vec3 scale = glm::vec3(1.0f, 1.0f, 1.0f)
 			);
 
+			VertexArray VAO;
+
 		private:
 
 			glm::vec3 position;

@@ -1,19 +1,19 @@
-#include "Camera/OrthographicCamera.h"
+#include "Camera/PerspectiveCamera.h"
 
 namespace FlappyCube
 {
-	OrthographicCamera::OrthographicCamera(float left, float right, float bottom, float top)
-		: left(left), right(right), bottom(bottom), top(top)
+	PerspectiveCamera::PerspectiveCamera(float FOVdeg, float nearPlane, float farPlane)
+		: FOVdeg(FOVdeg), nearPlane(nearPlane), farPlane(farPlane)
 	{
 		UpdateMatrix();
 	}
 
-	void OrthographicCamera::OnUpdate(TimeStep ts)
+	void PerspectiveCamera::OnUpdate(TimeStep ts)
 	{
 
 	}
 
-	void OrthographicCamera::UpdateMatrix()
+	void PerspectiveCamera::UpdateMatrix()
 	{
 		FrameBufferWidth = OpenGL::Viewport_Width;
 		FrameBufferHeight = OpenGL::Viewport_Height;
@@ -21,16 +21,29 @@ namespace FlappyCube
 		// Makes camera look in the right direction from the right position
 		view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
 
-		projection = glm::ortho(left, right, bottom, top, 0.1f, 100.0f);
-		
+		// Adds perspective to the scene
+		projection = glm::perspective(glm::radians(FOVdeg), (float)FrameBufferWidth / FrameBufferHeight, nearPlane, farPlane);
+
 		// Sets new camera matrix
 		cameraMatrix = projection * view;
 	}
 
-	void OrthographicCamera::MoveCamera(Direction direction)
+	void PerspectiveCamera::PushMatrixToShader(const char* uniform)
+	{
+		// Exports camera matrix
+		Shader::setMat4fv(cameraMatrix, uniform, GL_FALSE);
+	}
+
+	void PerspectiveCamera::MoveCamera(Direction direction)
 	{
 		//switch (direction)
 		//{
+		//case Engine::FORWARD:
+		//	cameraPos += cameraFront * MovementSpeed;
+		//	break;
+		//case Engine::BACKWARD:
+		//	cameraPos -= cameraFront * MovementSpeed;
+		//	break;
 		//case Engine::LEFT:
 		//	cameraPos -= glm::normalize(glm::cross(cameraFront, cameraUp)) * MovementSpeed;
 		//	break;

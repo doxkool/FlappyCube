@@ -4,13 +4,16 @@
 
 namespace FlappyCube
 {
-	class OrthographicCamera : public Camera
+	class PerspectiveCamera : public Camera
 	{
 		public:
-			OrthographicCamera() = default;
-			OrthographicCamera(float left, float right, float bottom, float top);
+			PerspectiveCamera() = default;
+			PerspectiveCamera(float FOVdeg, float nearPlane, float farPlane);
 
 			void OnUpdate(TimeStep ts);
+
+			// Exports the camera matrix to a shader
+			virtual void PushMatrixToShader(const char* uniform) override;
 			
 			void UpdateMatrix();
 
@@ -28,11 +31,10 @@ namespace FlappyCube
 
 		private:
 
-			// Variables for orthographic camera
-			float left;
-			float right;
-			float bottom;
-			float top;
+			// Variables for perspective camera
+			float FOVdeg;
+			float nearPlane;
+			float farPlane;
 
 			float MovementSpeed = 0.1f;
 			float MouseRotationSpeed = 0.1f;

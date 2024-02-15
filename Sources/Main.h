@@ -1,10 +1,17 @@
 #pragma once
 
+#include "Camera/OrthographicCamera.h"
+#include "Camera/PerspectiveCamera.h"
+
+#include "Model.h"
+
 #include "Shader.h"
 #include "Window.h"
 #include "Logger.h"
 
 #include "Primitives.h"
+
+#include "Utilities.h"
 
 #include <glm.hpp>
 
@@ -17,5 +24,6 @@ namespace FlappyCube
 	void RunGameLoop();
 
 	Window m_window;
-	//Camera  m_camera;
+	OrthographicCamera  m_OrthoCamera(-2.f, 2.f, -1.5f, 1.5f);
+	
 }

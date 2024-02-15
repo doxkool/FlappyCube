@@ -18,7 +18,7 @@ namespace FlappyCube
 	class  VertexBuffer
 	{
 	public:
-		VertexBuffer(uint32_t size);
+		VertexBuffer(std::vector<Vertex>& vertices);
 		~VertexBuffer();
 
 		void Bind();

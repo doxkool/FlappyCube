@@ -46,7 +46,6 @@ namespace FlappyCube
 		UpdateModelMatrices(translation, rotation, scale);
 
 		meshes.push_back(Mesh(vertexArray, indexArray, textureArray));
-
 	}
 
 	void Model::UpdateModelMatrices(glm::vec3 translation, glm::vec3 rotation, glm::vec3 scale)

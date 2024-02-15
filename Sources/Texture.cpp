@@ -30,7 +30,7 @@ namespace FlappyCube
 		}
 		else
 		{
-			LOG_ERROR("Failed to load texture");
+			LOG_ERROR("Failed to load texture : {}", texturePath);
 		}
 		stbi_image_free(data);
 	}

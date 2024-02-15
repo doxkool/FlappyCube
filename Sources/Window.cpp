@@ -65,10 +65,19 @@ namespace FlappyCube
 
 		LOG_INFO("====== Instance '{}' created ======", Spec.Window_Title);
 
+		//OpenGL::SetViewport(Window_Width, Window_Height);
+		OpenGL::Viewport_Width = Window_Width;
+		OpenGL::Viewport_Height = Window_Height;
+
 		// Setting up GLFW callback for keyboard and mouse events
 		glfwSetKeyCallback(m_Window, Key_Callback);
 		glfwSetScrollCallback(m_Window, Mouse_Scroll_Callback);
 		glfwSetMouseButtonCallback(m_Window, Mouse_Button_Callback);
+	}
+
+	void Window::UpdateWindowTitle(const std::string NewWindowTitle)
+	{
+		glfwSetWindowTitle(m_Window, NewWindowTitle.c_str());
 	}
 
 	void Window::Update()
