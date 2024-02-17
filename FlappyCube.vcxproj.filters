@@ -27,7 +27,7 @@
     <ClInclude Include="Sources\Shader.h" />
     <ClInclude Include="Sources\Texture.h" />
     <ClInclude Include="Sources\VertexArray.h" />
-    <ClInclude Include="Sources\Window.h" />
+    <ClInclude Include="Sources\Window\Window.h" />
     <ClInclude Include="Sources\Camera\OrthographicCamera.h" />
     <ClInclude Include="Sources\TimeStep.h" />
     <ClInclude Include="Sources\Camera\PerspectiveCamera.h" />
@@ -48,9 +48,10 @@
     <ClCompile Include="Sources\Shader.cpp" />
     <ClCompile Include="Sources\Texture.cpp" />
     <ClCompile Include="Sources\VertexArray.cpp" />
-    <ClCompile Include="Sources\Window.cpp" />
+    <ClCompile Include="Sources\Window\Window.cpp" />
     <ClCompile Include="Sources\Camera\OrthographicCamera.cpp" />
     <ClCompile Include="Sources\Camera\PerspectiveCamera.cpp" />
     <ClCompile Include="Sources\Utilities.cpp" />
+    <ClCompile Include="Sources\Window\WindowCallback.cpp" />
   </ItemGroup>
 </Project>

@@ -1,16 +1,12 @@
 #include "OpenGL.h"
 
-#include "Window.h"
+//#include "Window/Window.h"
 
 
 namespace FlappyCube
 {
-	int OpenGL::Viewport_Width;
-	int OpenGL::Viewport_Height;
-
-	OpenGL::OpenGL()
-	{
-	}
+	int OpenGL::m_FrameBuffer_Width;
+	int OpenGL::m_FrameBuffer_Height;
 
 	void OpenGL::Init()
 	{
@@ -41,13 +37,11 @@ namespace FlappyCube
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
 	}
 
-	void OpenGL::SetViewport(int Window_Width, int Window_Height)
+	void OpenGL::SetViewport(int FrameBuffer_Width, int FrameBuffer_Height)
 	{
-		glViewport(0, 0, Window_Width, Window_Height);
+		glViewport(0, 0, FrameBuffer_Width, FrameBuffer_Height);
 
-		Viewport_Width = Window_Width;
-		Viewport_Height = Window_Height;
-
-		//LOG_E_DEBUG("Window resolution changed to : {}x{}", Window_Width, Window_Height);
+		m_FrameBuffer_Width = FrameBuffer_Width;
+		m_FrameBuffer_Height = FrameBuffer_Height;
 	}
 }

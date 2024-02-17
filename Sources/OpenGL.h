@@ -11,16 +11,16 @@ namespace FlappyCube
 	class OpenGL
 	{
 		public:
-			OpenGL();
+			OpenGL() {}
 
 			static void Init();
 
 			static void Set_ClearColor(const glm::vec4& color);
 			static void Clear();
-			static void SetViewport(int Window_Width, int Window_Height);
+			static void SetViewport(int FrameBuffer_Width, int FrameBuffer_Height);
 
 		public:
-			static int Viewport_Width, Viewport_Height;
+			static int m_FrameBuffer_Width, m_FrameBuffer_Height;
 
 		private:
 	};

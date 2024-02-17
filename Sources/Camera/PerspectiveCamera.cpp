@@ -15,8 +15,8 @@ namespace FlappyCube
 
 	void PerspectiveCamera::UpdateMatrix()
 	{
-		FrameBufferWidth = OpenGL::Viewport_Width;
-		FrameBufferHeight = OpenGL::Viewport_Height;
+		FrameBufferWidth = OpenGL::m_FrameBuffer_Width;
+		FrameBufferHeight = OpenGL::m_FrameBuffer_Height;
 
 		// Makes camera look in the right direction from the right position
 		view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
@@ -36,28 +36,28 @@ namespace FlappyCube
 
 	void PerspectiveCamera::MoveCamera(Direction direction)
 	{
-		//switch (direction)
-		//{
-		//case Engine::FORWARD:
-		//	cameraPos += cameraFront * MovementSpeed;
-		//	break;
-		//case Engine::BACKWARD:
-		//	cameraPos -= cameraFront * MovementSpeed;
-		//	break;
-		//case Engine::LEFT:
-		//	cameraPos -= glm::normalize(glm::cross(cameraFront, cameraUp)) * MovementSpeed;
-		//	break;
-		//case Engine::RIGHT:
-		//	cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp)) * MovementSpeed;
-		//	break;
-		//case Engine::UP:
-		//	cameraPos += cameraUp * MovementSpeed;
-		//	break;
-		//case Engine::DOWN:
-		//	cameraPos -= cameraUp * MovementSpeed;
-		//	break;
-		//default:
-		//	break;
-		//}
+		switch (direction)
+		{
+		case FORWARD:
+			cameraPos += cameraFront * MovementSpeed;
+			break;
+		case BACKWARD:
+			cameraPos -= cameraFront * MovementSpeed;
+			break;
+		case LEFT:
+			cameraPos -= glm::normalize(glm::cross(cameraFront, cameraUp)) * MovementSpeed;
+			break;
+		case RIGHT:
+			cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp)) * MovementSpeed;
+			break;
+		case UP:
+			cameraPos += cameraUp * MovementSpeed;
+			break;
+		case DOWN:
+			cameraPos -= cameraUp * MovementSpeed;
+			break;
+		default:
+			break;
+		}
 	}
 }

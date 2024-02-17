@@ -1,32 +1,16 @@
-#include "Window.h"
+#include "Window/Window.h"
 
 
 namespace FlappyCube
 {
-	static void GLFWErrorCallback(int error, const char* message)
-	{
-		LOG_ERROR("GLFW Error ({}): {}", error, message);
-	}
-
-	void framebuffer_resize_callback(GLFWwindow* Window, int Window_Width, int Window_Height)
-	{
-		OpenGL::SetViewport(Window_Width, Window_Height);
-
-		LOG_DEBUG("Window resolution changed to : {}x{}", Window_Width, Window_Height);
-	};
-
-	Window::Window()
-	{
-	}
-
-	void Window::Init(const std::string Window_Title, const int Window_Width, const int Window_Height, const bool Window_Resizeable)
+	Window::Window(const std::string Window_Title, const int Window_Width, const int Window_Height, const bool Window_Resizeable)
 	{
 		Spec.Window_Title = Window_Title;
 		Spec.Window_Width = Window_Width;
 		Spec.Window_Height = Window_Height;
 		Spec.Window_Resizeable = Window_Resizeable;
 
-		glfwSetErrorCallback(GLFWErrorCallback);
+		glfwSetErrorCallback(WindowCallback::GLFWErrorCallback);
 
 		//INIT GLFW
 		if (!glfwInit())
@@ -46,11 +30,8 @@ namespace FlappyCube
 
 		m_Window = glfwCreateWindow(Spec.Window_Width, Spec.Window_Height, Spec.Window_Title.c_str(), NULL, NULL);
 
-		
 		glfwSetWindowMonitor(m_Window, NULL, (GetSystemMetrics(SM_CXSCREEN) / 2) - (Spec.Window_Width / 2), (GetSystemMetrics(SM_CYSCREEN) / 2) - (Spec.Window_Height / 2), Spec.Window_Width, Spec.Window_Height, GLFW_DONT_CARE);
 		LOG_INFO("New window resolution : {}x{}", Spec.Window_Width, Spec.Window_Height);
-
-		glfwSetFramebufferSizeCallback(m_Window, framebuffer_resize_callback);
 
 		glfwMakeContextCurrent(m_Window);
 
@@ -65,14 +46,13 @@ namespace FlappyCube
 
 		LOG_INFO("====== Instance '{}' created ======", Spec.Window_Title);
 
-		//OpenGL::SetViewport(Window_Width, Window_Height);
-		OpenGL::Viewport_Width = Window_Width;
-		OpenGL::Viewport_Height = Window_Height;
+		OpenGL::m_FrameBuffer_Width = Window_Width;
+		OpenGL::m_FrameBuffer_Height = Window_Height;
+	}
 
-		// Setting up GLFW callback for keyboard and mouse events
-		glfwSetKeyCallback(m_Window, Key_Callback);
-		glfwSetScrollCallback(m_Window, Mouse_Scroll_Callback);
-		glfwSetMouseButtonCallback(m_Window, Mouse_Button_Callback);
+	void Window::SetWindowUserPointer(Window* window)
+	{
+		glfwSetWindowUserPointer(m_Window, window);
 	}
 
 	void Window::UpdateWindowTitle(const std::string NewWindowTitle)
@@ -90,6 +70,12 @@ namespace FlappyCube
 		glfwSwapBuffers(m_Window);
 	}
 
+	void Window::EnableVsync(int enabled)
+	{
+		glfwSwapInterval(enabled);
+		LOG_DEBUG("vSync set to : {}", enabled);
+	}
+
 	int Window::Get_WindowShouldClose()
 	{
 		return glfwWindowShouldClose(m_Window);
@@ -98,20 +84,5 @@ namespace FlappyCube
 	void Window::Set_WindowShouldClose()
 	{
 		glfwSetWindowShouldClose(m_Window, GLFW_TRUE);
-	}
-
-	void Key_Callback(GLFWwindow* window, int key, int scancode, int action, int mods)
-	{
-		
-	}
-
-	void Mouse_Scroll_Callback(GLFWwindow* window, double xoffset, double yoffset)
-	{
-		
-	}
-
-	void Mouse_Button_Callback(GLFWwindow* window, int button, int action, int mods)
-	{
-		
 	}
 }

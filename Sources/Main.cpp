@@ -2,28 +2,31 @@
 
 int main(int argc, char* argv[])
 {	
-	FlappyCube::Init();
+	FlappyCube::Logger::Init();
+
+	FlappyCube::Game();
 
 	return 0;
 }
 
 namespace FlappyCube
 {
-	void Init()
+	Game::Game()
+		 : m_window("FlappyCube", 1280, 720, true)
 	{
-		Logger::Init();
-		m_window.Init("FlappyCube", 1280, 720, true);
 		OpenGL::Init();
-
-		
-
 		Shader::Init("Game/Shaders/vertex_basic.glsl", "Game/Shaders/fragment_basic.glsl");
+
+		// Setup window user pointer
+		m_window.SetWindowUserPointer(&m_window);
+		// Setup window Callback
+		WindowCallback WindowCallback(m_window);
 
 		Create_World();
 		RunGameLoop();
 	}
 
-	void Create_World()
+	void Game::Create_World()
 	{
 		Quad Player;
 
@@ -32,9 +35,11 @@ namespace FlappyCube
 		Model::LoadMesh(Player, glm::vec3(0.0f, 0.f, 0.f), glm::vec3(0.f, 0.f, 0.f), glm::vec3(1.f), tex1);
 	}
 
-	void RunGameLoop()
+	void Game::RunGameLoop()
 	{
-		PerspectiveCamera m_pCamera(45.f, 0.1f, 100.f);
+		OrthographicCamera  m_Camera(-1.f, 1.f, -1.f, 1.f);
+
+		m_window.EnableVsync(1);
 
 		while (!m_window.Get_WindowShouldClose())
 		{
@@ -57,10 +62,12 @@ namespace FlappyCube
 			m_window.UpdateWindowTitle(newTitle);
 
 		// Update Camera.
-			m_pCamera.OnUpdate(timestep);
+			m_Camera.OnUpdate(timestep);
 
-			m_pCamera.UpdateMatrix();
-			m_pCamera.PushMatrixToShader("camera");
+			//m_Camera.CheckForInput(m_window);
+
+			m_Camera.UpdateMatrix();
+			m_Camera.PushMatrixToShader("camera");
 
 		// OpenGL clear.
 			OpenGL::Set_ClearColor(glm::vec4(0.5f, 0.5f, 0.5f, 1.f));
@@ -78,3 +85,7 @@ namespace FlappyCube
 		}
 	}
 }
+
+
+// Resources :
+//	https://www.programmingcreatively.com/opengl-tutorial-9-qs.php

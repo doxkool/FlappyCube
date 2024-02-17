@@ -2,6 +2,8 @@
 
 #include "Camera/Camera.h"
 
+#include "Window/Window.h"
+
 namespace FlappyCube
 {
 	class PerspectiveCamera : public Camera
@@ -16,6 +18,8 @@ namespace FlappyCube
 			virtual void PushMatrixToShader(const char* uniform) override;
 			
 			void UpdateMatrix();
+
+			void CheckForInput(Window window);
 
 			void MoveCamera(Direction direction);
 

@@ -4,9 +4,8 @@
 #include "Camera/PerspectiveCamera.h"
 
 #include "Model.h"
-
 #include "Shader.h"
-#include "Window.h"
+#include "Window/Window.h"
 #include "Logger.h"
 
 #include "Primitives.h"
@@ -19,11 +18,15 @@ int main(int argc, char* argv[]);
 
 namespace FlappyCube
 {
-	void Init();
-	void Create_World();
-	void RunGameLoop();
+	class Game
+	{
+	public:
+		Game();
 
-	Window m_window;
-	OrthographicCamera  m_OrthoCamera(-2.f, 2.f, -1.5f, 1.5f);
-	
+		void Create_World();
+		void RunGameLoop();
+
+	private:
+		Window m_window;
+	};
 }

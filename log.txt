@@ -1,12 +1,19 @@
-[20:58:24] [info]	[Engine]   	====== New logging session ======
-[20:58:24] [debug]	[Engine]   	Log initialization completed.
-[20:58:24] [debug]	[Engine]   	GLFW initialization completed.
-[20:58:24] [info]	[Engine]   	New window resolution : 1280x720
-[20:58:24] [info]	[Engine]   	OpenGL_API Information :
-[20:58:24] [info]	[Engine]   		NVIDIA Corporation
-[20:58:24] [info]	[Engine]   		NVIDIA GeForce GTX 1070/PCIe/SSE2
-[20:58:24] [info]	[Engine]   		4.5.0 NVIDIA 537.34
-[20:58:24] [info]	[Engine]   	====== Instance 'FlappyCube' created ======
-[20:58:24] [debug]	[Engine]   	GLEW_INIT_SUCCESS
-[20:58:24] [trace]	[Engine]   	Texture loaded : Game/Textures/Default_Tex.jpg
-[20:58:24] [trace]	[Engine]   	Loading model from primitive...
+[14:34:07] [info]	[Engine]   	====== New logging session ======
+[14:34:07] [debug]	[Engine]   	Log initialization completed.
+[14:34:08] [debug]	[Engine]   	GLFW initialization completed.
+[14:34:08] [info]	[Engine]   	New window resolution : 1280x720
+[14:34:08] [info]	[Engine]   	OpenGL_API Information :
+[14:34:08] [info]	[Engine]   		NVIDIA Corporation
+[14:34:08] [info]	[Engine]   		NVIDIA GeForce GTX 1070/PCIe/SSE2
+[14:34:08] [info]	[Engine]   		4.5.0 NVIDIA 537.34
+[14:34:08] [info]	[Engine]   	====== Instance 'FlappyCube' created ======
+[14:34:08] [debug]	[Engine]   	GLEW_INIT_SUCCESS
+[14:34:08] [trace]	[Engine]   	Texture loaded : Game/Textures/Default_Tex.jpg
+[14:34:08] [trace]	[Engine]   	Loading model from primitive...
+[14:34:08] [debug]	[Engine]   	vSync set to : 1
+[14:34:10] [debug]	[Engine]   	Window : maximized.
+[14:34:10] [debug]	[Engine]   	FrameBuffer resolution changed to : 3840x2054
+[14:34:11] [debug]	[Engine]   	Window : not maximized.
+[14:34:11] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x720
+[14:34:21] [debug]	[Engine]   	FrameBuffer resolution changed to : 0x0
+[14:34:25] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x720

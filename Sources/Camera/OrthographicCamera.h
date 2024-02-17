@@ -2,6 +2,8 @@
 
 #include "Camera/Camera.h"
 
+#include "Window/Window.h"
+
 namespace FlappyCube
 {
 	class OrthographicCamera : public Camera
