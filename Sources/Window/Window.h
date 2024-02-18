@@ -8,7 +8,7 @@
 
 namespace FlappyCube
 {
-	struct Window_Spec
+	struct Window_Params
 	{
 		std::string Window_Title = "";
 		int Window_Width = 0;
@@ -17,10 +17,19 @@ namespace FlappyCube
 		bool FullScreen_mode = false;
 	};
 
+	struct Monitor_Spec
+	{
+		int MonitorID = 0;
+		const char* MonitorName = "";
+		bool PrimaryMonitor = true;
+	};
+
 	class Window
 	{
 		public:
 			Window(const std::string Window_Title = "Game", const int Window_Width = 0, const int Window_Height = 0, const bool Window_Resizeable = true);
+
+			void DetectMonitors();
 
 			void SetWindowUserPointer(Window* window);
 
@@ -33,8 +42,16 @@ namespace FlappyCube
 			void SwapBuffer();
 			void EnableVsync(int enabled);
 
+			bool CheckKeyboardInput(uint16_t key);
+			bool CheckMouseButtonInput(uint16_t button);
+
+			glm::vec2 GetMousePosition();
+			float GetMouseX();
+			float GetMouseY();
+
 		public:
-			Window_Spec Spec;
+			Window_Params WinParams;
+			std::vector<Monitor_Spec> MonitorsSpec;
 
 			GLFWwindow* m_Window;
 
@@ -51,6 +68,7 @@ namespace FlappyCube
 			static void Mouse_Scroll_Callback(GLFWwindow* window, double xoffset, double yoffset);
 			static void Mouse_Button_Callback(GLFWwindow* window, int button, int action, int mods);
 
+			static void MonitorCallback(GLFWmonitor* monitor, int event);
 			static void WindowResizeCallback(GLFWwindow* Window, int Window_Width, int Window_Height);
 			static void FramebufferResizeCallback(GLFWwindow* Window, int Window_Width, int Window_Height);
 			static void WindowPositionCallback(GLFWwindow* Window, int xPos, int yPos);

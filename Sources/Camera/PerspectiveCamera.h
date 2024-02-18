@@ -35,7 +35,7 @@ namespace FlappyCube
 
 		private:
 
-			// Variables for perspective camera
+			// Variables for Perspective camera
 			float FOVdeg;
 			float nearPlane;
 			float farPlane;

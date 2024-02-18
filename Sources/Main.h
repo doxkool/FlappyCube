@@ -26,6 +26,8 @@ namespace FlappyCube
 		void Create_World();
 		void RunGameLoop();
 
+		void CheckForInputs();
+
 	private:
 		Window m_window;
 	};

@@ -21,7 +21,7 @@ namespace FlappyCube
 		// Makes camera look in the right direction from the right position
 		view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
 
-		// Adds perspective to the scene
+		// Adds Perspective to the scene
 		projection = glm::perspective(glm::radians(FOVdeg), (float)FrameBufferWidth / FrameBufferHeight, nearPlane, farPlane);
 
 		// Sets new camera matrix

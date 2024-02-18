@@ -117,6 +117,7 @@
   <ItemGroup>
     <ClCompile Include="Sources\Buffers\ElementBuffer.cpp" />
     <ClCompile Include="Sources\Buffers\VertexBuffer.cpp" />
+    <ClCompile Include="Sources\Camera\Camera.cpp" />
     <ClCompile Include="Sources\Camera\OrthographicCamera.cpp" />
     <ClCompile Include="Sources\Camera\PerspectiveCamera.cpp" />
     <ClCompile Include="Sources\Logger.cpp" />

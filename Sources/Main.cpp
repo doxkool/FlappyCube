@@ -54,18 +54,17 @@ namespace FlappyCube
 		// Start performance counter.
 			Perf::StartPerfCounter(timestep);
 
+			CheckForInputs();
+
 		// Output the FPS and frame time to the window tilte.
 			str_FPS = std::to_string(Perf::Get_FPS());
 			str_FrameTime = std::to_string(Perf::Get_FrameTime());
-			std::string newTitle = m_window.Spec.Window_Title + " " + str_FPS + "fps / " + str_FrameTime + "ms";
+			std::string newTitle = m_window.WinParams.Window_Title + " " + str_FPS + "fps / " + str_FrameTime + "ms";
 
 			m_window.UpdateWindowTitle(newTitle);
 
 		// Update Camera.
-			m_Camera.OnUpdate(timestep);
-
-			//m_Camera.CheckForInput(m_window);
-
+			m_Camera.OnUpdate(m_window, timestep);
 			m_Camera.UpdateMatrix();
 			m_Camera.PushMatrixToShader("camera");
 
@@ -82,6 +81,14 @@ namespace FlappyCube
 
 		// End performance counter.
 			Perf::EndPerfCounter();
+		}
+	}
+
+	void Game::CheckForInputs()
+	{
+		if (m_window.CheckKeyboardInput(GLFW_KEY_Q))
+		{
+			LOG_DEBUG("test1");
 		}
 	}
 }

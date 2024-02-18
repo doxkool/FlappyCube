@@ -9,6 +9,7 @@ namespace FlappyCube
 		glfwSetScrollCallback(window.m_Window, Mouse_Scroll_Callback);
 		glfwSetMouseButtonCallback(window.m_Window, Mouse_Button_Callback);
 
+		glfwSetMonitorCallback(MonitorCallback);
 		glfwSetWindowSizeCallback(window.m_Window, WindowResizeCallback);
 		glfwSetFramebufferSizeCallback(window.m_Window, FramebufferResizeCallback);
 		glfwSetWindowPosCallback(window.m_Window, WindowPositionCallback);
@@ -39,6 +40,18 @@ namespace FlappyCube
 	void WindowCallback::GLFWErrorCallback(int error, const char* message)
 	{
 		LOG_ERROR("GLFW Error ({}): {}", error, message);
+	}
+
+	void WindowCallback::MonitorCallback(GLFWmonitor* monitor, int event)
+	{
+		if (event == GLFW_CONNECTED)
+		{
+			LOG_TRACE("A New monitor connected...");
+		}
+		else if (event == GLFW_DISCONNECTED)
+		{
+			LOG_TRACE("A monitor has benn disconnected...");
+		}
 	}
 
 	void WindowCallback::WindowResizeCallback(GLFWwindow* window, int Window_Width, int Window_Height)
