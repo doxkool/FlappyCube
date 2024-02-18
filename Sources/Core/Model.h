@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Mesh.h"
+#include "Core/Mesh.h"
 
 #include <gtx/euler_angles.hpp>
 #include <gtx/quaternion.hpp>

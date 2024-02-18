@@ -86,7 +86,7 @@ namespace FlappyCube
 
 	void Game::CheckForInputs()
 	{
-		if (m_window.CheckKeyboardInput(GLFW_KEY_Q))
+		if (m_window.CheckKeyboardInput(GLFW_KEY_ESCAPE))
 		{
 			LOG_DEBUG("test1");
 		}

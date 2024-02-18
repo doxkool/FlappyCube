@@ -1,8 +1,8 @@
 #pragma once
 
-#include "Logger.h"
-#include "Primitives.h"
-#include "Shader.h"
+#include "Core/Logger.h"
+#include "Core/Primitives.h"
+#include "Core/Shader.h"
 
 #include <GL/glew.h>
 #include <stb_image.h>

@@ -1,4 +1,4 @@
-#include "Model.h"
+#include "Core/Model.h"
 
 
 namespace FlappyCube

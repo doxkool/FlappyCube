@@ -1,4 +1,4 @@
-#include "VertexArray.h"
+#include "Core/VertexArray.h"
 
 namespace FlappyCube
 {

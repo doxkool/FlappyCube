@@ -1,11 +1,11 @@
 #pragma once
 
 #include "Window/Window.h"
-#include "OpenGL.h"
-#include "Logger.h"
-#include "TimeStep.h"
+#include "Core/OpenGL.h"
+#include "Core/Logger.h"
+#include "Core/TimeStep.h"
 
-#include "shader.h"
+#include "Core/Shader.h"
 
 #include <glm.hpp>
 #include <gtc/matrix_transform.hpp>
@@ -26,8 +26,6 @@ namespace FlappyCube
 
 			// Exports the camera matrix to a shader
 			virtual void PushMatrixToShader(const char* uniform);
-
-			virtual void MoveCamera(Direction direction);
 
 			void SetMovementSpeed(float Speed) { MovementSpeed = Speed; }
 			void SetMouseRotationSpeed(float Speed) { MouseRotationSpeed = Speed; }

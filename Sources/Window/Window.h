@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Logger.h"
-#include "OpenGL.h"
+#include "Core/Logger.h"
+#include "Core/OpenGL.h"
 
 #include <GL/glew.h>
 #include <glfw3.h>
@@ -38,9 +38,9 @@ namespace FlappyCube
 			int Get_WindowShouldClose();
 			void Set_WindowShouldClose();
 
-			void Update();
+			static void Update();
 			void SwapBuffer();
-			void EnableVsync(int enabled);
+			static void EnableVsync(int enabled);
 
 			bool CheckKeyboardInput(uint16_t key);
 			bool CheckMouseButtonInput(uint16_t button);

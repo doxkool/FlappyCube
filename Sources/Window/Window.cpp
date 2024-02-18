@@ -52,7 +52,7 @@ namespace FlappyCube
 
 	void Window::DetectMonitors()
 	{
-	// TODO : MAKE THE APPLICATION CRASH
+	// TODO : THIS MAKE THE APPLICATION CRASH
 		int numOfMonitor;
 		GLFWmonitor* PrimaryMonitor = glfwGetPrimaryMonitor();
 		GLFWmonitor** monitors = glfwGetMonitors(&numOfMonitor);

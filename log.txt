@@ -1,101 +1,17 @@
-[19:08:41] [info]	[Engine]   	====== New logging session ======
-[19:08:41] [debug]	[Engine]   	Log initialization completed.
-[19:08:41] [debug]	[Engine]   	GLFW initialization completed.
-[19:08:41] [info]	[Engine]   	New window resolution : 1280x720
-[19:08:41] [info]	[Engine]   	OpenGL_API Information :
-[19:08:41] [info]	[Engine]   		NVIDIA Corporation
-[19:08:41] [info]	[Engine]   		NVIDIA GeForce GTX 1070/PCIe/SSE2
-[19:08:41] [info]	[Engine]   		4.5.0 NVIDIA 537.34
-[19:08:41] [info]	[Engine]   	====== Instance 'FlappyCube' created ======
-[19:08:41] [debug]	[Engine]   	GLEW_INIT_SUCCESS
-[19:08:42] [trace]	[Engine]   	Texture loaded : Game/Textures/Default_Tex.jpg
-[19:08:42] [trace]	[Engine]   	Loading model from primitive...
-[19:08:42] [debug]	[Engine]   	vSync set to : 1
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x721
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x722
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x725
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x728
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x735
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x743
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x753
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x769
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x779
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x799
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x815
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x831
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x847
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x864
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x875
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x894
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x912
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x924
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x942
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x954
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x966
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x978
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x1003
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x1015
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x1037
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x1046
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x1056
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x1064
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x1072
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x1081
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x1084
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x1091
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x1099
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x1108
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x1117
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x1123
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x1130
-[19:08:43] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x1131
-[19:08:44] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x1129
-[19:08:44] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x1127
-[19:08:44] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x1124
-[19:08:44] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x1119
-[19:08:44] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x1112
-[19:08:44] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x1105
-[19:08:44] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x1093
-[19:08:44] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x1083
-[19:08:44] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x1063
-[19:08:44] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x1047
-[19:08:44] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x1028
-[19:08:44] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x1006
-[19:08:44] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x984
-[19:08:44] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x960
-[19:08:44] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x947
-[19:08:44] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x928
-[19:08:44] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x917
-[19:08:44] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x899
-[19:08:44] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x891
-[19:08:44] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x883
-[19:08:44] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x873
-[19:08:44] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x868
-[19:08:44] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x865
-[19:08:44] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x863
-[19:08:46] [debug]	[Engine]   	FrameBuffer resolution changed to : 1281x863
-[19:08:46] [debug]	[Engine]   	FrameBuffer resolution changed to : 1285x863
-[19:08:46] [debug]	[Engine]   	FrameBuffer resolution changed to : 1294x863
-[19:08:46] [debug]	[Engine]   	FrameBuffer resolution changed to : 1310x863
-[19:08:46] [debug]	[Engine]   	FrameBuffer resolution changed to : 1341x863
-[19:08:46] [debug]	[Engine]   	FrameBuffer resolution changed to : 1370x863
-[19:08:46] [debug]	[Engine]   	FrameBuffer resolution changed to : 1423x863
-[19:08:46] [debug]	[Engine]   	FrameBuffer resolution changed to : 1468x863
-[19:08:46] [debug]	[Engine]   	FrameBuffer resolution changed to : 1529x863
-[19:08:46] [debug]	[Engine]   	FrameBuffer resolution changed to : 1602x863
-[19:08:46] [debug]	[Engine]   	FrameBuffer resolution changed to : 1687x863
-[19:08:46] [debug]	[Engine]   	FrameBuffer resolution changed to : 1748x863
-[19:08:46] [debug]	[Engine]   	FrameBuffer resolution changed to : 1813x863
-[19:08:46] [debug]	[Engine]   	FrameBuffer resolution changed to : 1886x863
-[19:08:46] [debug]	[Engine]   	FrameBuffer resolution changed to : 1956x863
-[19:08:46] [debug]	[Engine]   	FrameBuffer resolution changed to : 2017x863
-[19:08:46] [debug]	[Engine]   	FrameBuffer resolution changed to : 2074x863
-[19:08:46] [debug]	[Engine]   	FrameBuffer resolution changed to : 2096x863
-[19:08:46] [debug]	[Engine]   	FrameBuffer resolution changed to : 2127x863
-[19:08:46] [debug]	[Engine]   	FrameBuffer resolution changed to : 2139x863
-[19:08:56] [debug]	[Engine]   	FrameBuffer resolution changed to : 0x0
-[19:08:57] [debug]	[Engine]   	FrameBuffer resolution changed to : 2139x863
-[19:08:59] [debug]	[Engine]   	Window : maximized.
-[19:08:59] [debug]	[Engine]   	FrameBuffer resolution changed to : 3840x2054
-[19:09:00] [debug]	[Engine]   	Window : not maximized.
-[19:09:00] [debug]	[Engine]   	FrameBuffer resolution changed to : 2139x863
+[09:56:50] [info]	[Engine]   	====== New logging session ======
+[09:56:50] [debug]	[Engine]   	Log initialization completed.
+[09:56:50] [debug]	[Engine]   	GLFW initialization completed.
+[09:56:50] [info]	[Engine]   	New window resolution : 1280x720
+[09:56:50] [info]	[Engine]   	OpenGL_API Information :
+[09:56:50] [info]	[Engine]   		NVIDIA Corporation
+[09:56:50] [info]	[Engine]   		NVIDIA GeForce GTX 1070/PCIe/SSE2
+[09:56:50] [info]	[Engine]   		4.5.0 NVIDIA 537.34
+[09:56:50] [info]	[Engine]   	====== Instance 'FlappyCube' created ======
+[09:56:50] [debug]	[Engine]   	GLEW_INIT_SUCCESS
+[09:56:50] [trace]	[Engine]   	Texture loaded : Game/Textures/Default_Tex.jpg
+[09:56:50] [trace]	[Engine]   	Loading model from primitive...
+[09:56:50] [debug]	[Engine]   	vSync set to : 1
+[09:58:24] [debug]	[Engine]   	test
+[09:58:25] [debug]	[Engine]   	test
+[09:58:26] [debug]	[Engine]   	test
+[09:58:26] [debug]	[Engine]   	test

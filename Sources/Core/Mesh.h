@@ -1,12 +1,11 @@
 #pragma once
 
-#include "Texture.h"
+#include "Core/Texture.h"
+#include "Core/Primitives.h"
+#include "Core/VertexArray.h"
+#include "Core/Logger.h"
 
 #include "Camera/Camera.h"
-#include "Primitives.h"
-#include "VertexArray.h"
-
-#include "Logger.h"
 
 #include <vector>
 #include <string>

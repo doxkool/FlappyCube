@@ -1,16 +1,15 @@
 #pragma once
 
+#include "Core/Model.h"
+#include "Core/Shader.h"
+#include "Core/Logger.h"
+#include "Core/Primitives.h"
+#include "Core/Utilities.h"
+
+#include "Window/Window.h"
+
 #include "Camera/OrthographicCamera.h"
 #include "Camera/PerspectiveCamera.h"
-
-#include "Model.h"
-#include "Shader.h"
-#include "Window/Window.h"
-#include "Logger.h"
-
-#include "Primitives.h"
-
-#include "Utilities.h"
 
 #include <glm.hpp>
 

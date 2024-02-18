@@ -1,6 +1,4 @@
-#include "OpenGL.h"
-
-//#include "Window/Window.h"
+#include "Core/OpenGL.h"
 
 
 namespace FlappyCube
