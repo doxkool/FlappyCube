@@ -1,6 +1,6 @@
 #include "Camera/PerspectiveCamera.h"
 
-namespace FlappyCube
+namespace Engine
 {
 	PerspectiveCamera::PerspectiveCamera(float FOVdeg, float nearPlane, float farPlane)
 		: FOVdeg(FOVdeg), nearPlane(nearPlane), farPlane(farPlane)

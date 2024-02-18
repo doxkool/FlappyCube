@@ -1,6 +1,6 @@
 #include "Window/Window.h"
 
-namespace FlappyCube
+namespace Engine
 {
 	Window::Window(const std::string Window_Title, const int Window_Width, const int Window_Height, const bool Window_Resizeable)
 	{

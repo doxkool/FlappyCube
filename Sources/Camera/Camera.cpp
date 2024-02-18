@@ -1,6 +1,6 @@
 #include "Camera/Camera.h"
 
-namespace FlappyCube
+namespace Engine
 {
 	void Camera::PushMatrixToShader(const char* uniform)
 	{

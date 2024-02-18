@@ -7,7 +7,7 @@
 #include <glm.hpp>
 #include <gtc/type_ptr.hpp>
 
-namespace FlappyCube
+namespace Engine
 {
 	class Shader
 	{

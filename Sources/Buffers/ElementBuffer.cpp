@@ -1,6 +1,6 @@
 #include "Buffers/ElementBuffer.h"
 
-namespace FlappyCube
+namespace Engine
 {
 	ElementBuffer::ElementBuffer(std::vector<GLuint>& indices)
 	{

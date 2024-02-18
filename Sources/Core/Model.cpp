@@ -1,7 +1,7 @@
 #include "Core/Model.h"
 
 
-namespace FlappyCube
+namespace Engine
 {
 	Primitive I_primitive;
 

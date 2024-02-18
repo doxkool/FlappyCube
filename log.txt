@@ -1,17 +1,13 @@
-[09:56:50] [info]	[Engine]   	====== New logging session ======
-[09:56:50] [debug]	[Engine]   	Log initialization completed.
-[09:56:50] [debug]	[Engine]   	GLFW initialization completed.
-[09:56:50] [info]	[Engine]   	New window resolution : 1280x720
-[09:56:50] [info]	[Engine]   	OpenGL_API Information :
-[09:56:50] [info]	[Engine]   		NVIDIA Corporation
-[09:56:50] [info]	[Engine]   		NVIDIA GeForce GTX 1070/PCIe/SSE2
-[09:56:50] [info]	[Engine]   		4.5.0 NVIDIA 537.34
-[09:56:50] [info]	[Engine]   	====== Instance 'FlappyCube' created ======
-[09:56:50] [debug]	[Engine]   	GLEW_INIT_SUCCESS
-[09:56:50] [trace]	[Engine]   	Texture loaded : Game/Textures/Default_Tex.jpg
-[09:56:50] [trace]	[Engine]   	Loading model from primitive...
-[09:56:50] [debug]	[Engine]   	vSync set to : 1
-[09:58:24] [debug]	[Engine]   	test
-[09:58:25] [debug]	[Engine]   	test
-[09:58:26] [debug]	[Engine]   	test
-[09:58:26] [debug]	[Engine]   	test
+[17:11:01] [info]	[Engine]   	====== New logging session ======
+[17:11:01] [debug]	[Engine]   	Log initialization completed.
+[17:11:01] [debug]	[Engine]   	GLFW initialization completed.
+[17:11:02] [info]	[Engine]   	New window resolution : 1280x720
+[17:11:02] [info]	[Engine]   	OpenGL_API Information :
+[17:11:02] [info]	[Engine]   		NVIDIA Corporation
+[17:11:02] [info]	[Engine]   		NVIDIA GeForce GTX 1070/PCIe/SSE2
+[17:11:02] [info]	[Engine]   		4.5.0 NVIDIA 537.34
+[17:11:02] [info]	[Engine]   	====== Instance 'FlappyCube' created ======
+[17:11:02] [debug]	[Engine]   	GLEW_INIT_SUCCESS
+[17:11:02] [trace]	[Engine]   	Texture loaded : Game/Textures/Default_Tex.jpg
+[17:11:02] [trace]	[Engine]   	Loading model from primitive...
+[17:11:02] [debug]	[Engine]   	vSync set to : 1

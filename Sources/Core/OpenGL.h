@@ -6,7 +6,7 @@
 
 #include <glm.hpp>
 
-namespace FlappyCube
+namespace Engine
 {
 	class OpenGL
 	{

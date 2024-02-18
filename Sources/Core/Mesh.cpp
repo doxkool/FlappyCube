@@ -1,6 +1,6 @@
 #include "Core/Mesh.h"
 
-namespace FlappyCube
+namespace Engine
 {
 	Mesh::Mesh(std::vector<Vertex>& vertices, std::vector<GLuint>& indices, std::vector<Texture>& textures)
 		: position(0.f), origin(0.f), rotation(0.f), scale(0.f), ModelMatrix(0.f)
@@ -45,12 +45,7 @@ namespace FlappyCube
 		for (unsigned int i = 0; i < textures.size(); i++)
 		{
 			textures[i].BindTexture();
-		}
-
-		//// Take care of the camera Matrix
-		//camera.UpdateMatrix();
-		//camera.PushMatrixToShader("camera");
-		
+		}		
 
 		// Initialize matrices
 		glm::mat4 trans = glm::mat4(1.0f);

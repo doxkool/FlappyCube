@@ -6,6 +6,8 @@
 #include "Core/Primitives.h"
 #include "Core/Utilities.h"
 
+#include "Scene/Player.h"
+
 #include "Window/Window.h"
 
 #include "Camera/OrthographicCamera.h"
@@ -15,7 +17,7 @@
 
 int main(int argc, char* argv[]);
 
-namespace FlappyCube
+namespace FlappySquare
 {
 	class Game
 	{
@@ -28,6 +30,6 @@ namespace FlappyCube
 		void CheckForInputs();
 
 	private:
-		Window m_window;
+		Engine::Window m_window;
 	};
 }

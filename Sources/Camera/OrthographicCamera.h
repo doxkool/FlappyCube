@@ -4,7 +4,7 @@
 
 #include "Window/Window.h"
 
-namespace FlappyCube
+namespace Engine
 {
 	class OrthographicCamera : public Camera
 	{

@@ -1,6 +1,6 @@
 #include "Core/Utilities.h"
 
-namespace FlappyCube
+namespace Engine
 {
 	// Initializing the static variables
 	float Perf::m_Start_Time = 0;

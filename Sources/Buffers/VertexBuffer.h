@@ -7,7 +7,7 @@
 
 #include <cstdint>
 
-namespace FlappyCube
+namespace Engine
 {
 	struct Vertex {
 		glm::vec3 position;

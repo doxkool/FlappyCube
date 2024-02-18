@@ -11,10 +11,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{F08F73B5-DC47-B502-454F-8E5E312650F3}</ProjectGuid>
+    <ProjectGuid>{42DDAB05-2E40-3BAA-D7C5-7360C307072D}</ProjectGuid>
     <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>FlappyCube</RootNamespace>
+    <RootNamespace>FlappySquare</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
@@ -43,14 +43,14 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>bin\Debug_windows_x86_64\</OutDir>
     <IntDir>bin-int\Debug_windows_x86_64\</IntDir>
-    <TargetName>FlappyCube</TargetName>
+    <TargetName>FlappySquare</TargetName>
     <TargetExt>.exe</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>bin\Release_windows_x86_64\</OutDir>
     <IntDir>bin-int\Release_windows_x86_64\</IntDir>
-    <TargetName>FlappyCube</TargetName>
+    <TargetName>FlappySquare</TargetName>
     <TargetExt>.exe</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -96,13 +96,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Sources\Scene\Scene.h" />
+    <ClInclude Include="Sources\Scene\Player.h" />
+    <ClInclude Include="Sources\Scene\EntityBase.h" />
     <ClInclude Include="Sources\Buffers\ElementBuffer.h" />
     <ClInclude Include="Sources\Buffers\VertexBuffer.h" />
     <ClInclude Include="Sources\Camera\Camera.h" />
     <ClInclude Include="Sources\Camera\OrthographicCamera.h" />
     <ClInclude Include="Sources\Camera\PerspectiveCamera.h" />
     <ClInclude Include="Sources\Core\Logger.h" />
-    <ClInclude Include="Sources\Main.h" />
     <ClInclude Include="Sources\Core\Mesh.h" />
     <ClInclude Include="Sources\Core\Model.h" />
     <ClInclude Include="Sources\Core\OpenGL.h" />
@@ -112,16 +114,19 @@
     <ClInclude Include="Sources\Core\TimeStep.h" />
     <ClInclude Include="Sources\Core\Utilities.h" />
     <ClInclude Include="Sources\Core\VertexArray.h" />
+    <ClInclude Include="Sources\Main.h" />
     <ClInclude Include="Sources\Window\Window.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Sources\Scene\Scene.cpp" />
+    <ClCompile Include="Sources\Scene\Player.cpp" />
+    <ClCompile Include="Sources\Scene\EntityBase.cpp" />
     <ClCompile Include="Sources\Buffers\ElementBuffer.cpp" />
     <ClCompile Include="Sources\Buffers\VertexBuffer.cpp" />
     <ClCompile Include="Sources\Camera\Camera.cpp" />
     <ClCompile Include="Sources\Camera\OrthographicCamera.cpp" />
     <ClCompile Include="Sources\Camera\PerspectiveCamera.cpp" />
     <ClCompile Include="Sources\Core\Logger.cpp" />
-    <ClCompile Include="Sources\Main.cpp" />
     <ClCompile Include="Sources\Core\Mesh.cpp" />
     <ClCompile Include="Sources\Core\Model.cpp" />
     <ClCompile Include="Sources\Core\OpenGL.cpp" />
@@ -129,6 +134,7 @@
     <ClCompile Include="Sources\Core\Texture.cpp" />
     <ClCompile Include="Sources\Core\Utilities.cpp" />
     <ClCompile Include="Sources\Core\VertexArray.cpp" />
+    <ClCompile Include="Sources\Main.cpp" />
     <ClCompile Include="Sources\Window\Window.cpp" />
     <ClCompile Include="Sources\Window\WindowCallback.cpp" />
   </ItemGroup>

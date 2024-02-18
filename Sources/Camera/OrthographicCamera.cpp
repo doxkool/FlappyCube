@@ -1,6 +1,6 @@
 #include "Camera/OrthographicCamera.h"
 
-namespace FlappyCube
+namespace Engine
 {
 	OrthographicCamera::OrthographicCamera(float left, float right, float bottom, float top)
 		: left(left), right(right), bottom(bottom), top(top)

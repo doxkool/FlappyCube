@@ -1,6 +1,6 @@
 #include "Window/Window.h"
 
-namespace FlappyCube
+namespace Engine
 {
 	WindowCallback::WindowCallback(Window& window)
 	{

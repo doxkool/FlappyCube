@@ -13,7 +13,7 @@
 #include <gtx/rotate_vector.hpp>
 #include <gtx/vector_angle.hpp>
 
-namespace FlappyCube
+namespace Engine
 {	
 	enum Direction { FORWARD = 0, BACKWARD, LEFT, RIGHT, UP, DOWN };
 

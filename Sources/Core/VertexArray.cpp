@@ -1,6 +1,6 @@
 #include "Core/VertexArray.h"
 
-namespace FlappyCube
+namespace Engine
 {
 	VertexArray::VertexArray()
 	{

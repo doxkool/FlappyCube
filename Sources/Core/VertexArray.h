@@ -5,7 +5,7 @@
 
 #include <GL/glew.h>
 
-namespace FlappyCube
+namespace Engine
 {
 	class VertexArray
 	{

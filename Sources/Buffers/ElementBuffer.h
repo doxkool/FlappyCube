@@ -4,7 +4,7 @@
 
 #include <vector>
 
-namespace FlappyCube
+namespace Engine
 {
 	class ElementBuffer
 	{

@@ -1,7 +1,7 @@
 #include "Core/OpenGL.h"
 
 
-namespace FlappyCube
+namespace Engine
 {
 	int OpenGL::m_FrameBuffer_Width;
 	int OpenGL::m_FrameBuffer_Height;

@@ -10,7 +10,7 @@
 #include <filesystem>
 #include <string>
 
-namespace FlappyCube
+namespace Engine
 {
 	class Texture
 	{

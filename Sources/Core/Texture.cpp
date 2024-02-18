@@ -2,7 +2,7 @@
 
 #include "Core/Texture.h"
 
-namespace FlappyCube
+namespace Engine
 {
 	Texture::Texture(const char* texturePath)
 	{

@@ -6,7 +6,7 @@
 #include <GL/glew.h>
 #include <glfw3.h>
 
-namespace FlappyCube
+namespace Engine
 {
 	struct Window_Params
 	{

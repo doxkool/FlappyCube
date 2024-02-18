@@ -1,6 +1,6 @@
 #include "Buffers/VertexBuffer.h"
 
-namespace FlappyCube
+namespace Engine
 {
 	VertexBuffer::VertexBuffer(std::vector<Vertex>& vertices)
 	{

@@ -1,5 +1,5 @@
-# FlappyCube
+# FlappySquare
 
-FlappyCube is a game inspired by FlappyBird.
+FlappySquare is a game inspired by FlappyBird.
 
 Made with OpenGL in C++.

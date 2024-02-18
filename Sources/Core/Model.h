@@ -5,7 +5,7 @@
 #include <gtx/euler_angles.hpp>
 #include <gtx/quaternion.hpp>
 
-namespace FlappyCube
+namespace Engine
 {
 	class Model
 	{

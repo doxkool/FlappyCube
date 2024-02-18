@@ -11,7 +11,7 @@
 #include <spdlog/fmt/ostr.h>
 #pragma warning(pop)
 
-namespace FlappyCube
+namespace Engine
 {
 	class Logger
 	{
@@ -27,9 +27,9 @@ namespace FlappyCube
 }
 
 // Core log macros
-#define LOG_TRACE(...)			FlappyCube::Logger::GetEngineLogger()->trace(__VA_ARGS__)
-#define LOG_DEBUG(...)			FlappyCube::Logger::GetEngineLogger()->debug(__VA_ARGS__)
-#define LOG_INFO(...)			FlappyCube::Logger::GetEngineLogger()->info(__VA_ARGS__)
-#define LOG_WARN(...)			FlappyCube::Logger::GetEngineLogger()->warn(__VA_ARGS__)
-#define LOG_ERROR(...)			FlappyCube::Logger::GetEngineLogger()->error(__VA_ARGS__)
-#define LOG_CRITICAL(...)		FlappyCube::Logger::GetEngineLogger()->critical(__VA_ARGS__)
+#define LOG_TRACE(...)			Engine::Logger::GetEngineLogger()->trace(__VA_ARGS__)
+#define LOG_DEBUG(...)			Engine::Logger::GetEngineLogger()->debug(__VA_ARGS__)
+#define LOG_INFO(...)			Engine::Logger::GetEngineLogger()->info(__VA_ARGS__)
+#define LOG_WARN(...)			Engine::Logger::GetEngineLogger()->warn(__VA_ARGS__)
+#define LOG_ERROR(...)			Engine::Logger::GetEngineLogger()->error(__VA_ARGS__)
+#define LOG_CRITICAL(...)		Engine::Logger::GetEngineLogger()->critical(__VA_ARGS__)

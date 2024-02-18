@@ -1,7 +1,7 @@
 #pragma once
 #include "Core/TimeStep.h"
 
-namespace FlappyCube
+namespace Engine
 {
 	class Perf
 	{

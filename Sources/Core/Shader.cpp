@@ -1,7 +1,7 @@
 #include "Core/Shader.h"
 
 
-namespace FlappyCube
+namespace Engine
 {
 	GLuint ID;
 

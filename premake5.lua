@@ -1,4 +1,4 @@
-workspace "FlappyCube"
+workspace "FlappySquare"
    architecture "x64"
    configurations { "Debug", "Release" }
 
@@ -12,7 +12,7 @@ IncludeDir["glm"] = "Vendors/glm"
 IncludeDir["spdlog"] = "Vendors/spdlog"
 IncludeDir["stb_image"] = "Vendors/stb_image"
 
-project "FlappyCube"
+project "FlappySquare"
    kind "ConsoleApp"
    language "C++"
    cppdialect "C++17"

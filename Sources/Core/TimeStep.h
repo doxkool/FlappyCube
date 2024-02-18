@@ -2,7 +2,7 @@
 
 #include <glfw3.h>
 
-namespace FlappyCube
+namespace Engine
 {
 	class TimeStep
 	{
