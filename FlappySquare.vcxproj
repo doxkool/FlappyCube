@@ -98,7 +98,7 @@
   <ItemGroup>
     <ClInclude Include="Sources\Scene\Scene.h" />
     <ClInclude Include="Sources\Scene\Player.h" />
-    <ClInclude Include="Sources\Scene\EntityBase.h" />
+    <ClInclude Include="Sources\Scene\Entity.h" />
     <ClInclude Include="Sources\Buffers\ElementBuffer.h" />
     <ClInclude Include="Sources\Buffers\VertexBuffer.h" />
     <ClInclude Include="Sources\Camera\Camera.h" />
@@ -120,7 +120,7 @@
   <ItemGroup>
     <ClCompile Include="Sources\Scene\Scene.cpp" />
     <ClCompile Include="Sources\Scene\Player.cpp" />
-    <ClCompile Include="Sources\Scene\EntityBase.cpp" />
+    <ClCompile Include="Sources\Scene\Entity.cpp" />
     <ClCompile Include="Sources\Buffers\ElementBuffer.cpp" />
     <ClCompile Include="Sources\Buffers\VertexBuffer.cpp" />
     <ClCompile Include="Sources\Camera\Camera.cpp" />

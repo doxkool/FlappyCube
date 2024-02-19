@@ -6,6 +6,7 @@
 #include "Core/Primitives.h"
 #include "Core/Utilities.h"
 
+#include "Scene/Scene.h"
 #include "Scene/Player.h"
 
 #include "Window/Window.h"
@@ -24,7 +25,7 @@ namespace FlappySquare
 	public:
 		Game();
 
-		void Create_World();
+		void SetupScene();
 		void RunGameLoop();
 
 		void CheckForInputs();

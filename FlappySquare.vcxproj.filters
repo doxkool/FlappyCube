@@ -64,7 +64,7 @@
     <ClInclude Include="Sources\Window\Window.h">
       <Filter>Window</Filter>
     </ClInclude>
-    <ClInclude Include="Sources\Scene\EntityBase.h" />
+    <ClInclude Include="Sources\Scene\Entity.h" />
     <ClInclude Include="Sources\Scene\Player.h" />
     <ClInclude Include="Sources\Scene\Scene.h" />
   </ItemGroup>
@@ -115,7 +115,7 @@
     <ClCompile Include="Sources\Window\WindowCallback.cpp">
       <Filter>Window</Filter>
     </ClCompile>
-    <ClCompile Include="Sources\Scene\EntityBase.cpp" />
+    <ClCompile Include="Sources\Scene\Entity.cpp" />
     <ClCompile Include="Sources\Scene\Player.cpp" />
     <ClCompile Include="Sources\Scene\Scene.cpp" />
   </ItemGroup>

@@ -22,17 +22,23 @@ namespace FlappySquare
 		// Setup window Callback
 		Engine::WindowCallback WindowCallback(m_window);
 
-		Create_World();
+		SetupScene();
 		RunGameLoop();
 	}
 
-	void Game::Create_World()
+	void Game::SetupScene()
 	{
-		Engine::Quad Player;
+		Engine::Scene scene;
 
-		Engine::Texture tex1("Game/Textures/Default_Tex.jpg");
+		Engine::Quad Quad_Player;
 
-		Engine::Model::LoadMesh(Player, glm::vec3(0.0f, 0.f, 0.f), glm::vec3(0.f, 0.f, 0.f), glm::vec3(1.f), tex1);
+		Engine::Player player("Player", &scene);
+
+		player.SetName("patate", &scene);
+		player.SetTexture("Game/Textures/Default_Tex.jpg", &scene);
+		player.SetMesh(Quad_Player, &scene);
+
+		scene.LoadScene();
 	}
 
 	void Game::RunGameLoop()
@@ -40,8 +46,6 @@ namespace FlappySquare
 		Engine::OrthographicCamera  m_Camera(-1.f, 1.f, -1.f, 1.f);
 
 		m_window.EnableVsync(1);
-
-		Engine::Player player;
 
 		while (!m_window.Get_WindowShouldClose())
 		{
