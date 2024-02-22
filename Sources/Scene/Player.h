@@ -10,7 +10,11 @@ namespace Engine
 	class Player : public Entity
 	{
 		public:
-			Player(const char* name, Scene* scene);
+			Player(const char* name, Scene* scene = NULL);
+
+			void SetPosition(glm::vec3 position, Scene* scene);
+			void SetRotation(glm::vec3 rotation, Scene* scene);
+			void SetScale(glm::vec3 scale, Scene* scene);
 
 			void Move(glm::vec3 translation, glm::vec3 oriantation);
 
@@ -27,5 +31,9 @@ namespace Engine
 			unsigned int ID;
 
 		private:
+
+			void PushDataToScene(Scene* scene);
+
+			Scene* m_scene;
 	};
 }

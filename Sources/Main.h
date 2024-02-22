@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Core/Input.h"
 #include "Core/Model.h"
 #include "Core/Shader.h"
 #include "Core/Logger.h"
@@ -31,6 +32,6 @@ namespace FlappySquare
 		void CheckForInputs();
 
 	private:
-		Engine::Window m_window;
+		Engine::Window window;
 	};
 }

@@ -12,19 +12,17 @@ namespace Engine
 		public:
 			Entity() = default;
 
-			//Base_Entity Data;
-
 		private:
 
 	};
 
 	struct Base_Entity
 	{
-		const char* name;
-
-		glm::vec3 position;
-		glm::vec3 rotation;
-		glm::vec3 scale;
+		unsigned int ID = -1;
+		const char* name = "Entity";
+		glm::vec3 position = glm::vec3(0.f);
+		glm::vec3 rotation = glm::vec3(0.f);
+		glm::vec3 scale = glm::vec3(1.f);
 	};
 
 	struct Player_Entity : Base_Entity

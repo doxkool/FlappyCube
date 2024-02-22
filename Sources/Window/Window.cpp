@@ -26,8 +26,6 @@ namespace Engine
 		glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 5);
 		glfwWindowHint(GLFW_RESIZABLE, true);
 
-		//DetectMonitors();
-
 		m_Window = glfwCreateWindow(WinParams.Window_Width, WinParams.Window_Height, WinParams.Window_Title.c_str(), NULL, NULL);
 
 		glfwSetWindowMonitor(m_Window, NULL, (GetSystemMetrics(SM_CXSCREEN) / 2) - (WinParams.Window_Width / 2), (GetSystemMetrics(SM_CYSCREEN) / 2) - (WinParams.Window_Height / 2), WinParams.Window_Width, WinParams.Window_Height, GLFW_DONT_CARE);

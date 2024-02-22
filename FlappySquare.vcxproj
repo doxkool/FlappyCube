@@ -96,6 +96,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Sources\Core\Input.h" />
+    <ClInclude Include="Sources\Core\Events.h" />
     <ClInclude Include="Sources\Scene\Scene.h" />
     <ClInclude Include="Sources\Scene\Player.h" />
     <ClInclude Include="Sources\Scene\Entity.h" />
@@ -118,6 +120,8 @@
     <ClInclude Include="Sources\Window\Window.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Sources\Core\Input.cpp" />
+    <ClCompile Include="Sources\Core\Events.cpp" />
     <ClCompile Include="Sources\Scene\Scene.cpp" />
     <ClCompile Include="Sources\Scene\Player.cpp" />
     <ClCompile Include="Sources\Scene\Entity.cpp" />

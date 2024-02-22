@@ -1,15 +1,18 @@
-[20:28:25] [info]	[Engine]   	====== New logging session ======
-[20:28:25] [debug]	[Engine]   	Log initialization completed.
-[20:28:25] [debug]	[Engine]   	GLFW initialization completed.
-[20:28:25] [info]	[Engine]   	New window resolution : 1280x720
-[20:28:25] [info]	[Engine]   	OpenGL_API Information :
-[20:28:25] [info]	[Engine]   		NVIDIA Corporation
-[20:28:25] [info]	[Engine]   		NVIDIA GeForce GTX 1070/PCIe/SSE2
-[20:28:25] [info]	[Engine]   		4.5.0 NVIDIA 537.34
-[20:28:25] [info]	[Engine]   	====== Instance 'FlappyCube' created ======
-[20:28:25] [debug]	[Engine]   	GLEW_INIT_SUCCESS
-[20:28:25] [trace]	[Engine]   	Texture loaded : Game/Textures/Default_Tex.jpg
-[20:28:25] [trace]	[Engine]   	Entity ID 1 name updated : patate
-[20:28:25] [trace]	[Engine]   	Texture loaded : Game/Textures/Default_Tex.jpg
-[20:28:25] [trace]	[Engine]   	Loading model from primitive...
-[20:28:25] [debug]	[Engine]   	vSync set to : 1
+[14:07:49] [info]	[Engine]   	====== New logging session ======
+[14:07:49] [debug]	[Engine]   	Log initialization completed.
+[14:07:50] [debug]	[Engine]   	GLFW initialization completed.
+[14:07:50] [info]	[Engine]   	New window resolution : 1280x720
+[14:07:50] [info]	[Engine]   	OpenGL_API Information :
+[14:07:50] [info]	[Engine]   		NVIDIA Corporation
+[14:07:50] [info]	[Engine]   		NVIDIA GeForce GTX 1070/PCIe/SSE2
+[14:07:50] [info]	[Engine]   		4.5.0 NVIDIA 537.34
+[14:07:50] [info]	[Engine]   	====== Instance 'FlappySquare' created ======
+[14:07:50] [debug]	[Engine]   	GLEW_INIT_SUCCESS
+[14:07:50] [trace]	[Engine]   	Texture loaded : Game/Textures/Default_Tex.jpg
+[14:07:50] [trace]	[Engine]   	Texture loaded : Game/Textures/Default_Tex.jpg
+[14:07:50] [trace]	[Engine]   	Texture loaded : Game/Textures/flappy-bird.png
+[14:07:50] [trace]	[Engine]   	Texture loaded : Game/Textures/Default_Tex.jpg
+[14:07:50] [trace]	[Engine]   	Texture loaded : Game/Textures/Default_Tex.jpg
+[14:07:50] [trace]	[Engine]   	Loading model from primitive...
+[14:07:50] [trace]	[Engine]   	Loading model from primitive...
+[14:07:50] [debug]	[Engine]   	vSync set to : 1

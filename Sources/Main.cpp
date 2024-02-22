@@ -12,15 +12,15 @@ int main(int argc, char* argv[])
 namespace FlappySquare
 {
 	Game::Game()
-		 : m_window("FlappyCube", 1280, 720, true)
+		 : window("FlappySquare", 1280, 720, true)
 	{
 		Engine::OpenGL::Init();
 		Engine::Shader::Init("Game/Shaders/vertex_basic.glsl", "Game/Shaders/fragment_basic.glsl");
 
 		// Setup window user pointer
-		m_window.SetWindowUserPointer(&m_window);
+		window.SetWindowUserPointer(&window);
 		// Setup window Callback
-		Engine::WindowCallback WindowCallback(m_window);
+		Engine::WindowCallback WindowCallback(window);
 
 		SetupScene();
 		RunGameLoop();
@@ -31,23 +31,27 @@ namespace FlappySquare
 		Engine::Scene scene;
 
 		Engine::Quad Quad_Player;
-
-		Engine::Player player("Player", &scene);
-
-		player.SetName("patate", &scene);
-		player.SetTexture("Game/Textures/Default_Tex.jpg", &scene);
+		
+		Engine::Player player("Player1", &scene);
+		player.SetTexture("Game/Textures/flappy-bird.png", &scene);
 		player.SetMesh(Quad_Player, &scene);
+		
+		Engine::Quad Quad_Player2;
+		
+		Engine::Player player2("Player2", &scene);
+		player2.SetPosition({1.f, 1.f, 0.f}, &scene);
+		player2.SetMesh(Quad_Player2, &scene);
 
 		scene.LoadScene();
 	}
 
 	void Game::RunGameLoop()
 	{
-		Engine::OrthographicCamera  m_Camera(-1.f, 1.f, -1.f, 1.f);
+		Engine::OrthographicCamera  m_Camera(0.f, 10.f, 0.f, 10.f);
 
-		m_window.EnableVsync(1);
+		window.EnableVsync(1);
 
-		while (!m_window.Get_WindowShouldClose())
+		while (!window.Get_WindowShouldClose())
 		{
 			// Run Game code here
 
@@ -65,12 +69,12 @@ namespace FlappySquare
 		// Output the FPS and frame time to the window tilte.
 			str_FPS = std::to_string(Engine::Perf::Get_FPS());
 			str_FrameTime = std::to_string(Engine::Perf::Get_FrameTime());
-			std::string newTitle = m_window.WinParams.Window_Title + " " + str_FPS + "fps / " + str_FrameTime + "ms";
+			std::string newTitle = window.WinParams.Window_Title + " " + str_FPS + "fps / " + str_FrameTime + "ms";
 
-			m_window.UpdateWindowTitle(newTitle);
+			window.UpdateWindowTitle(newTitle);
 
 		// Update Camera.
-			m_Camera.OnUpdate(m_window, timestep);
+			m_Camera.OnUpdate(window, timestep);
 			m_Camera.UpdateMatrix();
 			m_Camera.PushMatrixToShader("camera");
 
@@ -82,8 +86,8 @@ namespace FlappySquare
 			Engine::Model::Draw();
 
 		// Update window.
-			m_window.Update();
-			m_window.SwapBuffer();
+			window.Update();
+			window.SwapBuffer();
 
 		// End performance counter.
 			Engine::Perf::EndPerfCounter();
@@ -92,7 +96,7 @@ namespace FlappySquare
 
 	void Game::CheckForInputs()
 	{
-		if (m_window.CheckKeyboardInput(GLFW_KEY_ESCAPE))
+		if (Engine::Input::IsKeyPressed(window.m_Window, GLFW_KEY_ESCAPE))
 		{
 			LOG_DEBUG("test1");
 		}

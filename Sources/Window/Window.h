@@ -49,6 +49,8 @@ namespace Engine
 			float GetMouseX();
 			float GetMouseY();
 
+			void* GetWindowPtr() const { return m_Window; }
+
 		public:
 			Window_Params WinParams;
 			std::vector<Monitor_Spec> MonitorsSpec;
@@ -64,9 +66,6 @@ namespace Engine
 			WindowCallback(Window& window);
 
 			static void GLFWErrorCallback(int error, const char* message);
-			static void Key_Callback(GLFWwindow* window, int key, int scancode, int action, int mods);
-			static void Mouse_Scroll_Callback(GLFWwindow* window, double xoffset, double yoffset);
-			static void Mouse_Button_Callback(GLFWwindow* window, int button, int action, int mods);
 
 			static void MonitorCallback(GLFWmonitor* monitor, int event);
 			static void WindowResizeCallback(GLFWwindow* Window, int Window_Width, int Window_Height);

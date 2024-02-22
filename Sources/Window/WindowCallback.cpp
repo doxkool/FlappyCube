@@ -1,40 +1,21 @@
 #include "Window/Window.h"
 
+#include "Core/Input.h"
+
 namespace Engine
 {
 	WindowCallback::WindowCallback(Window& window)
 	{
-		glfwSetKeyCallback(window.m_Window, Key_Callback);
-		glfwSetKeyCallback(window.m_Window, Key_Callback);
-		glfwSetScrollCallback(window.m_Window, Mouse_Scroll_Callback);
-		glfwSetMouseButtonCallback(window.m_Window, Mouse_Button_Callback);
+		glfwSetKeyCallback(window.m_Window, Input::Key_Callback);
+		glfwSetKeyCallback(window.m_Window, Input::Key_Callback);
+		glfwSetScrollCallback(window.m_Window, Input::Mouse_Scroll_Callback);
+		glfwSetMouseButtonCallback(window.m_Window, Input::Mouse_Button_Callback);
 
 		glfwSetMonitorCallback(MonitorCallback);
 		glfwSetWindowSizeCallback(window.m_Window, WindowResizeCallback);
 		glfwSetFramebufferSizeCallback(window.m_Window, FramebufferResizeCallback);
 		glfwSetWindowPosCallback(window.m_Window, WindowPositionCallback);
 		glfwSetWindowMaximizeCallback(window.m_Window, WindowMaximizeCallback);
-	}
-
-	void WindowCallback::Key_Callback(GLFWwindow* window, int key, int scancode, int action, int mods)
-	{
-		if (key == GLFW_KEY_Q)
-		{
-			if (action == GLFW_PRESS || action == GLFW_REPEAT)
-			{
-				LOG_DEBUG("test");
-			}
-		}
-	}
-
-	void WindowCallback::Mouse_Scroll_Callback(GLFWwindow* window, double xoffset, double yoffset)
-	{
-
-	}
-
-	void WindowCallback::Mouse_Button_Callback(GLFWwindow* window, int button, int action, int mods)
-	{
-
 	}
 
 	void WindowCallback::GLFWErrorCallback(int error, const char* message)
