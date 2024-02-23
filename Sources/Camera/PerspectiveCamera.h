@@ -21,7 +21,7 @@ namespace Engine
 
 			void CheckForInput(Window window);
 
-			void MoveCamera(Direction direction);
+			void MoveCamera();
 
 			void SetMovementSpeed(float Speed) { MovementSpeed = Speed; }
 			void SetMouseRotationSpeed(float Speed) { MouseRotationSpeed = Speed; }

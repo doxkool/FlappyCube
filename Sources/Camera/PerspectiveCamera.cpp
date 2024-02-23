@@ -34,30 +34,8 @@ namespace Engine
 		Shader::setMat4fv(cameraMatrix, uniform, GL_FALSE);
 	}
 
-	void PerspectiveCamera::MoveCamera(Direction direction)
+	void PerspectiveCamera::MoveCamera()
 	{
-		switch (direction)
-		{
-		case FORWARD:
-			cameraPos += cameraFront * MovementSpeed;
-			break;
-		case BACKWARD:
-			cameraPos -= cameraFront * MovementSpeed;
-			break;
-		case LEFT:
-			cameraPos -= glm::normalize(glm::cross(cameraFront, cameraUp)) * MovementSpeed;
-			break;
-		case RIGHT:
-			cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp)) * MovementSpeed;
-			break;
-		case UP:
-			cameraPos += cameraUp * MovementSpeed;
-			break;
-		case DOWN:
-			cameraPos -= cameraUp * MovementSpeed;
-			break;
-		default:
-			break;
-		}
+
 	}
 }

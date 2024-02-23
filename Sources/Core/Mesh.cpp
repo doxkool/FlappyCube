@@ -3,7 +3,7 @@
 namespace Engine
 {
 	Mesh::Mesh(std::vector<Vertex>& vertices, std::vector<GLuint>& indices, std::vector<Texture>& textures)
-		: position(0.f), origin(0.f), rotation(0.f), scale(0.f), ModelMatrix(0.f)
+		: ModelMatrix(0.f)
 	{
 		Mesh::vertices = vertices;
 		Mesh::indices = indices;

@@ -22,34 +22,31 @@ namespace FlappySquare
 		// Setup window Callback
 		Engine::WindowCallback WindowCallback(window);
 
-		SetupScene();
 		RunGameLoop();
-	}
-
-	void Game::SetupScene()
-	{
-		Engine::Scene scene;
-
-		Engine::Quad Quad_Player;
-		
-		Engine::Player player("Player1", &scene);
-		player.SetTexture("Game/Textures/flappy-bird.png", &scene);
-		player.SetMesh(Quad_Player, &scene);
-		
-		Engine::Quad Quad_Player2;
-		
-		Engine::Player player2("Player2", &scene);
-		player2.SetPosition({1.f, 1.f, 0.f}, &scene);
-		player2.SetMesh(Quad_Player2, &scene);
-
-		scene.LoadScene();
 	}
 
 	void Game::RunGameLoop()
 	{
-		Engine::OrthographicCamera  m_Camera(0.f, 10.f, 0.f, 10.f);
+		Engine::OrthographicCamera  m_Camera(-2.f, 2.f, -2.f, 2.f);
 
 		window.EnableVsync(1);
+
+		Engine::Scene scene;
+
+		Engine::Quad Quad_Player;
+
+		Engine::Player player("Player1", &scene);
+		player.SetTexture("Game/Textures/flappy-bird.png");
+		player.SetMesh(Quad_Player);
+
+		Engine::Quad Quad_Player2;
+		
+		//Engine::Player player2("Player2", &scene);
+		//player2.SetTexture("Game/Textures/window.png");
+		//player2.SetPosition({ 0.5f, 0.5f, 0.f });
+		//player2.SetMesh(Quad_Player2);
+
+		//scene.LoadScene();
 
 		while (!window.Get_WindowShouldClose())
 		{
@@ -66,6 +63,8 @@ namespace FlappySquare
 
 			CheckForInputs();
 
+			player.OnUpdate(window, timestep);
+
 		// Output the FPS and frame time to the window tilte.
 			str_FPS = std::to_string(Engine::Perf::Get_FPS());
 			str_FrameTime = std::to_string(Engine::Perf::Get_FrameTime());
@@ -74,16 +73,15 @@ namespace FlappySquare
 			window.UpdateWindowTitle(newTitle);
 
 		// Update Camera.
-			m_Camera.OnUpdate(window, timestep);
 			m_Camera.UpdateMatrix();
 			m_Camera.PushMatrixToShader("camera");
 
 		// OpenGL clear.
-			Engine::OpenGL::Set_ClearColor(glm::vec4(0.5f, 0.5f, 0.5f, 1.f));
+			Engine::OpenGL::Set_ClearColor(glm::vec4(0.5f, 0.5f, 0.5f, 0.f));
 			Engine::OpenGL::Clear();
 
 		// Draw models.
-			Engine::Model::Draw();
+			scene.Draw();
 
 		// Update window.
 			window.Update();
@@ -98,7 +96,7 @@ namespace FlappySquare
 	{
 		if (Engine::Input::IsKeyPressed(window.m_Window, GLFW_KEY_ESCAPE))
 		{
-			LOG_DEBUG("test1");
+			window.Set_WindowShouldClose();
 		}
 	}
 }

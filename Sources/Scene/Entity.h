@@ -2,6 +2,10 @@
 
 #include "Core/Texture.h"
 #include "Core/Primitives.h"
+#include "Core/Model.h"
+
+#include "Window/Window.h"
+#include "Core/TimeStep.h"
 
 #include <glm.hpp>
 
@@ -11,6 +15,8 @@ namespace Engine
 	{
 		public:
 			Entity() = default;
+
+			virtual void OnUpdate(Window window, TimeStep ts);
 
 		private:
 
@@ -27,7 +33,11 @@ namespace Engine
 
 	struct Player_Entity : Base_Entity
 	{
-		Texture texture;
-		Quad mesh;
+		const char* texturePath = "Game/Textures/Default_Tex.jpg";
+		Texture textureData;
+		Primitive mesh;
+		Model model;
+
+		float MovementSpeed = 0.1;
 	};
 }

@@ -16,6 +16,6 @@ namespace Engine
 		static bool IsKeyPressed(GLFWwindow* window, int key);
 
 	private:
-
+		
 	};
 }

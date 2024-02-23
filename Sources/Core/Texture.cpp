@@ -21,18 +21,29 @@ namespace Engine
 
 		int width, height, nrChannels;
 
-		unsigned char* data = stbi_load(texturePath, &width, &height, &nrChannels, 0);
-		if (data)
+		if (texturePath)
 		{
-			glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
-			glGenerateMipmap(GL_TEXTURE_2D);
-			LOG_TRACE("Texture loaded : {}", texturePath);
+			unsigned char* data = stbi_load(texturePath, &width, &height, &nrChannels, 0);
+			if (data)
+			{
+				if (nrChannels == 3)
+				{
+					glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+				}
+				if (nrChannels == 4)
+				{
+					glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+				}
+
+				glGenerateMipmap(GL_TEXTURE_2D);
+				LOG_TRACE("Texture loaded : {}", texturePath);
+			}
+			else
+			{
+				LOG_ERROR("Failed to load texture : {}", texturePath);
+			}
+			stbi_image_free(data);
 		}
-		else
-		{
-			LOG_ERROR("Failed to load texture : {}", texturePath);
-		}
-		stbi_image_free(data);
 	}
 
 	Texture::~Texture()

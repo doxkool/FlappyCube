@@ -11,10 +11,6 @@ namespace Engine
 	std::vector<glm::vec3> scalesMeshes;
 	std::vector<glm::mat4> matricesMeshes;
 
-	Model::Model()
-	{
-	}
-
 	void Model::LoadMesh(const Primitive& primitive, glm::vec3 translation, glm::vec3 rotation, glm::vec3 scale, Texture& texture)
 	{
 		I_primitive = primitive;
@@ -48,13 +44,14 @@ namespace Engine
 		meshes.push_back(Mesh(vertexArray, indexArray, textureArray));
 	}
 
+	void Model::UpdateMeshPosition(glm::vec3 position)
+	{
+		m_position = position;
+	}
+
 	void Model::UpdateModelMatrices(glm::vec3 translation, glm::vec3 rotation, glm::vec3 scale)
 	{
-		// Convert VEC3 rotation to Quaternions
-		glm::quat QuatAroundX = glm::rotate(glm::radians(rotation.x), glm::vec3(1.0, 0.0, 0.0));
-		glm::quat QuatAroundY = glm::rotate(glm::radians(rotation.y), glm::vec3(0.0, 1.0, 0.0));
-		glm::quat QuatAroundZ = glm::rotate(glm::radians(rotation.z), glm::vec3(0.0, 0.0, 1.0));
-		glm::quat finalOrientation = QuatAroundX * QuatAroundY * QuatAroundZ;
+		glm::quat finalOrientation = Vec3ToQuat(rotation);
 
 		// Initialize matrices
 		glm::mat4 trans = glm::mat4(1.0f);
@@ -76,12 +73,23 @@ namespace Engine
 		matricesMeshes.push_back(Matrices);
 	}
 
+	glm::quat Model::Vec3ToQuat(glm::vec3 vec3)
+	{
+		glm::quat QuatAroundX = glm::rotate(glm::radians(vec3.x), glm::vec3(1.0, 0.0, 0.0));
+		glm::quat QuatAroundY = glm::rotate(glm::radians(vec3.y), glm::vec3(0.0, 1.0, 0.0));
+		glm::quat QuatAroundZ = glm::rotate(glm::radians(vec3.z), glm::vec3(0.0, 0.0, 1.0));
+		
+		glm::quat output = QuatAroundX * QuatAroundY * QuatAroundZ;
+
+		return output;
+	}
+
 	void Model::Draw()
 	{
 		// Go over all meshes and draw each one
 		for (unsigned int i = 0; i < meshes.size(); i++)
 		{
-			meshes[i].Mesh::Draw(matricesMeshes[i]);
+			meshes[i].Mesh::Draw(matricesMeshes[i], m_position, Vec3ToQuat(m_rotation), m_scale);
 		}
 	}
 }

@@ -16,6 +16,8 @@ namespace Engine
 
 		void LoadScene();
 
+		void Draw();
+
 		std::vector<Player_Entity> Player_Entities_Data;
 
 	private:

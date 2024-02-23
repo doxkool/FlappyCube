@@ -19,10 +19,10 @@ namespace Engine
 			LOG_DEBUG("GLEW_INIT_SUCCESS");
 		}
 
-		// Enables the Depth Buffer
 		glEnable(GL_DEPTH_TEST);
+		glEnable(GL_BLEND);
 
-		//SetViewport(Window_Width, Window_Height);
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	}
 
 	void OpenGL::Set_ClearColor(const glm::vec4& color)

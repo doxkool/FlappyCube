@@ -15,7 +15,7 @@ namespace Engine
 	class Texture
 	{
 	public:
-		Texture(const char* texturePath = "Game/Textures/Default_Tex.jpg");
+		Texture(const char* texturePath = NULL);
 		~Texture();
 
 		void LoadTexture();

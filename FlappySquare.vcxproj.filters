@@ -10,6 +10,9 @@
     <Filter Include="Core">
       <UniqueIdentifier>{2EB4837C-1AEB-840D-C3D7-6A10AFED000F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{B3F7140E-1F0C-3DBF-E88D-E01E546139F0}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Window">
       <UniqueIdentifier>{3DEA79DA-298C-A4B0-1247-B804FE872B01}</UniqueIdentifier>
     </Filter>
@@ -29,6 +32,12 @@
     </ClInclude>
     <ClInclude Include="Sources\Camera\PerspectiveCamera.h">
       <Filter>Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Core\Events.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Core\Input.h">
+      <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="Sources\Core\Logger.h">
       <Filter>Core</Filter>
@@ -61,14 +70,18 @@
       <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="Sources\Main.h" />
+    <ClInclude Include="Sources\Scene\Entity.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Scene\Player.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Scene\Scene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
     <ClInclude Include="Sources\Window\Window.h">
       <Filter>Window</Filter>
     </ClInclude>
-    <ClInclude Include="Sources\Scene\Entity.h" />
-    <ClInclude Include="Sources\Scene\Player.h" />
-    <ClInclude Include="Sources\Scene\Scene.h" />
-    <ClInclude Include="Sources\Core\Events.h" />
-    <ClInclude Include="Sources\Core\Input.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Sources\Buffers\ElementBuffer.cpp">
@@ -85,6 +98,12 @@
     </ClCompile>
     <ClCompile Include="Sources\Camera\PerspectiveCamera.cpp">
       <Filter>Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Core\Events.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Core\Input.cpp">
+      <Filter>Core</Filter>
     </ClCompile>
     <ClCompile Include="Sources\Core\Logger.cpp">
       <Filter>Core</Filter>
@@ -111,16 +130,20 @@
       <Filter>Core</Filter>
     </ClCompile>
     <ClCompile Include="Sources\Main.cpp" />
+    <ClCompile Include="Sources\Scene\Entity.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Scene\Player.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Scene\Scene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
     <ClCompile Include="Sources\Window\Window.cpp">
       <Filter>Window</Filter>
     </ClCompile>
     <ClCompile Include="Sources\Window\WindowCallback.cpp">
       <Filter>Window</Filter>
     </ClCompile>
-    <ClCompile Include="Sources\Scene\Entity.cpp" />
-    <ClCompile Include="Sources\Scene\Player.cpp" />
-    <ClCompile Include="Sources\Scene\Scene.cpp" />
-    <ClCompile Include="Sources\Core\Events.cpp" />
-    <ClCompile Include="Sources\Core\Input.cpp" />
   </ItemGroup>
 </Project>

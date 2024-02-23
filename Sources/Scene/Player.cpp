@@ -12,63 +12,120 @@ namespace Engine
 		Data.position = glm::vec3(0.f);
 		Data.rotation = glm::vec3(0.f);
 		Data.scale = glm::vec3(1.f);
-		Data.texture = "Game/Textures/Default_Tex.jpg";
 
 		scene->Player_Entities_Data.push_back(Data);
 	}
 
-	void Player::SetPosition(glm::vec3 position, Scene* scene)
+	void Player::SetPosition(glm::vec3 position)
 	{
 		Data.position = position;
 
-		PushDataToScene(scene);
+		PushDataToScene();
 	}
 
-	void Player::SetRotation(glm::vec3 rotation, Scene* scene)
+	void Player::SetRotation(glm::vec3 rotation)
 	{
 		Data.rotation = rotation;
 
-		PushDataToScene(scene);
+		PushDataToScene();
 	}
 
-	void Player::SetScale(glm::vec3 scale, Scene* scene)
+	void Player::SetScale(glm::vec3 scale)
 	{
 		Data.scale = scale;
 
-		PushDataToScene(scene);
+		PushDataToScene();
 	}
 
-	void Player::SetName(const char* name, Scene* scene)
+	void Player::SetName(const char* name)
 	{
 		Data.name = name;
 
-		PushDataToScene(scene);
+		PushDataToScene();
 
 		LOG_TRACE("Entity ID {} name updated : {}", ID, Data.name);
 	}
 
-	void Player::SetTexture(const char* texture, Scene* scene)
-	{
-		Texture tex(texture);
-		Data.texture = tex;
+	void Player::SetTexture(const char* texturePath)
+	{		
+		Data.texturePath = texturePath;
 
-		PushDataToScene(scene);
+		Texture tex(texturePath);
+
+		Data.textureData = tex;
+
+		PushDataToScene();
 	}
 
-	void Player::SetMesh(Quad quad, Scene* scene)
+	void Player::SetMesh(Quad quad)
 	{
 		Data.mesh = quad;
+		Data.model.LoadMesh(Data.mesh, Data.position, Data.rotation, Data.scale, Data.textureData);
 
-		PushDataToScene(scene);
+		PushDataToScene();
 	}
 
-	void Player::Move(glm::vec3 translation, glm::vec3 oriantation)
+	void Player::OnUpdate(Window window, TimeStep ts)
 	{
-
+		if (window.CheckKeyboardInput(GLFW_KEY_W))
+		{
+			Move(UP);
+		}
+		if (window.CheckKeyboardInput(GLFW_KEY_A))
+		{
+			Move(LEFT);
+		}
+		if (window.CheckKeyboardInput(GLFW_KEY_S))
+		{
+			Move(DOWN);
+		}
+		if (window.CheckKeyboardInput(GLFW_KEY_D))
+		{
+			Move(RIGHT);
+		}
+		if (window.CheckKeyboardInput(GLFW_KEY_Z))
+		{
+			Move(FORWARD);
+		}
+		if (window.CheckKeyboardInput(GLFW_KEY_X))
+		{
+			Move(BACKWARD);
+		}
 	}
 
-	void Player::PushDataToScene(Scene* scene)
+	void Player::Move(Direction direction)
 	{
-		scene->Player_Entities_Data[ID - 1] = Data;
+		switch (direction)
+		{
+		case FORWARD:
+			
+			break;
+		case BACKWARD:
+			
+			break;
+		case LEFT:
+			Data.position.x -= Data.MovementSpeed;
+			break;
+		case RIGHT:
+			Data.position.x += Data.MovementSpeed;
+			break;
+		case UP:
+			Data.position.y += Data.MovementSpeed;
+			break;
+		case DOWN:
+			Data.position.y -= Data.MovementSpeed;
+			break;
+		default:
+			break;
+		}
+
+		Data.model.UpdateMeshPosition(Data.position);
+
+		PushDataToScene();
+	}
+
+	void Player::PushDataToScene()
+	{
+		m_scene->Player_Entities_Data[ID - 1] = Data;
 	}
 }

@@ -29,20 +29,20 @@ namespace Engine
 
 			void Draw
 			(
-				glm::mat4 matrix = glm::mat4(1.0f),
-				glm::vec3 translation = glm::vec3(0.0f, 0.0f, 0.0f),
-				glm::quat rotation = glm::quat(1.0f, 0.0f, 0.0f, 0.0f),
-				glm::vec3 scale = glm::vec3(1.0f, 1.0f, 1.0f)
+				glm::mat4 matrix,
+				glm::vec3 translation,
+				glm::quat rotation,
+				glm::vec3 scale
 			);
 
 			VertexArray VAO;
 
 		private:
 
-			glm::vec3 position;
-			glm::vec3 origin;
-			glm::vec3 rotation;
-			glm::vec3 scale;
+			glm::vec3 m_position;
+			glm::vec3 m_origin;
+			glm::vec3 m_rotation;
+			glm::vec3 m_scale;
 
 			glm::mat4 ModelMatrix;
 	};

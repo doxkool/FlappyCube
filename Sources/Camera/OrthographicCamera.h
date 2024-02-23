@@ -15,7 +15,7 @@ namespace Engine
 			
 			void UpdateMatrix();
 
-			virtual void MoveCamera(Direction direction);
+			virtual void MoveCamera();
 
 		private:
 			// Variables for orthographic camera

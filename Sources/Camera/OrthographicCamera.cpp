@@ -10,31 +10,6 @@ namespace Engine
 
 	void OrthographicCamera::OnUpdate(Window window, TimeStep ts)
 	{
-		if (window.CheckKeyboardInput(GLFW_KEY_W))
-		{
-			MoveCamera(UP);
-		}
-		if (window.CheckKeyboardInput(GLFW_KEY_A))
-		{
-			MoveCamera(LEFT);
-		}
-		if (window.CheckKeyboardInput(GLFW_KEY_S))
-		{
-			MoveCamera(DOWN);
-		}
-		if (window.CheckKeyboardInput(GLFW_KEY_D))
-		{
-			MoveCamera(RIGHT);
-		}
-
-		if (window.CheckKeyboardInput(GLFW_KEY_Z))
-		{
-			MoveCamera(FORWARD);
-		}
-		if (window.CheckKeyboardInput(GLFW_KEY_X))
-		{
-			MoveCamera(BACKWARD);
-		}
 
 	}
 
@@ -51,30 +26,8 @@ namespace Engine
 		cameraMatrix = projection * view;
 	}
 
-	void OrthographicCamera::MoveCamera(Direction direction)
+	void OrthographicCamera::MoveCamera()
 	{
-		switch (direction)
-		{
-		case FORWARD:
-			zoom += 0.1;
-			break;
-		case BACKWARD:
-			if(zoom >= 0){ zoom -= 0.1; }
-			break;
-		case LEFT:
-			cameraPos -= glm::normalize(glm::cross(cameraFront, cameraUp)) * MovementSpeed;
-			break;
-		case RIGHT:
-			cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp)) * MovementSpeed;
-			break;
-		case UP:
-			cameraPos += cameraUp * MovementSpeed;
-			break;
-		case DOWN:
-			cameraPos -= cameraUp * MovementSpeed;
-			break;
-		default:
-			break;
-		}
+
 	}
 }

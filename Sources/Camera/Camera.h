@@ -14,9 +14,7 @@
 #include <gtx/vector_angle.hpp>
 
 namespace Engine
-{	
-	enum Direction { FORWARD = 0, BACKWARD, LEFT, RIGHT, UP, DOWN };
-
+{
 	class Camera
 	{
 		public:

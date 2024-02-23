@@ -7,24 +7,27 @@
 
 namespace Engine
 {
+	enum Direction { FORWARD = 0, BACKWARD, LEFT, RIGHT, UP, DOWN };
+
 	class Player : public Entity
 	{
 		public:
 			Player(const char* name, Scene* scene = NULL);
 
-			void SetPosition(glm::vec3 position, Scene* scene);
-			void SetRotation(glm::vec3 rotation, Scene* scene);
-			void SetScale(glm::vec3 scale, Scene* scene);
+			void OnUpdate(Window window, TimeStep ts);
 
-			void Move(glm::vec3 translation, glm::vec3 oriantation);
+			void SetPosition(glm::vec3 position);
+			void SetRotation(glm::vec3 rotation);
+			void SetScale(glm::vec3 scale);
 
-			void SetName(const char* name, Scene* scene);
+			void Move(Direction direction);
 
-			void SetTexture(const char* texture, Scene* scene);
+			void SetName(const char* name);
 
-			void SetMesh(Quad quad, Scene* scene);
+			void SetTexture(const char* texture);
 
-			void UpdateEntity(Player_Entity data, Scene& scene);
+			void SetMesh(Quad quad);
+
 
 			Player_Entity Data;
 
@@ -32,7 +35,7 @@ namespace Engine
 
 		private:
 
-			void PushDataToScene(Scene* scene);
+			void PushDataToScene();
 
 			Scene* m_scene;
 	};
