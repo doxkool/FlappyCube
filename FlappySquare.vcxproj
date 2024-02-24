@@ -114,8 +114,10 @@
     <ClInclude Include="Sources\Core\Utilities.h" />
     <ClInclude Include="Sources\Core\VertexArray.h" />
     <ClInclude Include="Sources\Main.h" />
-    <ClInclude Include="Sources\Scene\Entity.h" />
-    <ClInclude Include="Sources\Scene\Player.h" />
+    <ClInclude Include="Sources\Scene\Entities\Entity.h" />
+    <ClInclude Include="Sources\Scene\Entities\EntityTypes.h" />
+    <ClInclude Include="Sources\Scene\Entities\Player.h" />
+    <ClInclude Include="Sources\Scene\Entities\Square2D.h" />
     <ClInclude Include="Sources\Scene\Scene.h" />
     <ClInclude Include="Sources\Window\Window.h" />
   </ItemGroup>
@@ -136,8 +138,7 @@
     <ClCompile Include="Sources\Core\Utilities.cpp" />
     <ClCompile Include="Sources\Core\VertexArray.cpp" />
     <ClCompile Include="Sources\Main.cpp" />
-    <ClCompile Include="Sources\Scene\Entity.cpp" />
-    <ClCompile Include="Sources\Scene\Player.cpp" />
+    <ClCompile Include="Sources\Scene\Entities\Entity.cpp" />
     <ClCompile Include="Sources\Scene\Scene.cpp" />
     <ClCompile Include="Sources\Window\Window.cpp" />
     <ClCompile Include="Sources\Window\WindowCallback.cpp" />

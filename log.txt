@@ -1,13 +1,24 @@
-[14:16:37] [info]	[Engine]   	====== New logging session ======
-[14:16:37] [debug]	[Engine]   	Log initialization completed.
-[14:16:38] [debug]	[Engine]   	GLFW initialization completed.
-[14:16:38] [info]	[Engine]   	New window resolution : 1280x720
-[14:16:38] [info]	[Engine]   	OpenGL_API Information :
-[14:16:38] [info]	[Engine]   		NVIDIA Corporation
-[14:16:38] [info]	[Engine]   		NVIDIA GeForce GTX 1070/PCIe/SSE2
-[14:16:38] [info]	[Engine]   		4.5.0 NVIDIA 537.34
-[14:16:38] [info]	[Engine]   	====== Instance 'FlappySquare' created ======
-[14:16:38] [debug]	[Engine]   	GLEW_INIT_SUCCESS
-[14:16:38] [debug]	[Engine]   	vSync set to : 1
-[14:16:38] [trace]	[Engine]   	Texture loaded : Game/Textures/flappy-bird.png
-[14:16:38] [trace]	[Engine]   	Loading model from primitive...
+[10:55:13] [info]	[Engine]   	====== New logging session ======
+[10:55:13] [debug]	[Engine]   	Log initialization completed.
+[10:55:13] [debug]	[Engine]   	GLFW initialization completed.
+[10:55:13] [info]	[Engine]   	New window resolution : 1280x720
+[10:55:13] [info]	[Engine]   	OpenGL_API Information :
+[10:55:13] [info]	[Engine]   		NVIDIA Corporation
+[10:55:13] [info]	[Engine]   		NVIDIA GeForce GTX 1070/PCIe/SSE2
+[10:55:13] [info]	[Engine]   		4.5.0 NVIDIA 537.34
+[10:55:13] [info]	[Engine]   	====== Instance 'FlappySquare' created ======
+[10:55:13] [debug]	[Engine]   	GLEW_INIT_SUCCESS
+[10:55:13] [debug]	[Engine]   	vSync set to : 1
+[10:55:13] [trace]	[Engine]   	Scene created :
+- ID : 3435973837
+- Name : Scene1
+[10:55:13] [trace]	[Engine]   	New entity created :
+- ID : 1
+- Name : Player1
+[10:55:13] [trace]	[Engine]   	Texture loaded : Game/Textures/flappy-bird.png
+[10:55:13] [trace]	[Engine]   	Loading model from primitive...
+[10:55:13] [trace]	[Engine]   	New entity created :
+- ID : 2
+- Name : Wall01
+[10:55:13] [trace]	[Engine]   	Texture loaded : Game/Textures/window.png
+[10:55:13] [trace]	[Engine]   	Loading model from primitive...

@@ -8,7 +8,8 @@
 #include "Core/Utilities.h"
 
 #include "Scene/Scene.h"
-#include "Scene/Player.h"
+#include "Scene/Entities/Player.h"
+#include "Scene/Entities/Square2D.h"
 
 #include "Window/Window.h"
 
@@ -26,7 +27,6 @@ namespace FlappySquare
 	public:
 		Game();
 
-		void SetupScene();
 		void RunGameLoop();
 
 		void CheckForInputs();

@@ -1,3 +1,10 @@
+
+// TODO :
+// - Fix movement based on frame time.
+// - All screen objects move when player move, seem to be an issue with the model matrix.
+// - 
+// - 
+
 #include "Main.h"
 
 int main(int argc, char* argv[])
@@ -31,22 +38,19 @@ namespace FlappySquare
 
 		window.EnableVsync(1);
 
-		Engine::Scene scene;
+		Engine::Scene scene("Scene1");
 
-		Engine::Quad Quad_Player;
+		Engine::Quad Quad;
 
 		Engine::Player player("Player1", &scene);
 		player.SetTexture("Game/Textures/flappy-bird.png");
-		player.SetMesh(Quad_Player);
+		player.SetMesh(Quad);
 
-		Engine::Quad Quad_Player2;
 		
-		//Engine::Player player2("Player2", &scene);
-		//player2.SetTexture("Game/Textures/window.png");
-		//player2.SetPosition({ 0.5f, 0.5f, 0.f });
-		//player2.SetMesh(Quad_Player2);
-
-		//scene.LoadScene();
+		Engine::Square2D wall("Wall01", &scene);
+		wall.SetTexture("Game/Textures/window.png");
+		wall.SetPosition({ 1.f, 0.f, 0.f });
+		wall.SetMesh(Quad);
 
 		while (!window.Get_WindowShouldClose())
 		{

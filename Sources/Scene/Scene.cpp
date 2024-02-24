@@ -2,8 +2,11 @@
 
 namespace Engine
 {
-	Scene::Scene()
+	Scene::Scene(const char* Name)
 	{
+		sceneName = Name;
+		sceneID = sceneID + 1;
+		LOG_TRACE("Scene created :\n- ID : {}\n- Name : {}", sceneID, sceneName);
 	}
 
 	Scene::~Scene()
@@ -20,9 +23,9 @@ namespace Engine
 
 	void Scene::Draw()
 	{
-		for (size_t i = 0; i < Player_Entities_Data.size(); i++)
+		for (size_t i = 0; i < Entities_Data.size(); i++)
 			{
-				Player_Entities_Data[i].model.Draw();
+				Entities_Data[i].model.Draw();
 			}
 	}
 }

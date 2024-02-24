@@ -70,10 +70,10 @@
       <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="Sources\Main.h" />
-    <ClInclude Include="Sources\Scene\Entity.h">
+    <ClInclude Include="Sources\Scene\Entities\Entity.h">
       <Filter>Scene</Filter>
     </ClInclude>
-    <ClInclude Include="Sources\Scene\Player.h">
+    <ClInclude Include="Sources\Scene\Entities\Player.h">
       <Filter>Scene</Filter>
     </ClInclude>
     <ClInclude Include="Sources\Scene\Scene.h">
@@ -82,6 +82,8 @@
     <ClInclude Include="Sources\Window\Window.h">
       <Filter>Window</Filter>
     </ClInclude>
+    <ClInclude Include="Sources\Scene\Entities\Square2D.h" />
+    <ClInclude Include="Sources\Scene\Entities\EntityTypes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Sources\Buffers\ElementBuffer.cpp">
@@ -130,10 +132,7 @@
       <Filter>Core</Filter>
     </ClCompile>
     <ClCompile Include="Sources\Main.cpp" />
-    <ClCompile Include="Sources\Scene\Entity.cpp">
-      <Filter>Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="Sources\Scene\Player.cpp">
+    <ClCompile Include="Sources\Scene\Entities\Entity.cpp">
       <Filter>Scene</Filter>
     </ClCompile>
     <ClCompile Include="Sources\Scene\Scene.cpp">

@@ -2,7 +2,7 @@
 
 #include "Core/Model.h"
 
-#include "Scene/Entity.h"
+#include "Scene/Entities/EntityTypes.h"
 
 #include <vector>
 
@@ -11,16 +11,18 @@ namespace Engine
 	class Scene
 	{
 	public:
-		Scene();
+		Scene(const char* Name);
 		~Scene();
 
 		void LoadScene();
 
 		void Draw();
 
-		std::vector<Player_Entity> Player_Entities_Data;
+		std::vector<Base_Entity> Entities_Data;
 
 	private:
+		const char* sceneName = "Scene";
+		unsigned int sceneID;
 
 	};
 }
