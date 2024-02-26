@@ -18,8 +18,6 @@ namespace Engine
 		Texture(const char* texturePath = NULL);
 		~Texture();
 
-		void LoadTexture();
-
 		void texUnit(const char* uniform, GLuint unit);
 
 		void BindTexture();

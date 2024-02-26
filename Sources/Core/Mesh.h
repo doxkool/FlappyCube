@@ -20,19 +20,20 @@ namespace Engine
 	class Mesh
 	{
 		public:
-			Mesh(std::vector<Vertex>& vertices, std::vector<GLuint>& indices, std::vector<Texture>& textures);
+			Mesh(std::vector<Vertex>& vertices, std::vector<GLuint>& indices, Texture& texture);
 
 			// mesh data
 			std::vector <Vertex> vertices;
 			std::vector <GLuint> indices;
-			std::vector <Texture> textures;
+			Texture texture;
 
 			void Draw
 			(
-				glm::mat4 matrix,
+				glm::mat4 modelMatrix,
 				glm::vec3 translation,
 				glm::quat rotation,
-				glm::vec3 scale
+				glm::vec3 scale,
+				Texture texture
 			);
 
 			VertexArray VAO;
@@ -43,7 +44,5 @@ namespace Engine
 			glm::vec3 m_origin;
 			glm::vec3 m_rotation;
 			glm::vec3 m_scale;
-
-			glm::mat4 ModelMatrix;
 	};
 }

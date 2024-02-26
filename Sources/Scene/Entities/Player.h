@@ -11,17 +11,20 @@ namespace Engine
 	class Player : public Entity
 	{
 		public:
-			Player(const char* name, Scene* scene = NULL);
+			Player(const char* name, glm::vec3 position, Texture& texture, Scene* scene = NULL);
 
 			void OnUpdate(Window window, TimeStep ts);
+
+			//void SetMesh(Quad quad);
+			//void SetPosition(glm::vec3 position);
 
 			void Move(Direction direction);
 
 		private:
 	};
 
-	Player::Player(const char* name, Scene* scene)
-		: Entity(name, scene)
+	Player::Player(const char* name, glm::vec3 position, Texture& texture, Scene* scene)
+		: Entity(name, position, texture, scene)
 	{
 		Data.type = Ent_Player;
 	}
@@ -54,7 +57,20 @@ namespace Engine
 		}
 	}
 
-	
+	//void Player::SetMesh(Quad quad)
+	//{
+	//	Data.mesh = quad;
+	//	Data.model.LoadMesh(Data.mesh, Data.position, Data.rotation, Data.scale, Data.textureData);
+	//
+	//	PushDataToScene();
+	//}
+	//
+	//void Player::SetPosition(glm::vec3 position)
+	//{
+	//	Data.position = position;
+	//
+	//	PushDataToScene();
+	//}
 
 	void Player::Move(Direction direction)
 	{

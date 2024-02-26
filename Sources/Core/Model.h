@@ -24,6 +24,9 @@ namespace Engine
 
 		glm::quat Vec3ToQuat(glm::vec3 vec3);
 
+		glm::mat4 m_modelMatrix = glm::mat4(1.0f);
+		Texture m_texture;
+
 		glm::vec3 m_position = glm::vec3(0.f);
 		glm::vec3 m_origin = glm::vec3(0.f);
 		glm::vec3 m_rotation = glm::vec3(0.f);

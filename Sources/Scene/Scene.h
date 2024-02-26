@@ -14,7 +14,7 @@ namespace Engine
 		Scene(const char* Name);
 		~Scene();
 
-		void LoadScene();
+		void CheckEntityForCollisions();
 
 		void Draw();
 

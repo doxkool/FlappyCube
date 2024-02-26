@@ -5,6 +5,7 @@
 #include "Core/Shader.h"
 #include "Core/Logger.h"
 #include "Core/Primitives.h"
+#include "Core/Texture.h"
 #include "Core/Utilities.h"
 
 #include "Scene/Scene.h"

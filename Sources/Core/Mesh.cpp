@@ -2,12 +2,11 @@
 
 namespace Engine
 {
-	Mesh::Mesh(std::vector<Vertex>& vertices, std::vector<GLuint>& indices, std::vector<Texture>& textures)
-		: ModelMatrix(0.f)
+	Mesh::Mesh(std::vector<Vertex>& vertices, std::vector<GLuint>& indices, Texture& texture)
 	{
 		Mesh::vertices = vertices;
 		Mesh::indices = indices;
-		Mesh::textures = textures;
+		Mesh::texture = texture;
 
 		VAO.Bind();
 		// Generates Vertex Buffer Object and links it to vertices
@@ -32,36 +31,35 @@ namespace Engine
 
 	void Mesh::Draw
 	(
-		glm::mat4 matrix,
+		glm::mat4 modelMatrix,
 		glm::vec3 translation,
 		glm::quat rotation,
-		glm::vec3 scale
+		glm::vec3 scale,
+		Texture texture
 		)
 	{
 		// Bind shader to be able to access uniforms
 		Shader::Activate();
 		VAO.Bind();
 
-		for (unsigned int i = 0; i < textures.size(); i++)
-		{
-			textures[i].BindTexture();
-		}		
+		//for (unsigned int i = 0; i < textures.size(); i++)
+		//{
+		//	textures[i].BindTexture();
+		//}
+
+		texture.BindTexture();
 
 		// Initialize matrices
-		glm::mat4 trans = glm::mat4(1.0f);
-		glm::mat4 rot = glm::mat4(1.0f);
-		glm::mat4 sca = glm::mat4(1.0f);
+		glm::mat4 worldMatrix;
 
 		// Transform the matrices to their correct form
-		trans = glm::translate(trans, translation);
-		rot = glm::mat4_cast(rotation);
-		sca = glm::scale(sca, scale);
+		worldMatrix = glm::translate(worldMatrix, translation);
+		worldMatrix = glm::mat4_cast(rotation);
+		worldMatrix = glm::scale(worldMatrix, scale);
 
 		// Push the matrices to the vertex shader
-		Shader::setMat4fv(trans, "translation");
-		Shader::setMat4fv(rot, "rotation");
-		Shader::setMat4fv(sca, "scale");
-		Shader::setMat4fv(matrix, "model");
+		Shader::setMat4fv(worldMatrix, "world");
+		Shader::setMat4fv(modelMatrix, "model");
 
 		// Draw the actual mesh
 		glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_INT, 0);

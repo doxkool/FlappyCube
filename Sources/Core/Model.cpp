@@ -5,11 +5,17 @@ namespace Engine
 {
 	Primitive I_primitive;
 
+	//std::vector<Mesh> meshes;
+	//std::vector<glm::vec3> translationsMeshes;
+	//std::vector<glm::quat> rotationsMeshes;
+	//std::vector<glm::vec3> scalesMeshes;
+	//std::vector<glm::mat4> matricesMeshes;
+
 	std::vector<Mesh> meshes;
-	std::vector<glm::vec3> translationsMeshes;
-	std::vector<glm::quat> rotationsMeshes;
-	std::vector<glm::vec3> scalesMeshes;
-	std::vector<glm::mat4> matricesMeshes;
+	glm::vec3 translationsMesh;
+	glm::quat rotationsMesh;
+	glm::vec3 scalesMesh;
+	//glm::mat4 matricesMesh;
 
 	void Model::LoadMesh(const Primitive& primitive, glm::vec3 translation, glm::vec3 rotation, glm::vec3 scale, Texture& texture)
 	{
@@ -17,7 +23,6 @@ namespace Engine
 
 		std::vector<Vertex> vertexArray;
 		std::vector <GLuint> indexArray;
-		std::vector <Texture> textureArray;
 
 		unsigned nrOfVertices;
 		unsigned nrOfIndices;
@@ -31,26 +36,40 @@ namespace Engine
 		{
 			vertexArray.push_back(I_primitive.getVertices()[i]);
 		}
-
+		
 		for (size_t i = 0; i < nrOfIndices; i++)
 		{
 			indexArray.push_back(I_primitive.getIndices()[i]);
 		}
 
-		textureArray.push_back(texture);
+		m_texture = texture;
 
 		UpdateModelMatrices(translation, rotation, scale);
 
-		meshes.push_back(Mesh(vertexArray, indexArray, textureArray));
+		//Mesh m_mesh(vertexArray, indexArray, m_texture);
+
+		//mesh = &m_mesh;
+
+		meshes.push_back(Mesh(vertexArray, indexArray, m_texture));
 	}
 
 	void Model::UpdateMeshPosition(glm::vec3 position)
 	{
 		m_position = position;
+
+		UpdateModelMatrices(m_position, m_rotation, m_scale);
 	}
 
 	void Model::UpdateModelMatrices(glm::vec3 translation, glm::vec3 rotation, glm::vec3 scale)
 	{
+		// first translate (transformations are: scale happens first, then rotation, and then final translation happens; reversed order)
+
+		//m_modelMatrix = glm::translate(m_modelMatrix, translation);
+		//m_modelMatrix = glm::mat4_cast(Vec3ToQuat(rotation));
+		//m_modelMatrix = glm::scale(m_modelMatrix, scale);
+		//
+		//Shader::setMat4fv(m_modelMatrix, "model");
+
 		glm::quat finalOrientation = Vec3ToQuat(rotation);
 
 		// Initialize matrices
@@ -64,13 +83,9 @@ namespace Engine
 		sca = glm::scale(sca, scale);
 
 		// Multiply all matrices together
-		glm::mat4 Matrices = trans * rot * sca;
+		m_modelMatrix = trans * rot * sca;
 
-		translationsMeshes.push_back(translation);
-		rotationsMeshes.push_back(rotation);
-		scalesMeshes.push_back(scale);
-
-		matricesMeshes.push_back(Matrices);
+		//Shader::setMat4fv(m_modelMatrix, "model");
 	}
 
 	glm::quat Model::Vec3ToQuat(glm::vec3 vec3)
@@ -89,7 +104,9 @@ namespace Engine
 		// Go over all meshes and draw each one
 		for (unsigned int i = 0; i < meshes.size(); i++)
 		{
-			meshes[i].Mesh::Draw(matricesMeshes[i], m_position, Vec3ToQuat(m_rotation), m_scale);
+			meshes[0].Mesh::Draw(m_modelMatrix, m_position, Vec3ToQuat(m_rotation), m_scale, m_texture);
 		}
+
+		//mesh->Draw(matricesMesh, m_position, Vec3ToQuat(m_rotation), m_scale);
 	}
 }

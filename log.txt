@@ -1,24 +1,24 @@
-[10:55:13] [info]	[Engine]   	====== New logging session ======
-[10:55:13] [debug]	[Engine]   	Log initialization completed.
-[10:55:13] [debug]	[Engine]   	GLFW initialization completed.
-[10:55:13] [info]	[Engine]   	New window resolution : 1280x720
-[10:55:13] [info]	[Engine]   	OpenGL_API Information :
-[10:55:13] [info]	[Engine]   		NVIDIA Corporation
-[10:55:13] [info]	[Engine]   		NVIDIA GeForce GTX 1070/PCIe/SSE2
-[10:55:13] [info]	[Engine]   		4.5.0 NVIDIA 537.34
-[10:55:13] [info]	[Engine]   	====== Instance 'FlappySquare' created ======
-[10:55:13] [debug]	[Engine]   	GLEW_INIT_SUCCESS
-[10:55:13] [debug]	[Engine]   	vSync set to : 1
-[10:55:13] [trace]	[Engine]   	Scene created :
+[11:39:21] [info]	[Engine]   	====== New logging session ======
+[11:39:21] [debug]	[Engine]   	Log initialization completed.
+[11:39:21] [debug]	[Engine]   	GLFW initialization completed.
+[11:39:21] [info]	[Engine]   	New window resolution : 1280x720
+[11:39:21] [info]	[Engine]   	OpenGL_API Information :
+[11:39:21] [info]	[Engine]   		NVIDIA Corporation
+[11:39:21] [info]	[Engine]   		NVIDIA GeForce GTX 1070/PCIe/SSE2
+[11:39:21] [info]	[Engine]   		4.5.0 NVIDIA 537.34
+[11:39:21] [info]	[Engine]   	====== Instance 'FlappySquare' created ======
+[11:39:21] [debug]	[Engine]   	GLEW_INIT_SUCCESS
+[11:39:21] [trace]	[Engine]   	Scene created :
 - ID : 3435973837
 - Name : Scene1
-[10:55:13] [trace]	[Engine]   	New entity created :
+[11:39:21] [trace]	[Engine]   	Texture loaded : Game/Textures/flappy-bird.png
+[11:39:21] [trace]	[Engine]   	Texture loaded : Game/Textures/window.png
+[11:39:21] [trace]	[Engine]   	Loading model from primitive...
+[11:39:21] [trace]	[Engine]   	New entity created :
 - ID : 1
 - Name : Player1
-[10:55:13] [trace]	[Engine]   	Texture loaded : Game/Textures/flappy-bird.png
-[10:55:13] [trace]	[Engine]   	Loading model from primitive...
-[10:55:13] [trace]	[Engine]   	New entity created :
+[11:39:21] [trace]	[Engine]   	Loading model from primitive...
+[11:39:21] [trace]	[Engine]   	New entity created :
 - ID : 2
 - Name : Wall01
-[10:55:13] [trace]	[Engine]   	Texture loaded : Game/Textures/window.png
-[10:55:13] [trace]	[Engine]   	Loading model from primitive...
+[11:39:21] [debug]	[Engine]   	vSync set to : 1

@@ -34,30 +34,26 @@ namespace FlappySquare
 
 	void Game::RunGameLoop()
 	{
-		Engine::OrthographicCamera  m_Camera(-2.f, 2.f, -2.f, 2.f);
+		// Declare runtime variables.
+		Engine::TimeStep timestep;
 
-		window.EnableVsync(1);
+		Engine::OrthographicCamera  m_Camera(-2.f, 2.f, -2.f, 2.f);
 
 		Engine::Scene scene("Scene1");
 
-		Engine::Quad Quad;
+		Engine::Texture playerTex("Game/Textures/flappy-bird.png");
+		Engine::Texture wallTex("Game/Textures/window.png");
 
-		Engine::Player player("Player1", &scene);
-		player.SetTexture("Game/Textures/flappy-bird.png");
-		player.SetMesh(Quad);
+		Engine::Player player("Player1", { 0.f, 0.f, 0.f }, playerTex, &scene);
 
 		
-		Engine::Square2D wall("Wall01", &scene);
-		wall.SetTexture("Game/Textures/window.png");
-		wall.SetPosition({ 1.f, 0.f, 0.f });
-		wall.SetMesh(Quad);
+		Engine::Square2D wall("Wall01", { 1.f, 0.f, 0.f }, wallTex, &scene);
+
+		window.EnableVsync(1);
 
 		while (!window.Get_WindowShouldClose())
 		{
 			// Run Game code here
-
-		// Declare runtime variables.
-			Engine::TimeStep timestep;
 
 			std::string str_FPS;
 			std::string str_FrameTime;

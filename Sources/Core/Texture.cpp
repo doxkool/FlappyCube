@@ -50,11 +50,6 @@ namespace Engine
 	{
 	}
 
-	void Texture::LoadTexture()
-	{
-		
-	}
-
 	void Texture::texUnit(const char* uniform, GLuint unit)
 	{
 		// Gets the location of the uniform

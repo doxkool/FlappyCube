@@ -10,15 +10,12 @@ out vec2 TexCoord;
 
 uniform mat4 camera;
 uniform mat4 model;
-
-uniform mat4 translation;
-uniform mat4 rotation;
-uniform mat4 scale;
+uniform mat4 world;
 
 void main()
 {
 	// calculates current position
-	crntPos = vec3(model * translation * rotation * scale * vec4(aPos, 1.0f));
+	crntPos = vec3(model * world * vec4(aPos, 1.0f));
     
     ourColor = aColor; // set ourColor to the input color we got from the vertex data
 

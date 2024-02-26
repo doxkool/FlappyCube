@@ -4,6 +4,8 @@
 
 #include "Core/Logger.h"
 
+#include "Core/Primitives.h"
+
 #include "Scene/Entities/EntityTypes.h"
 
 namespace Engine
@@ -11,10 +13,10 @@ namespace Engine
 	class Entity
 	{
 		public:
-			Entity(const char* name, Scene* scene = NULL);
+			Entity(const char* name, glm::vec3 position, Texture& texture, Scene* scene = NULL);
 
 			void SetName(const char* name);
-			void SetTexture(const char* texturePath);
+			void SetTexture(Texture& texture);
 			void SetMesh(Quad quad);
 			void SetPosition(glm::vec3 position);
 			void SetRotation(glm::vec3 rotation);
@@ -27,6 +29,8 @@ namespace Engine
 			Base_Entity Data;
 
 			unsigned int ID;
+
+			Quad quad;
 
 			Scene* m_scene;
 
