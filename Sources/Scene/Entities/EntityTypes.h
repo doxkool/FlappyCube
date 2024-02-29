@@ -31,4 +31,9 @@ namespace Engine
 		float MovementSpeed = 0.1f;
 		bool GeneratePhysOverlap = false;
 	};
+
+	struct Sprite2D : Base_Entity
+	{
+
+	};
 }

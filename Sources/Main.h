@@ -8,6 +8,8 @@
 #include "Core/Texture.h"
 #include "Core/Utilities.h"
 
+#include "imgui.h"
+
 #include "Scene/Scene.h"
 #include "Scene/Entities/Player.h"
 #include "Scene/Entities/Square2D.h"
@@ -33,6 +35,7 @@ namespace FlappySquare
 		void CheckForInputs();
 
 	private:
+		
 		Engine::Window window;
 	};
 }

@@ -5,17 +5,10 @@ namespace Engine
 {
 	Primitive I_primitive;
 
-	//std::vector<Mesh> meshes;
-	//std::vector<glm::vec3> translationsMeshes;
-	//std::vector<glm::quat> rotationsMeshes;
-	//std::vector<glm::vec3> scalesMeshes;
-	//std::vector<glm::mat4> matricesMeshes;
-
 	std::vector<Mesh> meshes;
 	glm::vec3 translationsMesh;
 	glm::quat rotationsMesh;
 	glm::vec3 scalesMesh;
-	//glm::mat4 matricesMesh;
 
 	void Model::LoadMesh(const Primitive& primitive, glm::vec3 translation, glm::vec3 rotation, glm::vec3 scale, Texture& texture)
 	{
@@ -46,30 +39,25 @@ namespace Engine
 
 		UpdateModelMatrices(translation, rotation, scale);
 
-		//Mesh m_mesh(vertexArray, indexArray, m_texture);
-
-		//mesh = &m_mesh;
-
 		meshes.push_back(Mesh(vertexArray, indexArray, m_texture));
 	}
 
-	void Model::UpdateMeshPosition(glm::vec3 position)
+	void Model::UpdateMeshTransform(glm::vec3 position, glm::vec3 rotation, glm::vec3 scale)
 	{
 		m_position = position;
+		m_rotation = rotation;
+		m_scale = scale;
 
 		UpdateModelMatrices(m_position, m_rotation, m_scale);
 	}
 
+	void Model::UpdateMeshTexture(Texture& texture)
+	{
+		m_texture = texture;
+	}
+
 	void Model::UpdateModelMatrices(glm::vec3 translation, glm::vec3 rotation, glm::vec3 scale)
 	{
-		// first translate (transformations are: scale happens first, then rotation, and then final translation happens; reversed order)
-
-		//m_modelMatrix = glm::translate(m_modelMatrix, translation);
-		//m_modelMatrix = glm::mat4_cast(Vec3ToQuat(rotation));
-		//m_modelMatrix = glm::scale(m_modelMatrix, scale);
-		//
-		//Shader::setMat4fv(m_modelMatrix, "model");
-
 		glm::quat finalOrientation = Vec3ToQuat(rotation);
 
 		// Initialize matrices
@@ -84,8 +72,6 @@ namespace Engine
 
 		// Multiply all matrices together
 		m_modelMatrix = trans * rot * sca;
-
-		//Shader::setMat4fv(m_modelMatrix, "model");
 	}
 
 	glm::quat Model::Vec3ToQuat(glm::vec3 vec3)
@@ -106,7 +92,5 @@ namespace Engine
 		{
 			meshes[0].Mesh::Draw(m_modelMatrix, m_position, Vec3ToQuat(m_rotation), m_scale, m_texture);
 		}
-
-		//mesh->Draw(matricesMesh, m_position, Vec3ToQuat(m_rotation), m_scale);
 	}
 }

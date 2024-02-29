@@ -1,24 +1,57 @@
-[11:39:21] [info]	[Engine]   	====== New logging session ======
-[11:39:21] [debug]	[Engine]   	Log initialization completed.
-[11:39:21] [debug]	[Engine]   	GLFW initialization completed.
-[11:39:21] [info]	[Engine]   	New window resolution : 1280x720
-[11:39:21] [info]	[Engine]   	OpenGL_API Information :
-[11:39:21] [info]	[Engine]   		NVIDIA Corporation
-[11:39:21] [info]	[Engine]   		NVIDIA GeForce GTX 1070/PCIe/SSE2
-[11:39:21] [info]	[Engine]   		4.5.0 NVIDIA 537.34
-[11:39:21] [info]	[Engine]   	====== Instance 'FlappySquare' created ======
-[11:39:21] [debug]	[Engine]   	GLEW_INIT_SUCCESS
-[11:39:21] [trace]	[Engine]   	Scene created :
-- ID : 3435973837
-- Name : Scene1
-[11:39:21] [trace]	[Engine]   	Texture loaded : Game/Textures/flappy-bird.png
-[11:39:21] [trace]	[Engine]   	Texture loaded : Game/Textures/window.png
-[11:39:21] [trace]	[Engine]   	Loading model from primitive...
-[11:39:21] [trace]	[Engine]   	New entity created :
+[19:49:54] [info]	[Engine]   	====== New logging session ======
+[19:49:54] [debug]	[Engine]   	Log initialization completed.
+[19:49:54] [debug]	[Engine]   	GLFW initialization completed.
+[19:49:54] [info]	[Engine]   	New window resolution : 1280x720
+[19:49:54] [info]	[Engine]   	OpenGL_API Information :
+[19:49:54] [info]	[Engine]   		NVIDIA Corporation
+[19:49:54] [info]	[Engine]   		NVIDIA GeForce GTX 1070/PCIe/SSE2
+[19:49:54] [info]	[Engine]   		4.5.0 NVIDIA 537.34
+[19:49:54] [info]	[Engine]   	====== Instance 'FlappySquare' created ======
+[19:49:54] [debug]	[Engine]   	GLEW_INIT_SUCCESS
+[19:49:54] [trace]	[Engine]   	Scene created :
+- ID : 1
+- Name : DevScene
+[19:49:54] [trace]	[Engine]   	Texture loaded : Game/Textures/background-day.png
+[19:49:54] [trace]	[Engine]   	Texture loaded : Game/Textures/flappy-bird.png
+[19:49:54] [trace]	[Engine]   	Texture loaded : Game/Textures/pipe-green.png
+[19:49:54] [trace]	[Engine]   	Loading model from primitive...
+[19:49:54] [trace]	[Engine]   	New entity created :
 - ID : 1
 - Name : Player1
-[11:39:21] [trace]	[Engine]   	Loading model from primitive...
-[11:39:21] [trace]	[Engine]   	New entity created :
+[19:49:54] [trace]	[Engine]   	Loading model from primitive...
+[19:49:54] [trace]	[Engine]   	New entity created :
 - ID : 2
-- Name : Wall01
-[11:39:21] [debug]	[Engine]   	vSync set to : 1
+- Name : Pipe
+[19:49:54] [trace]	[Engine]   	Loading model from primitive...
+[19:49:54] [trace]	[Engine]   	New entity created :
+- ID : 3
+- Name : Pipe
+[19:49:54] [trace]	[Engine]   	Loading model from primitive...
+[19:49:54] [trace]	[Engine]   	New entity created :
+- ID : 4
+- Name : Pipe
+[19:49:54] [trace]	[Engine]   	Loading model from primitive...
+[19:49:54] [trace]	[Engine]   	New entity created :
+- ID : 5
+- Name : Pipe
+[19:49:54] [trace]	[Engine]   	Loading model from primitive...
+[19:49:54] [trace]	[Engine]   	New entity created :
+- ID : 6
+- Name : BackGround
+[19:49:54] [trace]	[Engine]   	Loading model from primitive...
+[19:49:54] [trace]	[Engine]   	New entity created :
+- ID : 7
+- Name : BackGround
+[19:49:54] [trace]	[Engine]   	Loading model from primitive...
+[19:49:54] [trace]	[Engine]   	New entity created :
+- ID : 8
+- Name : BackGround
+[19:49:54] [trace]	[Engine]   	Loading model from primitive...
+[19:49:54] [trace]	[Engine]   	New entity created :
+- ID : 9
+- Name : BackGround
+[19:49:54] [trace]	[Engine]   	Loading model from primitive...
+[19:49:54] [trace]	[Engine]   	New entity created :
+- ID : 10
+- Name : BackGround
+[19:49:54] [debug]	[Engine]   	vSync set to : 1

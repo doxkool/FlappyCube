@@ -41,6 +41,11 @@ namespace Engine
 			else
 			{
 				LOG_ERROR("Failed to load texture : {}", texturePath);
+
+				stbi_image_free(data);
+				unsigned char* data = stbi_load("Game/Textures/Default_Tex.jpg", &width, &height, &nrChannels, 0);
+				glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+				glGenerateMipmap(GL_TEXTURE_2D);
 			}
 			stbi_image_free(data);
 		}

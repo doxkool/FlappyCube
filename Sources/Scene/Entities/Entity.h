@@ -13,7 +13,7 @@ namespace Engine
 	class Entity
 	{
 		public:
-			Entity(const char* name, glm::vec3 position, Texture& texture, Scene* scene = NULL);
+			Entity(const char* name, glm::vec3 position, glm::vec3 rotation, glm::vec3 scale, Texture& texture, Scene* scene = NULL);
 
 			void SetName(const char* name);
 			void SetTexture(Texture& texture);

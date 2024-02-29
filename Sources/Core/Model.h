@@ -14,7 +14,9 @@ namespace Engine
 
 		void LoadMesh(const Primitive& primitive, glm::vec3 translation = glm::vec3(0.f), glm::vec3 rotation = glm::vec3(0.f), glm::vec3 scale = glm::vec3(1.f), Texture& texture = Texture("Game/Textures/Default_Tex.jpg"));
 
-		void UpdateMeshPosition(glm::vec3 position);
+		void UpdateMeshTransform(glm::vec3 position, glm::vec3 rotation, glm::vec3 scale);
+
+		void UpdateMeshTexture(Texture& texture);
 
 		void UpdateModelMatrices(glm::vec3 translation, glm::vec3 rotation, glm::vec3 scale);
 

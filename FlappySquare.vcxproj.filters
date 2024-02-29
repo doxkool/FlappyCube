@@ -1,148 +1,186 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Buffers">
-      <UniqueIdentifier>{92479EF4-FE26-1D90-073F-A866739D83F1}</UniqueIdentifier>
+    <Filter Include="Sources">
+      <UniqueIdentifier>{89565304-F535-D29F-FE4D-5D766AAC3801}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Camera">
-      <UniqueIdentifier>{CE7141AB-BA13-6C81-A3CE-7FD58F0FF3D1}</UniqueIdentifier>
+    <Filter Include="Sources\Buffers">
+      <UniqueIdentifier>{058FD61C-711A-44E1-7A2B-C7D5E635A0E1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Core">
-      <UniqueIdentifier>{2EB4837C-1AEB-840D-C3D7-6A10AFED000F}</UniqueIdentifier>
+    <Filter Include="Sources\Camera">
+      <UniqueIdentifier>{E11605DB-CDE4-F8E0-B678-6907A2E5D445}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Scene">
-      <UniqueIdentifier>{B3F7140E-1F0C-3DBF-E88D-E01E546139F0}</UniqueIdentifier>
+    <Filter Include="Sources\Core">
+      <UniqueIdentifier>{81F8E48E-6D5B-7433-16E1-ACE9022340B6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Window">
-      <UniqueIdentifier>{3DEA79DA-298C-A4B0-1247-B804FE872B01}</UniqueIdentifier>
+    <Filter Include="Sources\Scene">
+      <UniqueIdentifier>{66C69E6C-D286-1AA3-9BC1-632007415F7F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Scene\Entities">
+      <UniqueIdentifier>{DA713481-C66B-5DD3-AFD8-F3E39B71C33F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Window">
+      <UniqueIdentifier>{508F3D0A-3C5D-3110-25F1-A136115E0D75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendors">
+      <UniqueIdentifier>{665268D3-D231-E76E-DB49-724547A84DD0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Sources\Buffers\ElementBuffer.h">
-      <Filter>Buffers</Filter>
+      <Filter>Sources\Buffers</Filter>
     </ClInclude>
     <ClInclude Include="Sources\Buffers\VertexBuffer.h">
-      <Filter>Buffers</Filter>
+      <Filter>Sources\Buffers</Filter>
     </ClInclude>
     <ClInclude Include="Sources\Camera\Camera.h">
-      <Filter>Camera</Filter>
+      <Filter>Sources\Camera</Filter>
     </ClInclude>
     <ClInclude Include="Sources\Camera\OrthographicCamera.h">
-      <Filter>Camera</Filter>
+      <Filter>Sources\Camera</Filter>
     </ClInclude>
     <ClInclude Include="Sources\Camera\PerspectiveCamera.h">
-      <Filter>Camera</Filter>
+      <Filter>Sources\Camera</Filter>
     </ClInclude>
     <ClInclude Include="Sources\Core\Events.h">
-      <Filter>Core</Filter>
+      <Filter>Sources\Core</Filter>
     </ClInclude>
     <ClInclude Include="Sources\Core\Input.h">
-      <Filter>Core</Filter>
+      <Filter>Sources\Core</Filter>
     </ClInclude>
     <ClInclude Include="Sources\Core\Logger.h">
-      <Filter>Core</Filter>
+      <Filter>Sources\Core</Filter>
     </ClInclude>
     <ClInclude Include="Sources\Core\Mesh.h">
-      <Filter>Core</Filter>
+      <Filter>Sources\Core</Filter>
     </ClInclude>
     <ClInclude Include="Sources\Core\Model.h">
-      <Filter>Core</Filter>
+      <Filter>Sources\Core</Filter>
     </ClInclude>
     <ClInclude Include="Sources\Core\OpenGL.h">
-      <Filter>Core</Filter>
+      <Filter>Sources\Core</Filter>
     </ClInclude>
     <ClInclude Include="Sources\Core\Primitives.h">
-      <Filter>Core</Filter>
+      <Filter>Sources\Core</Filter>
     </ClInclude>
     <ClInclude Include="Sources\Core\Shader.h">
-      <Filter>Core</Filter>
+      <Filter>Sources\Core</Filter>
     </ClInclude>
     <ClInclude Include="Sources\Core\Texture.h">
-      <Filter>Core</Filter>
+      <Filter>Sources\Core</Filter>
     </ClInclude>
     <ClInclude Include="Sources\Core\TimeStep.h">
-      <Filter>Core</Filter>
+      <Filter>Sources\Core</Filter>
     </ClInclude>
     <ClInclude Include="Sources\Core\Utilities.h">
-      <Filter>Core</Filter>
+      <Filter>Sources\Core</Filter>
     </ClInclude>
     <ClInclude Include="Sources\Core\VertexArray.h">
-      <Filter>Core</Filter>
+      <Filter>Sources\Core</Filter>
     </ClInclude>
-    <ClInclude Include="Sources\Main.h" />
+    <ClInclude Include="Sources\Main.h">
+      <Filter>Sources</Filter>
+    </ClInclude>
     <ClInclude Include="Sources\Scene\Entities\Entity.h">
-      <Filter>Scene</Filter>
+      <Filter>Sources\Scene\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Scene\Entities\EntityTypes.h">
+      <Filter>Sources\Scene\Entities</Filter>
     </ClInclude>
     <ClInclude Include="Sources\Scene\Entities\Player.h">
-      <Filter>Scene</Filter>
+      <Filter>Sources\Scene\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Scene\Entities\Square2D.h">
+      <Filter>Sources\Scene\Entities</Filter>
     </ClInclude>
     <ClInclude Include="Sources\Scene\Scene.h">
-      <Filter>Scene</Filter>
+      <Filter>Sources\Scene</Filter>
     </ClInclude>
     <ClInclude Include="Sources\Window\Window.h">
-      <Filter>Window</Filter>
+      <Filter>Sources\Window</Filter>
     </ClInclude>
-    <ClInclude Include="Sources\Scene\Entities\Square2D.h" />
-    <ClInclude Include="Sources\Scene\Entities\EntityTypes.h" />
+    <ClInclude Include="Vendors\imgui\imconfig.h" />
+    <ClInclude Include="Vendors\imgui\imgui.h" />
+    <ClInclude Include="Vendors\imgui\imgui_internal.h" />
+    <ClInclude Include="Vendors\imgui\imstb_rectpack.h" />
+    <ClInclude Include="Vendors\imgui\imstb_textedit.h" />
+    <ClInclude Include="Vendors\imgui\imstb_truetype.h" />
+    <ClInclude Include="Vendors\imgui\backends\imgui_impl_opengl3.h" />
+    <ClInclude Include="Vendors\imgui\backends\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="Vendors\imgui\backends\imgui_impl_glfw.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Sources\Buffers\ElementBuffer.cpp">
-      <Filter>Buffers</Filter>
+      <Filter>Sources\Buffers</Filter>
     </ClCompile>
     <ClCompile Include="Sources\Buffers\VertexBuffer.cpp">
-      <Filter>Buffers</Filter>
+      <Filter>Sources\Buffers</Filter>
     </ClCompile>
     <ClCompile Include="Sources\Camera\Camera.cpp">
-      <Filter>Camera</Filter>
+      <Filter>Sources\Camera</Filter>
     </ClCompile>
     <ClCompile Include="Sources\Camera\OrthographicCamera.cpp">
-      <Filter>Camera</Filter>
+      <Filter>Sources\Camera</Filter>
     </ClCompile>
     <ClCompile Include="Sources\Camera\PerspectiveCamera.cpp">
-      <Filter>Camera</Filter>
+      <Filter>Sources\Camera</Filter>
     </ClCompile>
     <ClCompile Include="Sources\Core\Events.cpp">
-      <Filter>Core</Filter>
+      <Filter>Sources\Core</Filter>
     </ClCompile>
     <ClCompile Include="Sources\Core\Input.cpp">
-      <Filter>Core</Filter>
+      <Filter>Sources\Core</Filter>
     </ClCompile>
     <ClCompile Include="Sources\Core\Logger.cpp">
-      <Filter>Core</Filter>
+      <Filter>Sources\Core</Filter>
     </ClCompile>
     <ClCompile Include="Sources\Core\Mesh.cpp">
-      <Filter>Core</Filter>
+      <Filter>Sources\Core</Filter>
     </ClCompile>
     <ClCompile Include="Sources\Core\Model.cpp">
-      <Filter>Core</Filter>
+      <Filter>Sources\Core</Filter>
     </ClCompile>
     <ClCompile Include="Sources\Core\OpenGL.cpp">
-      <Filter>Core</Filter>
+      <Filter>Sources\Core</Filter>
     </ClCompile>
     <ClCompile Include="Sources\Core\Shader.cpp">
-      <Filter>Core</Filter>
+      <Filter>Sources\Core</Filter>
     </ClCompile>
     <ClCompile Include="Sources\Core\Texture.cpp">
-      <Filter>Core</Filter>
+      <Filter>Sources\Core</Filter>
     </ClCompile>
     <ClCompile Include="Sources\Core\Utilities.cpp">
-      <Filter>Core</Filter>
+      <Filter>Sources\Core</Filter>
     </ClCompile>
     <ClCompile Include="Sources\Core\VertexArray.cpp">
-      <Filter>Core</Filter>
+      <Filter>Sources\Core</Filter>
     </ClCompile>
-    <ClCompile Include="Sources\Main.cpp" />
+    <ClCompile Include="Sources\Main.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
     <ClCompile Include="Sources\Scene\Entities\Entity.cpp">
-      <Filter>Scene</Filter>
+      <Filter>Sources\Scene\Entities</Filter>
     </ClCompile>
     <ClCompile Include="Sources\Scene\Scene.cpp">
-      <Filter>Scene</Filter>
+      <Filter>Sources\Scene</Filter>
     </ClCompile>
     <ClCompile Include="Sources\Window\Window.cpp">
-      <Filter>Window</Filter>
+      <Filter>Sources\Window</Filter>
     </ClCompile>
     <ClCompile Include="Sources\Window\WindowCallback.cpp">
-      <Filter>Window</Filter>
+      <Filter>Sources\Window</Filter>
     </ClCompile>
+    <ClCompile Include="Vendors\imgui\imgui.cpp" />
+    <ClCompile Include="Vendors\imgui\imgui_demo.cpp" />
+    <ClCompile Include="Vendors\imgui\imgui_draw.cpp" />
+    <ClCompile Include="Vendors\imgui\imgui_tables.cpp" />
+    <ClCompile Include="Vendors\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="Vendors\imgui\backends\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="Vendors\imgui\backends\imgui_impl_glfw.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Vendors\imgui">
+      <Filter>Vendors</Filter>
+    </None>
   </ItemGroup>
 </Project>

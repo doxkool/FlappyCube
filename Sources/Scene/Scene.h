@@ -22,7 +22,7 @@ namespace Engine
 
 	private:
 		const char* sceneName = "Scene";
-		unsigned int sceneID;
+		unsigned int sceneID = 0;
 
 	};
 }
