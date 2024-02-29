@@ -11,6 +11,7 @@ IncludeDir["GLEW"] = "Vendors/GLEW/include"
 IncludeDir["glm"] = "Vendors/glm"
 IncludeDir["spdlog"] = "Vendors/spdlog"
 IncludeDir["stb_image"] = "Vendors/stb_image"
+IncludeDir["imgui"] = "Vendors/imgui"
 
 project "FlappySquare"
    kind "ConsoleApp"
@@ -23,7 +24,8 @@ project "FlappySquare"
 
    files 
    {
-      "Sources/**"
+      "Sources/**",
+	  "Vendors/imgui/**"
    }
 
    defines
@@ -39,7 +41,8 @@ project "FlappySquare"
     "%{IncludeDir.GLEW}",
     "%{IncludeDir.glm}",
 	"%{IncludeDir.spdlog}",
-	"%{IncludeDir.stb_image}"
+	"%{IncludeDir.stb_image}",
+	"%{IncludeDir.imgui}"
    }
 
    libdirs

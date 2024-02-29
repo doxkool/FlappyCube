@@ -3,8 +3,12 @@
 #include "Core/Logger.h"
 #include "Core/OpenGL.h"
 
+//#include "Core/Imgui.h"
+
 #include <GL/glew.h>
 #include <glfw3.h>
+
+
 
 namespace Engine
 {
@@ -58,6 +62,9 @@ namespace Engine
 			GLFWwindow* m_Window;
 
 		private:
+
+		static void InitImgui(GLFWwindow* window);
+		static void UpdateImgui();
 	};
 
 	class WindowCallback
