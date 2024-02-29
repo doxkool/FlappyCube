@@ -1,3 +1,4 @@
+// Flappybird assets by Samuel Cust : https://github.com/samuelcust/flappy-bird-assets/tree/master
 
 // TODO :
 // - Fix movement based on frame time.
