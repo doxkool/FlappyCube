@@ -1,9 +1,5 @@
 #include "Window/Window.h"
 
-#include "imgui.h"
-#include "backends/imgui_impl_glfw.h"
-#include "backends/imgui_impl_opengl3.h"
-
 namespace Engine
 {
 	Window::Window(const std::string Window_Title, const int Window_Width, const int Window_Height, const bool Window_Resizeable)
@@ -51,25 +47,6 @@ namespace Engine
 		OpenGL::m_FrameBuffer_Width = Window_Width;
 		OpenGL::m_FrameBuffer_Height = Window_Height;
 
-		InitImgui(m_Window);
-	}
-
-	void Window::InitImgui(GLFWwindow* window)
-	{
-		IMGUI_CHECKVERSION();
-		ImGui::CreateContext();
-		ImGuiIO& io = ImGui::GetIO();
-		io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
-		io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
-		io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;
-
-		ImGui::StyleColorsDark();
-
-		ImGui_ImplGlfw_InitForOpenGL(window, true);
-
-		const char* glsl_version = "#version 330";
-
-		ImGui_ImplOpenGL3_Init(glsl_version);
 	}
 
 	void Window::DetectMonitors()
@@ -99,43 +76,17 @@ namespace Engine
 	void Window::Update()
 	{
 		glfwPollEvents();
-
-		UpdateImgui();
-	}
-
-	void Window::UpdateImgui()
-	{
-		ImGui_ImplOpenGL3_NewFrame();
-		ImGui_ImplGlfw_NewFrame();
-		ImGui::NewFrame();
-		bool show_demo_window = true;
-		ImGui::ShowDemoWindow(&show_demo_window);
 	}
 
 	void Window::SwapBuffer()
 	{
-		ImGuiIO& io = ImGui::GetIO();
-
-		io.DisplaySize = ImVec2(1280, 720);
-
-		ImGui::Render();
-		ImGui::EndFrame();
-		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-
-		if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
-		{
-			GLFWwindow* backup_current_context = glfwGetCurrentContext();
-			ImGui::UpdatePlatformWindows();
-			ImGui::RenderPlatformWindowsDefault();
-			glfwMakeContextCurrent(backup_current_context);
-		}
-
 		glfwSwapBuffers(m_Window);
 	}
 
 	void Window::EnableVsync(int enabled)
 	{
 		glfwSwapInterval(enabled);
+
 		LOG_DEBUG("vSync set to : {}", enabled);
 	}
 

@@ -3,12 +3,8 @@
 #include "Core/Logger.h"
 #include "Core/OpenGL.h"
 
-//#include "Core/Imgui.h"
-
 #include <GL/glew.h>
 #include <glfw3.h>
-
-
 
 namespace Engine
 {
@@ -44,6 +40,7 @@ namespace Engine
 
 			static void Update();
 			void SwapBuffer();
+
 			static void EnableVsync(int enabled);
 
 			bool CheckKeyboardInput(uint16_t key);
@@ -53,8 +50,6 @@ namespace Engine
 			float GetMouseX();
 			float GetMouseY();
 
-			void* GetWindowPtr() const { return m_Window; }
-
 		public:
 			Window_Params WinParams;
 			std::vector<Monitor_Spec> MonitorsSpec;
@@ -63,8 +58,6 @@ namespace Engine
 
 		private:
 
-		static void InitImgui(GLFWwindow* window);
-		static void UpdateImgui();
 	};
 
 	class WindowCallback

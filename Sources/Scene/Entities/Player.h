@@ -71,6 +71,8 @@ namespace Engine
 
 	void Player::Move(Direction direction)
 	{
+		double DeltaTime = Perf::Get_DeltaTime();
+
 		switch (direction)
 		{
 		case FORWARD:
@@ -80,16 +82,16 @@ namespace Engine
 
 			break;
 		case LEFT:
-			Data.position.x -= Data.MovementSpeed;
+			Data.position.x -= Data.MovementSpeed * DeltaTime;
 			break;
 		case RIGHT:
-			Data.position.x += Data.MovementSpeed;
+			Data.position.x += Data.MovementSpeed * DeltaTime;
 			break;
 		case UP:
-			Data.position.y += Data.MovementSpeed;
+			Data.position.y += Data.MovementSpeed * DeltaTime;
 			break;
 		case DOWN:
-			Data.position.y -= Data.MovementSpeed;
+			Data.position.y -= Data.MovementSpeed * DeltaTime;
 			break;
 		default:
 			break;

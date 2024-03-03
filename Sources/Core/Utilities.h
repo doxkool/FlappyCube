@@ -15,6 +15,8 @@ namespace Engine
 		// Return the last frame time in mililseconds.
 		static double Get_FrameTime() { return ((m_Start_Time - m_End_Time) * 1000); }
 
+		static double Get_DeltaTime() { return (m_Start_Time - m_End_Time); }
+
 	public:
 		static float m_Start_Time;
 		static float m_End_Time;

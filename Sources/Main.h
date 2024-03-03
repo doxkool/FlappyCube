@@ -8,7 +8,7 @@
 #include "Core/Texture.h"
 #include "Core/Utilities.h"
 
-#include "imgui.h"
+#include "Renderer/ImGuiLayer.h"
 
 #include "Scene/Scene.h"
 #include "Scene/Entities/Player.h"
@@ -30,7 +30,7 @@ namespace FlappySquare
 	public:
 		Game();
 
-		void RunGameLoop();
+		void Run();
 
 		void CheckForInputs();
 

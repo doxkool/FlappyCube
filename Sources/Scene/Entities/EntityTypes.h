@@ -1,11 +1,11 @@
 #pragma once
 
+#include "Window/Window.h"
+
 #include "Core/Texture.h"
 #include "Core/Primitives.h"
 #include "Core/Model.h"
 #include "Core/TimeStep.h"
-
-#include "Window/Window.h"
 
 #include <glm.hpp>
 
@@ -28,7 +28,7 @@ namespace Engine
 		Primitive mesh;
 		Model model;
 
-		float MovementSpeed = 0.1f;
+		float MovementSpeed = 5.f;
 		bool GeneratePhysOverlap = false;
 	};
 

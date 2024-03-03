@@ -4,10 +4,13 @@
 
 namespace Engine
 {
+
 	class Events
 	{
 	public:
-		Events() {}
+		Events();
+
+		static void test(bool test);
 
 	private:
 

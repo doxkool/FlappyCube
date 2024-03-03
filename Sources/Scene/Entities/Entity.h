@@ -1,9 +1,8 @@
 #pragma once
 
 #include "Scene/Scene.h"
-
+#include "Core/Utilities.h"
 #include "Core/Logger.h"
-
 #include "Core/Primitives.h"
 
 #include "Scene/Entities/EntityTypes.h"
@@ -21,6 +20,7 @@ namespace Engine
 			void SetPosition(glm::vec3 position);
 			void SetRotation(glm::vec3 rotation);
 			void SetScale(glm::vec3 scale);
+			void SetMovementSpeed(float scale);
 
 			virtual void OnUpdate(Window window, TimeStep ts);
 

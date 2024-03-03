@@ -31,7 +31,7 @@ namespace Engine
 		}
 		else if (event == GLFW_DISCONNECTED)
 		{
-			LOG_TRACE("A monitor has benn disconnected...");
+			LOG_TRACE("A monitor has been disconnected...");
 		}
 	}
 

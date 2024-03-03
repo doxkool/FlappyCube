@@ -15,7 +15,7 @@ namespace Engine
 	class Texture
 	{
 	public:
-		Texture(const char* texturePath = NULL);
+		Texture(const char* texPath = NULL);
 		~Texture();
 
 		void texUnit(const char* uniform, GLuint unit);
@@ -23,6 +23,8 @@ namespace Engine
 		void BindTexture();
 
 		GLuint ID;
+
+		const char* texturePath;
 
 	private:
 

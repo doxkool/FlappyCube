@@ -1,7 +1,5 @@
 #pragma once
 
-#include "Core/Model.h"
-
 #include "Scene/Entities/EntityTypes.h"
 
 #include <vector>
@@ -14,14 +12,15 @@ namespace Engine
 		Scene(const char* Name);
 		~Scene();
 
-		void CheckEntityForCollisions();
+		bool CheckForOverlap();
 
 		void Draw();
 
 		std::vector<Base_Entity> Entities_Data;
 
-	private:
 		const char* sceneName = "Scene";
+
+	private:
 		unsigned int sceneID = 0;
 
 	};

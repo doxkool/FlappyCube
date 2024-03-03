@@ -5,7 +5,7 @@ namespace Engine
 	Entity::Entity(const char* name, glm::vec3 position, glm::vec3 rotation, glm::vec3 scale, Texture& texture, Scene* scene)
 		: m_scene(scene)
 	{
-		ID = scene->Entities_Data.size() + 1;
+		ID = scene->Entities_Data.size();
 
 		Data.ID = ID;
 		Data.name = name;
@@ -15,6 +15,7 @@ namespace Engine
 		Data.scale = scale;
 
 		Data.textureData = texture;
+		Data.texturePath = texture.texturePath;
 
 		Data.mesh = quad;
 		Data.model.LoadMesh(Data.mesh, Data.position, Data.rotation, Data.scale, Data.textureData);
@@ -41,6 +42,7 @@ namespace Engine
 	void Entity::SetTexture(Texture& texture)
 	{
 		Data.textureData = texture;
+		Data.texturePath = texture.texturePath;
 
 		Data.model.UpdateMeshTexture(Data.textureData);
 
@@ -76,8 +78,15 @@ namespace Engine
 		PushDataToScene();
 	}
 
+	void Entity::SetMovementSpeed(float scale)
+	{
+		Data.MovementSpeed = 10.f;
+
+		PushDataToScene();
+	}
+
 	void Entity::PushDataToScene()
 	{
-		m_scene->Entities_Data[ID - 1] = Data;
+		m_scene->Entities_Data[ID] = Data;
 	}
 }

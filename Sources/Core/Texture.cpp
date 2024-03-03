@@ -4,7 +4,8 @@
 
 namespace Engine
 {
-	Texture::Texture(const char* texturePath)
+	Texture::Texture(const char* texPath)
+		: texturePath(texPath)
 	{
 		glGenTextures(1, &ID);
 		glBindTexture(GL_TEXTURE_2D, this->ID);
@@ -21,9 +22,9 @@ namespace Engine
 
 		int width, height, nrChannels;
 
-		if (texturePath)
+		if (texPath)
 		{
-			unsigned char* data = stbi_load(texturePath, &width, &height, &nrChannels, 0);
+			unsigned char* data = stbi_load(texPath, &width, &height, &nrChannels, 0);
 			if (data)
 			{
 				if (nrChannels == 3)
@@ -36,11 +37,11 @@ namespace Engine
 				}
 
 				glGenerateMipmap(GL_TEXTURE_2D);
-				LOG_TRACE("Texture loaded : {}", texturePath);
+				LOG_TRACE("Texture loaded : {}", texPath);
 			}
 			else
 			{
-				LOG_ERROR("Failed to load texture : {}", texturePath);
+				LOG_ERROR("Failed to load texture : {}", texPath);
 
 				stbi_image_free(data);
 				unsigned char* data = stbi_load("Game/Textures/Default_Tex.jpg", &width, &height, &nrChannels, 0);

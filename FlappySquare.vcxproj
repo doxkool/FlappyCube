@@ -96,6 +96,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Sources\Renderer\ImGuiLayer.h" />
     <ClInclude Include="Sources\Buffers\ElementBuffer.h" />
     <ClInclude Include="Sources\Buffers\VertexBuffer.h" />
     <ClInclude Include="Sources\Camera\Camera.h" />
@@ -131,6 +132,7 @@
     <ClInclude Include="Vendors\imgui\imstb_truetype.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Sources\Renderer\ImGuiLayer.cpp" />
     <ClCompile Include="Sources\Buffers\ElementBuffer.cpp" />
     <ClCompile Include="Sources\Buffers\VertexBuffer.cpp" />
     <ClCompile Include="Sources\Camera\Camera.cpp" />

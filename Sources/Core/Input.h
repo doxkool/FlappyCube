@@ -1,8 +1,10 @@
 #pragma once
 
+#include "Core/Events.h"
+
 #include "Window/Window.h"
 
-#include "backends/imgui_impl_glfw.h"
+#include "Renderer/ImGuiLayer.h"
 
 namespace Engine
 {
@@ -18,6 +20,6 @@ namespace Engine
 		static bool IsKeyPressed(GLFWwindow* window, int key);
 
 	private:
-		
+
 	};
 }
