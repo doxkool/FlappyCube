@@ -15,29 +15,6 @@ namespace Engine
 	{
 	}
 
-	bool Scene::CheckForOverlap()
-	{
-		std::vector<glm::vec3> EntitiesPosition;
-		std::vector<int> EntitiesID;
-
-		for (size_t e = 0; e < Entities_Data.size(); e++)
-		{
-			EntitiesID.push_back(Entities_Data[e].ID);
-			EntitiesPosition.push_back(Entities_Data[e].position);
-
-			for (size_t i = 0; i < Entities_Data.size(); i++)
-			{
-				if (!EntitiesID[i] == Entities_Data[i].ID)
-				{
-					EntitiesPosition[i];
-				}
-			}
-		}
-
-
-		return false;
-	}
-
 	void Scene::Draw()
 	{
 		for (size_t i = 0; i < Entities_Data.size(); i++)

@@ -4,13 +4,19 @@ namespace Engine
 {
 	std::vector<float> ImGuiLayer::FrameTime;
 	std::vector<float> ImGuiLayer::FPS;
-
+	
 	bool ImGuiLayer::b_ShowDemoWindow = false;
-
+	
 	bool ImGuiLayer::b_ShowStatistics = false;
 	bool ImGuiLayer::b_ShowAdvanceStatistics = false;
 	bool ImGuiLayer::b_ShowMenuBar = false;
 	bool ImGuiLayer::b_ShowSceneInspector = false;
+
+	//ImGuiLayer::ImGuiLayer(Window& window, Scene* scene)
+	//	: m_window(window), m_scene(scene)
+	//{
+	//	Init();
+	//}
 
 	void ImGuiLayer::Init(GLFWwindow* window)
 	{
@@ -189,6 +195,8 @@ namespace Engine
 
 	void ImGuiLayer::ShowSceneInspector(Scene& scene)
 	{
+		//scene.Entities_Data = scene.Entities_Data;
+
 		//ImGui::SetNextWindowSize(ImVec2(550, 650));
 
 		if (!ImGui::Begin("Scene Inspector"))
@@ -212,6 +220,8 @@ namespace Engine
 
 		ImGui::PopStyleVar();
 		ImGui::End();
+
+
 	}
 
 	void ImGuiLayer::ShowEntityObject(Scene& scene)
@@ -258,15 +268,18 @@ namespace Engine
 
 					if (ImGui::TreeNodeEx("Position", NULL, "Position"))
 					{
+						glm::vec3 entityPos = scene.Entities_Data[i].position;
 						ImGui::Text("X: ");
 						ImGui::SameLine();
-						ImGui::DragFloat("##xPos", &scene.Entities_Data[i].position.x, 0.005f, -100.0f, 100.0f, "%.3f");
+						ImGui::DragFloat("##xPos", &entityPos.x, 1.f, -100.0f, 100.0f, "%.2f");
 						ImGui::Text("Y: ");
 						ImGui::SameLine();
-						ImGui::DragFloat("##yPos", &scene.Entities_Data[i].position.y, 0.005f, -100.0f, 100.0f, "%.3f");
+						ImGui::DragFloat("##yPos", &entityPos.y, 1.f, -100.0f, 100.0f, "%.2f");
 						ImGui::Text("Z: ");
 						ImGui::SameLine();
-						ImGui::DragFloat("##zPos", &scene.Entities_Data[i].position.z, 0.005f, -100.0f, 100.0f, "%.3f");
+						ImGui::DragFloat("##zPos", &entityPos.z, 1.f, -100.0f, 100.0f, "%.2f");
+
+						LOG_TRACE("{}", entityPos.x);
 
 						ImGui::TreePop();
 						ImGui::Spacing();

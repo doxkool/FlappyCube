@@ -20,8 +20,8 @@ namespace Engine
 		// Makes camera look in the right direction from the right position
 		view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
 
-		projection = glm::ortho(left * Aspect / zoom, right * Aspect / zoom, bottom / zoom,top / zoom, 0.1f, 100.0f);
-		
+		projection = glm::ortho(-(left * Aspect), right * Aspect, -(bottom), top, -1.0f, 100.0f);
+
 		// Sets new camera matrix
 		cameraMatrix = projection * view;
 	}

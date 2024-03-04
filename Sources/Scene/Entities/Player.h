@@ -11,7 +11,7 @@ namespace Engine
 	class Player : public Entity
 	{
 		public:
-			Player(const char* name, glm::vec3 position, glm::vec3 rotation, glm::vec3 scale, Texture& texture, Scene* scene = NULL);
+			Player(const char* name, glm::vec3 position, float rotation, glm::vec3 scale, Texture& texture, Scene* scene = NULL);
 
 			void OnUpdate(Window window, TimeStep ts);
 
@@ -20,7 +20,7 @@ namespace Engine
 		private:
 	};
 
-	Player::Player(const char* name, glm::vec3 position, glm::vec3 rotation, glm::vec3 scale, Texture& texture, Scene* scene)
+	Player::Player(const char* name, glm::vec3 position, float rotation,  glm::vec3 scale, Texture& texture, Scene* scene)
 		: Entity(name, position, rotation, scale, texture, scene)
 	{
 		Data.type = Ent_Player;

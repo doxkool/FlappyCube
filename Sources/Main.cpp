@@ -42,7 +42,7 @@ namespace FlappySquare
 		Engine::TimeStep timestep;
 
 	// Creating the camera object.
-		Engine::OrthographicCamera  m_Camera(-4.f, 4.f, -4.f, 4.f);
+		Engine::OrthographicCamera  m_Camera(0, 1000, 0, 1000);
 
 	// Creating the scene where all the game objects will be stored.
 		Engine::Scene scene("DevScene");
@@ -53,25 +53,26 @@ namespace FlappySquare
 		Engine::Texture pipeTex("Game/Textures/pipe-green.png");
 
 	// Creating the Player object.
-		Engine::Player player("Player", glm::vec3(-4.f, -2.f, 0.f), glm::vec3(0.f), glm::vec3(1.f), playerTex, &scene);
-		player.SetMovementSpeed(10.f);
+		Engine::Player player("Player", glm::vec3(0, 0, 0), 00, glm::vec3(10, 10, 0), playerTex, &scene);
+		player.SetMovementSpeed(50.f);
 	// Creating the Pipes object.
-		Engine::Square2D pipe1("Pipe", glm::vec3(0.f, -3.f, 0.f), glm::vec3(0.f, 0.f, 0.f), glm::vec3(1.f, 4.f, 1.f), pipeTex, &scene);
-		Engine::Square2D pipe2("Pipe", glm::vec3(0.f, 3.f, 0.f), glm::vec3(180.f, 0.f, 0.f), glm::vec3(1.f, 4.f, 1.f), pipeTex, &scene);
-		Engine::Square2D pipe3("Pipe", glm::vec3(4.f, -2.f, 0.f), glm::vec3(0.f, 0.f, 0.f), glm::vec3(1.f, 4.f, 1.f), pipeTex, &scene);
-		Engine::Square2D pipe4("Pipe", glm::vec3(4.f, 4.f, 0.f), glm::vec3(180.f, 0.f, 0.f), glm::vec3(1.f, 4.f, 1.f), pipeTex, &scene);
+		//Engine::Square2D pipe1("Pipe", glm::vec3(0.f, -3.f, 0.f), glm::vec3(0.f, 0.f, 0.f), glm::vec3(1.f, 4.f, 1.f), pipeTex, &scene);
+		//Engine::Square2D pipe2("Pipe", glm::vec3(0.f, 3.f, 0.f), glm::vec3(180.f, 0.f, 0.f), glm::vec3(1.f, 4.f, 1.f), pipeTex, &scene);
+		//Engine::Square2D pipe3("Pipe", glm::vec3(4.f, -2.f, 0.f), glm::vec3(0.f, 0.f, 0.f), glm::vec3(1.f, 4.f, 1.f), pipeTex, &scene);
+		//Engine::Square2D pipe4("Pipe", glm::vec3(4.f, 4.f, 0.f), glm::vec3(180.f, 0.f, 0.f), glm::vec3(1.f, 4.f, 1.f), pipeTex, &scene);
 
 	// Creating the background.
-		Engine::Square2D BgTile01("BG_Tile", glm::vec3(-8.f, 0, 0.f), glm::vec3(0.f, 0.f, 0.f), glm::vec3(4.f, 8.f, 1.f), BGTex, &scene);
-		Engine::Square2D BgTile02("BG_Tile", glm::vec3(-4.f, 0, 0.f), glm::vec3(0.f, 0.f, 0.f), glm::vec3(4.f, 8.f, 1.f), BGTex, &scene);
-		Engine::Square2D BgTile03("BG_Tile", glm::vec3(0.f, 0, 0.f), glm::vec3(0.f, 0.f, 0.f), glm::vec3(4.f, 8.f, 1.f), BGTex, &scene);
-		Engine::Square2D BgTile04("BG_Tile", glm::vec3(4.f, 0, 0.f), glm::vec3(0.f, 0.f, 0.f), glm::vec3(4.f, 8.f, 1.f), BGTex, &scene);
-		Engine::Square2D BgTile05("BG_Tile", glm::vec3(8.f, 0, 0.f), glm::vec3(0.f, 0.f, 0.f), glm::vec3(4.f, 8.f, 1.f), BGTex, &scene);
+		Engine::Square2D BgTile01("BG_Tile", glm::vec3(0, 0, 0), 0, glm::vec3(50, 25, 0), BGTex, &scene);
+		//Engine::Square2D BgTile02("BG_Tile", glm::vec3(-4.f, 0, 0.f), glm::vec3(0.f, 0.f, 0.f), glm::vec3(4.f, 8.f, 1.f), BGTex, &scene);
+		//Engine::Square2D BgTile03("BG_Tile", glm::vec3(0.f, 0, 0.f), glm::vec3(0.f, 0.f, 0.f), glm::vec3(4.f, 8.f, 1.f), BGTex, &scene);
+		//Engine::Square2D BgTile04("BG_Tile", glm::vec3(4.f, 0, 0.f), glm::vec3(0.f, 0.f, 0.f), glm::vec3(4.f, 8.f, 1.f), BGTex, &scene);
+		//Engine::Square2D BgTile05("BG_Tile", glm::vec3(8.f, 0, 0.f), glm::vec3(0.f, 0.f, 0.f), glm::vec3(4.f, 8.f, 1.f), BGTex, &scene);
 
 		window.EnableVsync(1);
 
 		Engine::ImGuiLayer::b_ShowStatistics = true;
 		Engine::ImGuiLayer::b_ShowAdvanceStatistics = true;
+		Engine::ImGuiLayer::b_ShowSceneInspector = true;
 
 		while (!window.Get_WindowShouldClose())
 		{

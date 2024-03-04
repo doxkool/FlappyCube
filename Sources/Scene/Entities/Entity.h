@@ -12,15 +12,15 @@ namespace Engine
 	class Entity
 	{
 		public:
-			Entity(const char* name, glm::vec3 position, glm::vec3 rotation, glm::vec3 scale, Texture& texture, Scene* scene = NULL);
+			Entity(const char* name, glm::vec3 position, float rotation, glm::vec3 scale, Texture& texture, Scene* scene = NULL);
 
 			void SetName(const char* name);
 			void SetTexture(Texture& texture);
 			void SetMesh(Quad quad);
 			void SetPosition(glm::vec3 position);
-			void SetRotation(glm::vec3 rotation);
+			void SetRotation(float rotation);
 			void SetScale(glm::vec3 scale);
-			void SetMovementSpeed(float scale);
+			void SetMovementSpeed(float speed);
 
 			virtual void OnUpdate(Window window, TimeStep ts);
 

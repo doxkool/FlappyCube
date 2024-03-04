@@ -12,8 +12,6 @@ namespace Engine
 		Scene(const char* Name);
 		~Scene();
 
-		bool CheckForOverlap();
-
 		void Draw();
 
 		std::vector<Base_Entity> Entities_Data;

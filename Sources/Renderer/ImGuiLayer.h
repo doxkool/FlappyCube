@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Scene/Scene.h"
+#include "Scene/Entities/EntityTypes.h"
 
 #include "Core/Utilities.h"
 
@@ -31,14 +32,17 @@ namespace Engine
 
 			static void ShowSceneInspector(Scene& scene);
 
-			static bool b_ShowDemoWindow;
 
 			static bool b_ShowStatistics;
 			static bool b_ShowAdvanceStatistics;
 			static bool b_ShowMenuBar;
 			static bool b_ShowSceneInspector;
 
+			static bool b_ShowDemoWindow;
+
 		private:
+
+			//static std::vector<Base_Entity> m_Entity_Data;
 
 			static std::vector<float> FrameTime;
 			static std::vector<float> FPS;

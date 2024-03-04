@@ -18,9 +18,9 @@ namespace Engine
 		unsigned int ID = -1;
 		EntityType type = Ent_Base;
 		const char* name = "Entity";
-		glm::vec3 position = glm::vec3(0.f);
-		glm::vec3 rotation = glm::vec3(0.f);
-		glm::vec3 scale = glm::vec3(1.f);
+		glm::vec3 position = glm::vec3(0);
+		glm::vec3 rotation = glm::vec3(0);
+		glm::vec3 scale = glm::vec3(1);
 
 		const char* texturePath = "Game/Textures/Default_Tex.jpg";
 		Texture textureData;
@@ -28,7 +28,7 @@ namespace Engine
 		Primitive mesh;
 		Model model;
 
-		float MovementSpeed = 5.f;
+		float MovementSpeed = 5;
 		bool GeneratePhysOverlap = false;
 	};
 
