@@ -61,6 +61,8 @@ namespace Engine
 	{
 		Data.position = position;
 
+		Data.model.UpdateMeshTransform(Data.position, Data.rotation, Data.scale);
+
 		PushDataToScene();
 	}
 
@@ -68,12 +70,16 @@ namespace Engine
 	{
 		Data.rotation =  glm::vec3(0, 0, rotation);
 
+		Data.model.UpdateMeshTransform(Data.position, Data.rotation, Data.scale);
+
 		PushDataToScene();
 	}
 
 	void Entity::SetScale(glm::vec3 scale)
 	{
 		Data.scale = scale;
+
+		Data.model.UpdateMeshTransform(Data.position, Data.rotation, Data.scale);
 
 		PushDataToScene();
 	}

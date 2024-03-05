@@ -53,7 +53,7 @@ namespace FlappySquare
 		Engine::Texture pipeTex("Game/Textures/pipe-green.png");
 
 	// Creating the Player object.
-		Engine::Player player("Player", glm::vec3(0, 0, 0), 00, glm::vec3(10, 10, 0), playerTex, &scene);
+		Engine::Player player("Player", glm::vec3(0, 0, 0), 0, glm::vec3(10, 10, 0), playerTex, &scene);
 		player.SetMovementSpeed(50.f);
 	// Creating the Pipes object.
 		//Engine::Square2D pipe1("Pipe", glm::vec3(0.f, -3.f, 0.f), glm::vec3(0.f, 0.f, 0.f), glm::vec3(1.f, 4.f, 1.f), pipeTex, &scene);
@@ -107,7 +107,7 @@ namespace FlappySquare
 		// ImGui New Frame
 			Engine::ImGuiLayer::NewFrame();
 
-			Engine::ImGuiLayer::Render(scene);
+			Engine::ImGuiLayer::Render(&scene);
 
 		// Swap the Buffer
 			window.SwapBuffer();

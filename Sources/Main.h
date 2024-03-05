@@ -8,7 +8,7 @@
 #include "Core/Texture.h"
 #include "Core/Utilities.h"
 
-#include "Renderer/ImGuiLayer.h"
+#include "Renderer/ImGui/ImGuiLayer.h"
 
 #include "Scene/Scene.h"
 #include "Scene/Entities/Player.h"

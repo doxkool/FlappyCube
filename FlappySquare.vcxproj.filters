@@ -108,7 +108,8 @@
     <ClInclude Include="Vendors\imgui\backends\imgui_impl_opengl3.h" />
     <ClInclude Include="Vendors\imgui\backends\imgui_impl_opengl3_loader.h" />
     <ClInclude Include="Vendors\imgui\backends\imgui_impl_glfw.h" />
-    <ClInclude Include="Sources\Renderer\ImGuiLayer.h" />
+    <ClInclude Include="Sources\Renderer\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="Sources\Renderer\ImGui\App\SceneInspector.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Sources\Buffers\ElementBuffer.cpp">
@@ -178,7 +179,8 @@
     <ClCompile Include="Vendors\imgui\imgui_widgets.cpp" />
     <ClCompile Include="Vendors\imgui\backends\imgui_impl_opengl3.cpp" />
     <ClCompile Include="Vendors\imgui\backends\imgui_impl_glfw.cpp" />
-    <ClCompile Include="Sources\Renderer\ImGuiLayer.cpp" />
+    <ClCompile Include="Sources\Renderer\ImGui\ImGuiLayer.cpp" />
+    <ClCompile Include="Sources\Renderer\ImGui\App\SceneInspector.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Vendors\imgui">

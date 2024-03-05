@@ -3,6 +3,8 @@
 #include "Scene/Scene.h"
 #include "Scene/Entities/EntityTypes.h"
 
+#include "Renderer/ImGui/App/SceneInspector.h"
+
 #include "Core/Utilities.h"
 
 #include <glfw3.h>
@@ -23,14 +25,11 @@ namespace Engine
 
 			static void Init(GLFWwindow* window);
 			static void NewFrame();
-			static void Render(Scene& scene);
+			static void Render(Scene* scene);
 
 			static void ShowMenuBar();
 			static void ShowStatistics();
 			static void ShowAdvanceStatistics();
-			static void ShowEntityObject(Scene& scene);
-
-			static void ShowSceneInspector(Scene& scene);
 
 
 			static bool b_ShowStatistics;

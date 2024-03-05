@@ -71,6 +71,8 @@ namespace Engine
 
 	void Player::Move(Direction direction)
 	{
+		Data = m_scene->Entities_Data[ID];
+
 		double DeltaTime = Perf::Get_DeltaTime();
 
 		switch (direction)
