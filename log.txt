@@ -1,25 +1,25 @@
-[20:25:11] [info]	[Engine]   	====== New logging session ======
-[20:25:11] [debug]	[Engine]   	Log initialization completed.
-[20:25:11] [debug]	[Engine]   	GLFW initialization completed.
-[20:25:11] [info]	[Engine]   	New window resolution : 1280x720
-[20:25:11] [info]	[Engine]   	OpenGL_API Information :
-[20:25:11] [info]	[Engine]   		NVIDIA Corporation
-[20:25:11] [info]	[Engine]   		NVIDIA GeForce GTX 1070/PCIe/SSE2
-[20:25:11] [info]	[Engine]   		4.5.0 NVIDIA 537.34
-[20:25:11] [info]	[Engine]   	====== Instance 'FlappySquare' created ======
-[20:25:11] [debug]	[Engine]   	GLEW_INIT_SUCCESS
-[20:25:11] [trace]	[Engine]   	Scene created :
+[09:06:34] [info]	[Engine]   	====== New logging session ======
+[09:06:34] [debug]	[Engine]   	Log initialization completed.
+[09:06:34] [debug]	[Engine]   	GLFW initialization completed.
+[09:06:34] [info]	[Engine]   	New window resolution : 1280x720
+[09:06:34] [info]	[Engine]   	OpenGL_API Information :
+[09:06:34] [info]	[Engine]   		Intel
+[09:06:34] [info]	[Engine]   		Intel(R) Iris(R) Xe Graphics
+[09:06:34] [info]	[Engine]   		4.5.0 - Build 31.0.101.4953
+[09:06:34] [info]	[Engine]   	====== Instance 'FlappySquare' created ======
+[09:06:34] [debug]	[Engine]   	GLEW_INIT_SUCCESS
+[09:06:34] [trace]	[Engine]   	Scene created :
 - ID : 1
 - Name : DevScene
-[20:25:11] [trace]	[Engine]   	Texture loaded : Game/Textures/background-day.png
-[20:25:11] [trace]	[Engine]   	Texture loaded : Game/Textures/flappy-bird.png
-[20:25:11] [trace]	[Engine]   	Texture loaded : Game/Textures/pipe-green.png
-[20:25:11] [trace]	[Engine]   	Loading model from primitive...
-[20:25:11] [trace]	[Engine]   	New entity created :
+[09:06:34] [trace]	[Engine]   	Texture loaded : Game/Textures/background-day.png
+[09:06:34] [trace]	[Engine]   	Texture loaded : Game/Textures/flappy-bird.png
+[09:06:34] [trace]	[Engine]   	Texture loaded : Game/Textures/pipe-green.png
+[09:06:34] [trace]	[Engine]   	Loading model from primitive...
+[09:06:34] [trace]	[Engine]   	New entity created :
 - ID : 0
 - Name : Player
-[20:25:11] [trace]	[Engine]   	Loading model from primitive...
-[20:25:11] [trace]	[Engine]   	New entity created :
+[09:06:34] [trace]	[Engine]   	Loading model from primitive...
+[09:06:34] [trace]	[Engine]   	New entity created :
 - ID : 1
 - Name : BG_Tile
-[20:25:11] [debug]	[Engine]   	vSync set to : 1
+[09:06:34] [debug]	[Engine]   	vSync set to : 1

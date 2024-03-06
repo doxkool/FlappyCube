@@ -21,6 +21,7 @@ namespace Engine
 		glm::vec3 position = glm::vec3(0);
 		glm::vec3 rotation = glm::vec3(0);
 		glm::vec3 scale = glm::vec3(1);
+		bool lockScaleRatio = true;
 
 		const char* texturePath = "Game/Textures/Default_Tex.jpg";
 		Texture textureData;

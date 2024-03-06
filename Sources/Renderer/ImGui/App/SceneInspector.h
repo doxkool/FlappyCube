@@ -16,5 +16,7 @@ namespace Engine
 
 	private:
 		void ShowEntityObject(Scene* scene);
+
+		bool b_2DcoordinatesOnly = true;
 	};
 }

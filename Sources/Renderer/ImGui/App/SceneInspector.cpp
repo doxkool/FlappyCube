@@ -53,6 +53,7 @@ namespace Engine
 				const char* texPath = m_scene->Entities_Data[i].texturePath;
 				float movSpeed = m_scene->Entities_Data[i].MovementSpeed;
 				bool genOverlap = m_scene->Entities_Data[i].GeneratePhysOverlap;
+				bool lockScaleRatio = m_scene->Entities_Data[i].lockScaleRatio;
 
 				// Use object uid as identifier. Most commonly you could also use the object pointer as a base ID.
 				ImGui::PushID(uid);
@@ -90,9 +91,12 @@ namespace Engine
 						ImGui::Text("Y: ");
 						ImGui::SameLine();
 						if (ImGui::DragFloat("##yPos", &entityPos.y, 1.f, NULL, NULL, "%.2f")) { Data[i].position.y = entityPos.y; }
-						ImGui::Text("Z: ");
-						ImGui::SameLine();
-						if (ImGui::DragFloat("##zPos", &entityPos.z, 1.f, NULL, NULL, "%.2f")) { Data[i].position.z = entityPos.z; }
+						if (!b_2DcoordinatesOnly)
+						{
+							ImGui::Text("Z: ");
+							ImGui::SameLine();
+							if (ImGui::DragFloat("##zPos", &entityPos.z, 1.f, NULL, NULL, "%.2f")) { Data[i].position.z = entityPos.z; }
+						}
 
 						ImGui::TreePop();
 						ImGui::Spacing();
@@ -100,25 +104,44 @@ namespace Engine
 					}
 					else
 					{
-						ImGui::SameLine();
-						ImGui::Text("X: %.2f | ", entityPos.x);
-						ImGui::SameLine();
-						ImGui::Text("Y: %.2f | ", entityPos.y);
-						ImGui::SameLine();
-						ImGui::Text("Z: %.2f", entityPos.z);
+						if (!b_2DcoordinatesOnly)
+						{
+							ImGui::SameLine();
+							ImGui::Text("X: %.2f | ", entityPos.x);
+							ImGui::SameLine();
+							ImGui::Text("Y: %.2f | ", entityPos.y);
+							ImGui::SameLine();
+							ImGui::Text("Z: %.2f", entityPos.z);
+						}
+						else
+						{
+							ImGui::SameLine();
+							ImGui::Text("X: %.2f | ", entityPos.x);
+							ImGui::SameLine();
+							ImGui::Text("Y: %.2f", entityPos.y);
+						}
 					}
 
 					if (ImGui::TreeNodeEx("Rotation", NULL, "Rotation"))
 					{
-						ImGui::Text("X: ");
-						ImGui::SameLine();
-						if (ImGui::DragFloat("##xRot", &entityRot.x, 1.f, NULL, NULL, "%.2f")) { Data[i].rotation.x = entityRot.x; }
-						ImGui::Text("Y: ");
-						ImGui::SameLine();
-						if (ImGui::DragFloat("##yRot", &entityRot.y, 1.f, NULL, NULL, "%.2f")) { Data[i].rotation.y = entityRot.y; }
-						ImGui::Text("Z: ");
-						ImGui::SameLine();
-						if (ImGui::DragFloat("##zRot", &entityRot.z, 1.f, NULL, NULL, "%.2f")) { Data[i].rotation.z = entityRot.z; }
+						if (!b_2DcoordinatesOnly)
+						{
+							ImGui::Text("X: ");
+							ImGui::SameLine();
+							if (ImGui::DragFloat("##xRot", &entityRot.x, 1.f, NULL, NULL, "%.2f")) { Data[i].rotation.x = entityRot.x; }
+							ImGui::Text("Y: ");
+							ImGui::SameLine();
+							if (ImGui::DragFloat("##yRot", &entityRot.y, 1.f, NULL, NULL, "%.2f")) { Data[i].rotation.y = entityRot.y; }
+							ImGui::Text("Z: ");
+							ImGui::SameLine();
+							if (ImGui::DragFloat("##zRot", &entityRot.z, 1.f, NULL, NULL, "%.2f")) { Data[i].rotation.z = entityRot.z; }
+						}
+						else
+						{
+							ImGui::Text("   ");
+							ImGui::SameLine();
+							if (ImGui::DragFloat("##zRot", &entityRot.z, 1.f, NULL, NULL, "%.2f")) { Data[i].rotation.z = entityRot.z; }
+						}
 
 						ImGui::TreePop();
 						ImGui::Spacing();
@@ -126,25 +149,93 @@ namespace Engine
 					}
 					else
 					{
-						ImGui::SameLine();
-						ImGui::Text("X: %.2f | ", entityRot.x);
-						ImGui::SameLine();
-						ImGui::Text("Y: %.2f | ", entityRot.y);
-						ImGui::SameLine();
-						ImGui::Text("Z: %.2f", entityRot.z);
+						if (!b_2DcoordinatesOnly)
+						{
+							ImGui::SameLine();
+							ImGui::Text("X: %.2f | ", entityRot.x);
+							ImGui::SameLine();
+							ImGui::Text("Y: %.2f | ", entityRot.y);
+							ImGui::SameLine();
+							ImGui::Text("Z: %.2f", entityRot.z);
+						}
+						else
+						{
+							ImGui::SameLine();
+							ImGui::Text("%.2f", entityRot.z);
+						}
 					}
 
 					if (ImGui::TreeNodeEx("Scale", NULL, "Scale"))
 					{
-						ImGui::Text("X: ");
-						ImGui::SameLine();
-						if (ImGui::DragFloat("##xSca", &entitySca.x, 1.f, NULL, NULL, "%.2f")) { Data[i].scale.x = entitySca.x; }
-						ImGui::Text("Y: ");
-						ImGui::SameLine();
-						if (ImGui::DragFloat("##ySca", &entitySca.y, 1.f, NULL, NULL, "%.2f")) { Data[i].scale.y = entitySca.y; }
-						ImGui::Text("Z: ");
-						ImGui::SameLine();
-						if (ImGui::DragFloat("##zSca", &entitySca.z, 1.f, NULL, NULL, "%.2f")) { Data[i].scale.z = entitySca.z; }
+						if (!b_2DcoordinatesOnly)
+						{
+							if (lockScaleRatio)
+							{
+								ImGui::Text("X: ");
+								ImGui::SameLine();
+								if (ImGui::DragFloat("##xSca", &entitySca.x, 1.f, NULL, NULL, "%.2f"))
+								{
+									Data[i].scale.x = entitySca.x;
+									Data[i].scale.y = entitySca.x;
+								}
+								ImGui::Text("Y: ");
+								ImGui::SameLine();
+								if (ImGui::DragFloat("##ySca", &entitySca.x, 1.f, NULL, NULL, "%.2f"))
+								{
+									Data[i].scale.x = entitySca.x;
+									Data[i].scale.y = entitySca.x;
+								}
+							}
+							else
+							{
+								ImGui::Text("X: ");
+								ImGui::SameLine();
+								if (ImGui::DragFloat("##xSca", &entitySca.x, 1.f, NULL, NULL, "%.2f")) { Data[i].scale.x = entitySca.x; }
+								ImGui::Text("Y: ");
+								ImGui::SameLine();
+								if (ImGui::DragFloat("##ySca", &entitySca.y, 1.f, NULL, NULL, "%.2f")) { Data[i].scale.y = entitySca.y; }
+							}
+							ImGui::Text("Z: ");
+							ImGui::SameLine();
+							if (ImGui::DragFloat("##zSca", &entitySca.z, 1.f, NULL, NULL, "%.2f")) { Data[i].scale.z = entitySca.z; }
+							ImGui::SameLine();
+							ImGui::Text("Lock ratio: ");
+							ImGui::SameLine();
+							if (ImGui::Checkbox("##lockScaleRatio", &lockScaleRatio)) { Data[i].lockScaleRatio = lockScaleRatio; }
+						}
+						else
+						{
+							if (lockScaleRatio)
+							{
+								ImGui::Text("X: ");
+								ImGui::SameLine();
+								if (ImGui::DragFloat("##xSca", &entitySca.x, 1.f, NULL, NULL, "%.2f"))
+								{
+									Data[i].scale.x = entitySca.x;
+									Data[i].scale.y = entitySca.x;
+								}
+								ImGui::Text("Y: ");
+								ImGui::SameLine();
+								if (ImGui::DragFloat("##ySca", &entitySca.x, 1.f, NULL, NULL, "%.2f"))
+								{
+									Data[i].scale.x = entitySca.x;
+									Data[i].scale.y = entitySca.x;
+								}
+							}
+							else
+							{
+								ImGui::Text("X: ");
+								ImGui::SameLine();
+								if (ImGui::DragFloat("##xSca", &entitySca.x, 1.f, NULL, NULL, "%.2f")) { Data[i].scale.x = entitySca.x; }
+								ImGui::Text("Y: ");
+								ImGui::SameLine();
+								if (ImGui::DragFloat("##ySca", &entitySca.y, 1.f, NULL, NULL, "%.2f")) { Data[i].scale.y = entitySca.y; }
+							}
+							ImGui::SameLine();
+							ImGui::Text("Lock ratio: ");
+							ImGui::SameLine();
+							if (ImGui::Checkbox("##lockScaleRatio", &lockScaleRatio)) { Data[i].lockScaleRatio = lockScaleRatio; }
+						}
 
 						ImGui::TreePop();
 						ImGui::Spacing();
@@ -152,12 +243,22 @@ namespace Engine
 					}
 					else
 					{
-						ImGui::SameLine();
-						ImGui::Text("X: %.2f | ", entitySca.x);
-						ImGui::SameLine();
-						ImGui::Text("Y: %.2f | ", entitySca.y);
-						ImGui::SameLine();
-						ImGui::Text("Z: %.2f", entitySca.z);
+						if (!b_2DcoordinatesOnly)
+						{
+							ImGui::SameLine();
+							ImGui::Text("X: %.2f | ", entitySca.x);
+							ImGui::SameLine();
+							ImGui::Text("Y: %.2f | ", entitySca.y);
+							ImGui::SameLine();
+							ImGui::Text("Z: %.2f", entitySca.z);
+						}
+						else
+						{
+							ImGui::SameLine();
+							ImGui::Text("X: %.2f | ", entitySca.x);
+							ImGui::SameLine();
+							ImGui::Text("Y: %.2f", entitySca.y);
+						}
 					}
 
 					ImGui::Separator();
