@@ -25,7 +25,7 @@ project "FlappySquare"
    files 
    {
       "Sources/**",
-	  "Vendors/imgui/**"
+	  "Vendors/imgui/*"
    }
 
    defines
