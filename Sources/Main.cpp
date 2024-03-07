@@ -62,7 +62,7 @@ namespace FlappySquare
 		//Engine::Square2D pipe4("Pipe", glm::vec3(4.f, 4.f, 0.f), glm::vec3(180.f, 0.f, 0.f), glm::vec3(1.f, 4.f, 1.f), pipeTex, &scene);
 
 	// Creating the background.
-		Engine::Square2D BgTile01("BG_Tile", glm::vec3(0, 0, 0), 0, glm::vec3(50, 25, 0), BGTex, &scene);
+		Engine::Square2D BgTile01("BG_Tile", glm::vec3(0, 0, 0), 0, glm::vec3(25, 30, 0), BGTex, &scene);
 		//Engine::Square2D BgTile02("BG_Tile", glm::vec3(-4.f, 0, 0.f), glm::vec3(0.f, 0.f, 0.f), glm::vec3(4.f, 8.f, 1.f), BGTex, &scene);
 		//Engine::Square2D BgTile03("BG_Tile", glm::vec3(0.f, 0, 0.f), glm::vec3(0.f, 0.f, 0.f), glm::vec3(4.f, 8.f, 1.f), BGTex, &scene);
 		//Engine::Square2D BgTile04("BG_Tile", glm::vec3(4.f, 0, 0.f), glm::vec3(0.f, 0.f, 0.f), glm::vec3(4.f, 8.f, 1.f), BGTex, &scene);
