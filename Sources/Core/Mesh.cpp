@@ -42,26 +42,27 @@ namespace Engine
 		Shader::Activate();
 		VAO.Bind();
 
-		//for (unsigned int i = 0; i < textures.size(); i++)
-		//{
-		//	textures[i].BindTexture();
-		//}
-
+		// Bind the texture
 		texture.BindTexture();
 
 		// Initialize matrices
-		glm::mat4 worldMatrix;
+		glm::mat4 worldMatrix= glm::mat4(1.0f);
 
 		// Transform the matrices to their correct form
 		worldMatrix = glm::translate(worldMatrix, translation);
+		//worldMatrix = glm::translate(worldMatrix, glm::vec3(0.5f * scale.x, 0.5f * scale.y, 0.5f * scale.z));
 		worldMatrix = glm::mat4_cast(rotation);
+		//worldMatrix = glm::translate(worldMatrix, glm::vec3(-0.5f * scale.x, -0.5f * scale.y, -0.5f * scale.z));
 		worldMatrix = glm::scale(worldMatrix, scale);
+		
+
+		//worldMatrix = glm::translate(worldMatrix, translation);
 
 		// Push the matrices to the vertex shader
-		Shader::setMat4fv(worldMatrix, "world");
 		Shader::setMat4fv(modelMatrix, "model");
+		Shader::setMat4fv(worldMatrix, "world");
 
 		// Draw the actual mesh
-		glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_INT, 0);
+		glDrawElements(GL_TRIANGLES, (GLsizei)indices.size(), GL_UNSIGNED_INT, 0);
 	}
 }

@@ -54,21 +54,6 @@ namespace Engine
 		}
 	}
 
-	//void Player::SetMesh(Quad quad)
-	//{
-	//	Data.mesh = quad;
-	//	Data.model.LoadMesh(Data.mesh, Data.position, Data.rotation, Data.scale, Data.textureData);
-	//
-	//	PushDataToScene();
-	//}
-	//
-	//void Player::SetPosition(glm::vec3 position)
-	//{
-	//	Data.position = position;
-	//
-	//	PushDataToScene();
-	//}
-
 	void Player::Move(Direction direction)
 	{
 		Data = m_scene->Entities_Data[ID];

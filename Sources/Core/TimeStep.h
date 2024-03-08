@@ -8,18 +8,18 @@ namespace Engine
 	{
 	public:
 
-		TimeStep(float time = 0.0f)
+		TimeStep(double time = 0.0)
 			: m_Time(time)
 		{}
 
-		float GetTime() { return glfwGetTime(); }
+		double GetTime() { return glfwGetTime(); }
 
-		operator float() const { return m_Time; }
+		operator double() const { return m_Time; }
 
-		float Get_Seconds() const { return m_Time; }
-		float Get_Milliseconds() const { return m_Time * 1000.0f; }
+		double Get_Seconds() const { return m_Time; }
+		double Get_Milliseconds() const { return m_Time * 1000; }
 
 	private:
-		float m_Time;
+		double m_Time;
 	};
 }

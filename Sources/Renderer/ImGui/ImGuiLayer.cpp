@@ -105,15 +105,15 @@ namespace Engine
 			{
 				if (ImGui::BeginMenu("Statistics"))
 				{
-					if (ImGui::MenuItem("Show FPS Overlay", "F1", &b_ShowStatistics));
-					if (ImGui::MenuItem("Show Advance Statistics", "F2", &b_ShowAdvanceStatistics));
+					if (ImGui::MenuItem("Show FPS Overlay", "F1", &b_ShowStatistics)) {}
+					if (ImGui::MenuItem("Show Advance Statistics", "F2", &b_ShowAdvanceStatistics)) {}
 
 					ImGui::EndMenu();
 				}
 
 				ImGui::Separator();
-				if (ImGui::MenuItem("Scene Inspector", NULL, &b_ShowSceneInspector));
-				if (ImGui::MenuItem("ImGui Demo Window", NULL, &b_ShowDemoWindow));
+				if (ImGui::MenuItem("Scene Inspector", NULL, &b_ShowSceneInspector)) {}
+				if (ImGui::MenuItem("ImGui Demo Window", NULL, &b_ShowDemoWindow)) {}
 
 				ImGui::EndMenu();
 			}
@@ -149,20 +149,20 @@ namespace Engine
 		static bool update = true;
 		ImGui::Checkbox("Update", &update);
 
-		float f_FrameTime = Engine::Perf::Get_FrameTime();
-		float f_FPS = Engine::Perf::Get_FPS();
+		double f_FrameTime = Engine::Perf::Get_FrameTime();
+		double f_FPS = Engine::Perf::Get_FPS();
 
 		if (update)
 		{
 			if (FPS.size() > 100)
 			{
-				for (size_t i = 1; i < FPS.size(); i++)
+				for (double i = 1; i < FPS.size(); i++)
 				{
 					FPS[i - 1] = FPS[i];
 				}
 				FPS[FPS.size() - 1] = f_FPS;
 
-				for (size_t i = 1; i < FrameTime.size(); i++)
+				for (double i = 1; i < FrameTime.size(); i++)
 				{
 					FrameTime[i - 1] = FrameTime[i];
 				}

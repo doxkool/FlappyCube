@@ -18,8 +18,8 @@ namespace Engine
 		static double Get_DeltaTime() { return (m_Start_Time - m_End_Time); }
 
 	public:
-		static float m_Start_Time;
-		static float m_End_Time;
+		static double m_Start_Time;
+		static double m_End_Time;
 		static int m_Frames;
 	};
 }

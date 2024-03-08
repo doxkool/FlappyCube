@@ -51,7 +51,7 @@ namespace Engine
 		m_rotation = rotation;
 		m_scale = scale;
 
-		UpdateModelMatrices(m_position, m_rotation, m_scale);
+		//UpdateModelMatrices(m_position, m_rotation, m_scale);
 	}
 
 	void Model::UpdateMeshTexture(Texture& texture)
@@ -72,7 +72,7 @@ namespace Engine
 		trans = glm::translate(trans, translation);
 		//trans = glm::translate(trans, glm::vec3(1.5f * scale.x, 1.5f * scale.y, 1.5f * scale.z));
 		rot = glm::mat4_cast(finalOrientation);
-		//trans = glm::translate(trans, glm::vec3(-1.5f * scale.x, -1.5f * scale.y, -1.5f * scale.z));
+		//trans = glm::translate(trans, glm::vec3(-0.5f * scale.x, -0.5f * scale.y, -0.5f * scale.z));
 		sca = glm::scale(sca, scale);
 	
 		// Multiply all matrices together

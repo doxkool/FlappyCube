@@ -71,7 +71,7 @@ namespace FlappySquare
 		window.EnableVsync(1);
 
 		Engine::ImGuiLayer::b_ShowStatistics = true;
-		Engine::ImGuiLayer::b_ShowAdvanceStatistics = true;
+		Engine::ImGuiLayer::b_ShowAdvanceStatistics = false;
 		Engine::ImGuiLayer::b_ShowSceneInspector = true;
 
 		while (!window.Get_WindowShouldClose())
