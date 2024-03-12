@@ -51,9 +51,6 @@ namespace FlappySquare
 		scene.AddComponent(Player, Engine::Transform);
 		scene.AddComponent(Player, Engine::Sprite2D);
 
-		//scene.GetRegistry().emplace<Engine::TransformComponent>(Player);
-		//scene.GetRegistry().emplace<Engine::Sprite2DComponent>(Player, glm::vec4(0.f, 1.0f, 0.f, 1.0f));
-
 		window.EnableVsync(1);
 
 		Engine::ImGuiLayer::b_ShowStatistics = true;

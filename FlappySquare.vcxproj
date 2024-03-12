@@ -116,6 +116,7 @@
     <ClInclude Include="Sources\Main.h" />
     <ClInclude Include="Sources\Renderer\ImGui\App\SceneInspector.h" />
     <ClInclude Include="Sources\Renderer\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="Sources\Renderer\Renderer2D.h" />
     <ClInclude Include="Sources\Scene\Components.h" />
     <ClInclude Include="Sources\Scene\Entities\Entity.h" />
     <ClInclude Include="Sources\Scene\Entities\EntityTypes.h" />
@@ -134,6 +135,7 @@
     <ClInclude Include="Vendors\imgui\imstb_truetype.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Sources\Renderer\Renderer2D.cpp" />
     <ClCompile Include="Sources\Buffers\ElementBuffer.cpp" />
     <ClCompile Include="Sources\Buffers\VertexBuffer.cpp" />
     <ClCompile Include="Sources\Camera\Camera.cpp" />

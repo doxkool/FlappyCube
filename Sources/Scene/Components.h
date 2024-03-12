@@ -48,14 +48,11 @@ namespace Engine
 
 	struct Sprite2DComponent
 	{
-		char* Path;
-		Texture texture;
-		Primitive mesh;
-		Model model;
+		glm::vec4 Color = glm::vec4(1.f);
 
 		Sprite2DComponent() = default;
 		Sprite2DComponent(const Sprite2DComponent&) = default;
-		Sprite2DComponent(char* path)
-			: Path(path) {}
+		Sprite2DComponent(glm::vec4 color)
+			: Color(color) {}
 	};
 }

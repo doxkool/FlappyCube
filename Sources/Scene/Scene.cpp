@@ -21,11 +21,8 @@ namespace Engine
 		for (auto entity : group)
 		{
 			auto& [transform, sprite] = group.get<TransformComponent, Sprite2DComponent>(entity);
-
-			auto& model = m_Registry.get<Sprite2DComponent>(entity).model;
-			auto& mesh = m_Registry.get<Sprite2DComponent>(entity).mesh;
-
-			model.LoadMesh(mesh, { 0.f, 0.f, 0.f }, { 0.f, 0.f, 0.f }, { 1.f, 1.f, 1.f }, m_Registry.get<Sprite2DComponent>(entity).texture);
+		
+			//model.LoadMesh(mesh, { 0.f, 0.f, 0.f }, { 0.f, 0.f, 0.f }, { 1.f, 1.f, 1.f }, m_Registry.get<Sprite2DComponent>(entity).texture);
 		}
 	}
 

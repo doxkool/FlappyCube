@@ -1,31 +1,17 @@
-[20:25:20] [info]	[Engine]   	====== New logging session ======
-[20:25:20] [debug]	[Engine]   	Log initialization completed.
-[20:25:20] [debug]	[Engine]   	GLFW initialization completed.
-[20:25:20] [info]	[Engine]   	New window resolution : 1280x720
-[20:25:20] [info]	[Engine]   	OpenGL_API Information :
-[20:25:20] [info]	[Engine]   		NVIDIA Corporation
-[20:25:20] [info]	[Engine]   		NVIDIA GeForce GTX 1070/PCIe/SSE2
-[20:25:20] [info]	[Engine]   		4.5.0 NVIDIA 537.34
-[20:25:20] [info]	[Engine]   	====== Instance 'FlappySquare' created ======
-[20:25:20] [debug]	[Engine]   	GLEW_INIT_SUCCESS
-[20:25:20] [trace]	[Engine]   	Scene created :
+[18:09:38] [info]	[Engine]   	====== New logging session ======
+[18:09:38] [debug]	[Engine]   	Log initialization completed.
+[18:09:39] [debug]	[Engine]   	GLFW initialization completed.
+[18:09:39] [info]	[Engine]   	New window resolution : 1280x720
+[18:09:39] [info]	[Engine]   	OpenGL_API Information :
+[18:09:39] [info]	[Engine]   		NVIDIA Corporation
+[18:09:39] [info]	[Engine]   		NVIDIA GeForce GTX 1070/PCIe/SSE2
+[18:09:39] [info]	[Engine]   		4.5.0 NVIDIA 537.34
+[18:09:39] [info]	[Engine]   	====== Instance 'FlappySquare' created ======
+[18:09:39] [debug]	[Engine]   	GLEW_INIT_SUCCESS
+[18:09:39] [trace]	[Engine]   	Scene created :
 - ID : 1
 - Name : DevScene
-[20:25:20] [trace]	[Engine]   	Texture loaded : Game/Textures/background-day.png
-[20:25:20] [trace]	[Engine]   	Texture loaded : Game/Textures/flappy-bird.png
-[20:25:20] [trace]	[Engine]   	Texture loaded : Game/Textures/pipe-green.png
-[20:25:20] [trace]	[Engine]   	Loading model from primitive...
-[20:25:20] [trace]	[Engine]   	New entity created :
-- ID : 0
-- Name : Player
-[20:25:20] [trace]	[Engine]   	Loading model from primitive...
-[20:25:20] [trace]	[Engine]   	New entity created :
-- ID : 1
-- Name : BG_Tile
-[20:25:20] [debug]	[Engine]   	vSync set to : 1
-[20:25:25] [debug]	[Engine]   	FrameBuffer resolution changed to : 852x478
-[20:25:26] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x720
-[20:25:29] [debug]	[Engine]   	FrameBuffer resolution changed to : 852x478
-[20:25:30] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x720
-[21:00:49] [debug]	[Engine]   	FrameBuffer resolution changed to : 0x0
-[21:00:49] [debug]	[Engine]   	FrameBuffer resolution changed to : 1280x720
+[18:09:39] [debug]	[Engine]   	New entity created: Player
+[18:09:39] [error]	[Engine]   	The entity 'Player' already have a Transform component!
+[18:09:39] [debug]	[Engine]   	Sprite2D component added to : 'Player'
+[18:09:39] [debug]	[Engine]   	vSync set to : 1

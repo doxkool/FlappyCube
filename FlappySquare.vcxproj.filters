@@ -99,6 +99,9 @@
     <ClInclude Include="Sources\Renderer\ImGui\ImGuiLayer.h">
       <Filter>Sources\Renderer\ImGui</Filter>
     </ClInclude>
+    <ClInclude Include="Sources\Scene\Components.h">
+      <Filter>Sources\Scene</Filter>
+    </ClInclude>
     <ClInclude Include="Sources\Scene\Entities\Entity.h">
       <Filter>Sources\Scene\Entities</Filter>
     </ClInclude>
@@ -144,6 +147,7 @@
     <ClInclude Include="Vendors\imgui\imstb_truetype.h">
       <Filter>Vendors\imgui</Filter>
     </ClInclude>
+    <ClInclude Include="Sources\Renderer\Renderer2D.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Sources\Buffers\ElementBuffer.cpp">
@@ -233,6 +237,7 @@
     <ClCompile Include="Vendors\imgui\imgui_widgets.cpp">
       <Filter>Vendors\imgui</Filter>
     </ClCompile>
+    <ClCompile Include="Sources\Renderer\Renderer2D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Vendors\imgui\LICENSE.txt">
