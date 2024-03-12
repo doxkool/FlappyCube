@@ -58,7 +58,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>Sources;Vendors\GLFW\include;Vendors\GLEW\include;Vendors\glm;Vendors\spdlog;Vendors\stb_image;Vendors\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Sources;Vendors\GLFW\include;Vendors\GLEW\include;Vendors\glm;Vendors\spdlog;Vendors\stb_image;Vendors\imgui;Vendors\Entt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -77,7 +77,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>Sources;Vendors\GLFW\include;Vendors\GLEW\include;Vendors\glm;Vendors\spdlog;Vendors\stb_image;Vendors\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Sources;Vendors\GLFW\include;Vendors\GLEW\include;Vendors\glm;Vendors\spdlog;Vendors\stb_image;Vendors\imgui;Vendors\Entt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -96,8 +96,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Sources\Renderer\ImGui\App\SceneInspector.h" />
-    <ClInclude Include="Sources\Renderer\ImGui\ImGuiLayer.h" />
     <ClInclude Include="Sources\Buffers\ElementBuffer.h" />
     <ClInclude Include="Sources\Buffers\VertexBuffer.h" />
     <ClInclude Include="Sources\Camera\Camera.h" />
@@ -116,25 +114,26 @@
     <ClInclude Include="Sources\Core\Utilities.h" />
     <ClInclude Include="Sources\Core\VertexArray.h" />
     <ClInclude Include="Sources\Main.h" />
+    <ClInclude Include="Sources\Renderer\ImGui\App\SceneInspector.h" />
+    <ClInclude Include="Sources\Renderer\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="Sources\Scene\Components.h" />
     <ClInclude Include="Sources\Scene\Entities\Entity.h" />
     <ClInclude Include="Sources\Scene\Entities\EntityTypes.h" />
     <ClInclude Include="Sources\Scene\Entities\Player.h" />
     <ClInclude Include="Sources\Scene\Entities\Square2D.h" />
     <ClInclude Include="Sources\Scene\Scene.h" />
     <ClInclude Include="Sources\Window\Window.h" />
-    <ClInclude Include="Vendors\imgui\backends\imgui_impl_glfw.h" />
-    <ClInclude Include="Vendors\imgui\backends\imgui_impl_opengl3.h" />
-    <ClInclude Include="Vendors\imgui\backends\imgui_impl_opengl3_loader.h" />
     <ClInclude Include="Vendors\imgui\imconfig.h" />
     <ClInclude Include="Vendors\imgui\imgui.h" />
+    <ClInclude Include="Vendors\imgui\imgui_impl_glfw.h" />
+    <ClInclude Include="Vendors\imgui\imgui_impl_opengl3.h" />
+    <ClInclude Include="Vendors\imgui\imgui_impl_opengl3_loader.h" />
     <ClInclude Include="Vendors\imgui\imgui_internal.h" />
     <ClInclude Include="Vendors\imgui\imstb_rectpack.h" />
     <ClInclude Include="Vendors\imgui\imstb_textedit.h" />
     <ClInclude Include="Vendors\imgui\imstb_truetype.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Sources\Renderer\ImGui\App\SceneInspector.cpp" />
-    <ClCompile Include="Sources\Renderer\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="Sources\Buffers\ElementBuffer.cpp" />
     <ClCompile Include="Sources\Buffers\VertexBuffer.cpp" />
     <ClCompile Include="Sources\Camera\Camera.cpp" />
@@ -151,20 +150,22 @@
     <ClCompile Include="Sources\Core\Utilities.cpp" />
     <ClCompile Include="Sources\Core\VertexArray.cpp" />
     <ClCompile Include="Sources\Main.cpp" />
+    <ClCompile Include="Sources\Renderer\ImGui\App\SceneInspector.cpp" />
+    <ClCompile Include="Sources\Renderer\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="Sources\Scene\Entities\Entity.cpp" />
     <ClCompile Include="Sources\Scene\Scene.cpp" />
     <ClCompile Include="Sources\Window\Window.cpp" />
     <ClCompile Include="Sources\Window\WindowCallback.cpp" />
-    <ClCompile Include="Vendors\imgui\backends\imgui_impl_glfw.cpp" />
-    <ClCompile Include="Vendors\imgui\backends\imgui_impl_opengl3.cpp" />
     <ClCompile Include="Vendors\imgui\imgui.cpp" />
     <ClCompile Include="Vendors\imgui\imgui_demo.cpp" />
     <ClCompile Include="Vendors\imgui\imgui_draw.cpp" />
+    <ClCompile Include="Vendors\imgui\imgui_impl_glfw.cpp" />
+    <ClCompile Include="Vendors\imgui\imgui_impl_opengl3.cpp" />
     <ClCompile Include="Vendors\imgui\imgui_tables.cpp" />
     <ClCompile Include="Vendors\imgui\imgui_widgets.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Vendors\imgui" />
+    <None Include="Vendors\imgui\LICENSE.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

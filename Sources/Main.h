@@ -13,11 +13,14 @@
 #include "Scene/Scene.h"
 #include "Scene/Entities/Player.h"
 #include "Scene/Entities/Square2D.h"
+#include "Scene/Components.h"
 
 #include "Window/Window.h"
 
 #include "Camera/OrthographicCamera.h"
 #include "Camera/PerspectiveCamera.h"
+
+#include <entt.hpp>
 
 #include <glm.hpp>
 

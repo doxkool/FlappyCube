@@ -44,29 +44,15 @@ namespace FlappySquare
 	// Creating the camera object.
 		Engine::OrthographicCamera  m_Camera(0, 1000, 0, 1000);
 
-	// Creating the scene where all the game objects will be stored.
 		Engine::Scene scene("DevScene");
 
-	// Load the textures
-		Engine::Texture BGTex("Game/Textures/background-day.png");
-		Engine::Texture playerTex("Game/Textures/flappy-bird.png");
-		Engine::Texture pipeTex("Game/Textures/pipe-green.png");
+		auto Player = scene.AddEntity("Player");
 
-	// Creating the Player object.
-		Engine::Player player("Player", glm::vec3(0, 0, 0), 0, glm::vec3(10, 10, 0), playerTex, &scene);
-		player.SetMovementSpeed(50.f);
-	// Creating the Pipes object.
-		//Engine::Square2D pipe1("Pipe", glm::vec3(0.f, -3.f, 0.f), glm::vec3(0.f, 0.f, 0.f), glm::vec3(1.f, 4.f, 1.f), pipeTex, &scene);
-		//Engine::Square2D pipe2("Pipe", glm::vec3(0.f, 3.f, 0.f), glm::vec3(180.f, 0.f, 0.f), glm::vec3(1.f, 4.f, 1.f), pipeTex, &scene);
-		//Engine::Square2D pipe3("Pipe", glm::vec3(4.f, -2.f, 0.f), glm::vec3(0.f, 0.f, 0.f), glm::vec3(1.f, 4.f, 1.f), pipeTex, &scene);
-		//Engine::Square2D pipe4("Pipe", glm::vec3(4.f, 4.f, 0.f), glm::vec3(180.f, 0.f, 0.f), glm::vec3(1.f, 4.f, 1.f), pipeTex, &scene);
+		scene.AddComponent(Player, Engine::Transform);
+		scene.AddComponent(Player, Engine::Sprite2D);
 
-	// Creating the background.
-		Engine::Square2D BgTile01("BG_Tile", glm::vec3(0, 0, 0), 0, glm::vec3(25, 30, 0), BGTex, &scene);
-		//Engine::Square2D BgTile02("BG_Tile", glm::vec3(-4.f, 0, 0.f), glm::vec3(0.f, 0.f, 0.f), glm::vec3(4.f, 8.f, 1.f), BGTex, &scene);
-		//Engine::Square2D BgTile03("BG_Tile", glm::vec3(0.f, 0, 0.f), glm::vec3(0.f, 0.f, 0.f), glm::vec3(4.f, 8.f, 1.f), BGTex, &scene);
-		//Engine::Square2D BgTile04("BG_Tile", glm::vec3(4.f, 0, 0.f), glm::vec3(0.f, 0.f, 0.f), glm::vec3(4.f, 8.f, 1.f), BGTex, &scene);
-		//Engine::Square2D BgTile05("BG_Tile", glm::vec3(8.f, 0, 0.f), glm::vec3(0.f, 0.f, 0.f), glm::vec3(4.f, 8.f, 1.f), BGTex, &scene);
+		//scene.GetRegistry().emplace<Engine::TransformComponent>(Player);
+		//scene.GetRegistry().emplace<Engine::Sprite2DComponent>(Player, glm::vec4(0.f, 1.0f, 0.f, 1.0f));
 
 		window.EnableVsync(1);
 
@@ -83,11 +69,11 @@ namespace FlappySquare
 
 			CheckForInputs();
 
-			player.OnUpdate(window, timestep);
+			scene.OnUpdate(timestep);
 
 			if (Engine::Input::IsKeyPressed(window.m_Window, GLFW_KEY_Q))
 			{
-				player.SetTexture(pipeTex);
+				
 			}
 
 		// Update Camera.
@@ -122,7 +108,3 @@ namespace FlappySquare
 
 	}
 }
-
-
-// Resources :
-//	https://www.programmingcreatively.com/opengl-tutorial-9-qs.php

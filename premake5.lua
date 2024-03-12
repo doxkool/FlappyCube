@@ -12,6 +12,7 @@ IncludeDir["glm"] = "Vendors/glm"
 IncludeDir["spdlog"] = "Vendors/spdlog"
 IncludeDir["stb_image"] = "Vendors/stb_image"
 IncludeDir["imgui"] = "Vendors/imgui"
+IncludeDir["Entt"] = "Vendors/Entt"
 
 project "FlappySquare"
    kind "ConsoleApp"
@@ -42,7 +43,8 @@ project "FlappySquare"
     "%{IncludeDir.glm}",
 	"%{IncludeDir.spdlog}",
 	"%{IncludeDir.stb_image}",
-	"%{IncludeDir.imgui}"
+	"%{IncludeDir.imgui}",
+	"%{IncludeDir.Entt}"
    }
 
    libdirs
